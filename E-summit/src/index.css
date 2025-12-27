@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* -- Fonts -- */
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Rajdhani", sans-serif;
+
+  /* -- Colors (Extracted from Logo) -- */
+  /* Deep Void Backgrounds */
+  --color-gaming-950: #020617;
+  --color-gaming-900: #0f172a;
+  --color-gaming-800: #1e293b;
+
+  /* Brand Accents */
+  --color-brand-primary: #d946ef;   /* Fuchsia/Pink */
+  --color-brand-secondary: #6366f1; /* Indigo/Purple */
+  --color-brand-accent: #22d3ee;    /* Cyan/Tech Blue */
+
+  /* -- Background Images/Gradients -- */
+  --image-hero-gradient: linear-gradient(135deg, #d946ef 0%, #6366f1 100%);
+  --image-hero-glow: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, rgba(2, 6, 23, 0) 70%);
+}
+
+/* -- Global Base Styles -- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gaming-950 text-white overflow-x-hidden font-sans;
+
+    /* Subtle Grid Pattern for the "Blueprint/Tech" feel */
+    background-image: linear-gradient(to right, #1e293b 1px, transparent 1px),
+                      linear-gradient(to bottom, #1e293b 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-blend-mode: overlay; /* Blends grid into the dark bg */
+  }
+
+  /* Typography Defaults */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold uppercase tracking-wide;
+  }
+
+  h1 { @apply text-5xl md:text-7xl; }
+  h2 { @apply text-4xl md:text-5xl; }
+  p { @apply text-gray-300 leading-relaxed; }
+}
+
+/* -- Custom Utilities -- */
+@layer utilities {
+  /* Gradient Text Utility */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-brand-primary to-brand-secondary;
+  }
+
+  /* Neon Glow Effects */
+  .glow-sm {
+    box-shadow: 0 0 10px rgba(217, 70, 239, 0.3);
+  }
+
+  .glow-md {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  }
+
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply bg-gaming-900/60 backdrop-blur-md border border-white/10;
+  }
+}
