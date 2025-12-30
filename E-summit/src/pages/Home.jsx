@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Naitik/Navbar";
 import HeroSection from "../components/Naitik/herosection";
 import AboutSection from "../components/Naitik/about";
 import EventsSection from "../components/Naitik/events";
@@ -70,7 +70,7 @@ export default function Home() {
 
 
 
-            
+
             </main>
         </div>
     );
