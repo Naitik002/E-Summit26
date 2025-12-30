@@ -32,7 +32,7 @@ const AboutSection = () => {
     <section className="relative w-full py-24 px-6 lg:px-20 overflow-hidden bg-gaming-950 border-b border-white/5">
 
       {/* Background Grid Accent (Subtle) */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-[linear-gradient(to_left,rgba(99,102,241,0.05)_1px,transparent_1px)] bg-[size:40px_100%] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-[linear-gradient(to_left,rgba(99,102,241,0.05)_1px,transparent_1px)] bg-size-[40px_100%] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto">
 
@@ -103,7 +103,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-brand-primary/20 blur-[50px] -z-10 group-hover:bg-brand-primary/30 transition-all duration-500" />
 
               {/* The Frame Container */}
-              <div className="relative z-10 p-1 bg-gradient-to-br from-gray-700 via-gray-900 to-gray-800 rounded-lg clip-path-gaming border border-white/10">
+              <div className="relative z-10 p-1 bg-linear-to-br from-gray-700 via-gray-900 to-gray-800 rounded-lg clip-path-gaming border border-white/10">
                 {/* Decorative Corners */}
                 <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-brand-accent z-20" />
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-brand-primary z-20" />

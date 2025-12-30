@@ -7,6 +7,7 @@ import Casestudy from "./pages/casestudy";
 import Keynote from "./pages/keynote";
 import Contact from "./pages/contact";
 import FooterSection from "./components/Naitik/footer";
+import Bplan from "./pages/Bplan";
 
 function App() {
   return (
@@ -15,12 +16,13 @@ function App() {
       <Navbar />
 
       {/* Add top padding so content doesn't hide behind navbar */}
-      <div className="pt-40 text-white bg-black min-h-screen">
+      <div className="pt-25 text-white bg-black min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/iplauction" element={<Iplauction/>} />
           <Route path="/casestudy" element={<Casestudy/>} />
           <Route path="/keynote" element={<Keynote/>} />
+          <Route path="/bplan" element={<Bplan />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
@@ -34,3 +36,6 @@ function App() {
 }
 
 export default App;
+
+
+

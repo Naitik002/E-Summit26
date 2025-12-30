@@ -16,7 +16,7 @@ const FooterSection = () => {
       </div>
 
       {/* 2. Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[40px_40px] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-16">
 
@@ -37,7 +37,7 @@ const FooterSection = () => {
           {/* The "Terminal" Newsletter Input */}
           <div className="w-full max-w-md">
             <label className="text-xs font-mono text-brand-accent mb-2 block tracking-widest uppercase">
-              > Subscribe_to_Updates
+              {">"} Subscribe_to_Updates
             </label>
             <div className="relative group">
               <input
@@ -126,7 +126,7 @@ const FooterSection = () => {
 
           {/* Copyright */}
           <div className="text-gray-500 text-xs font-mono">
-             © 2026 E-Cell MANIT. Made with <span className="text-brand-primary">⚡</span> by Tech Team.
+             © 2026 E-Cell MANIT
           </div>
 
           {/* Scroll to Top */}

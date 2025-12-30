@@ -15,6 +15,7 @@ const Navbar = () => {
   const navItems = [
     { name: "HOME", path: "/" },
     { name: "STARTUP EXPO", path: "https://esummit.ecellnitb.in/#" },
+    {name: "B-PLAN", path: "/bplan" },
     { name: "CASE STUDY", path: "/casestudy" },
     { name: "IPL AUCTION", path: "/iplauction" },
     { name: "KEYNOTE SESSIONS", path: "/keynote" },
@@ -50,7 +51,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="bg-black text-white fixed top-0 w-full z-[100] transition-transform duration-300 font-heading shadow-md"
+      className="bg-black text-white fixed top-0 w-full z-100 transition-transform duration-300 font-heading shadow-md"
       animate={{ y: showNavbar ? 0 : -135 }}
       initial={{ y: 0 }}
     >
@@ -101,7 +102,7 @@ const Navbar = () => {
 
         {/* Mobile Button */}
         <button
-          className="lg:hidden text-[#D66AF3] z-[110] relative"
+          className="lg:hidden text-[#D66AF3] z-110 relative"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <motion.div animate={{ rotate: menuOpen ? 90 : 0 }}>

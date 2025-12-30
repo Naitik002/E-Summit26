@@ -23,22 +23,22 @@ const row2 = allSpeakers.slice(6, 12);
 
 // --- The Card Component ---
 const SpeakerCard = ({ speaker }) => (
-  <div className="relative group w-[280px] h-[160px] flex-shrink-0 mx-4 cursor-pointer">
+  <div className="relative group w-70 h-40 shrink-0 mx-4 cursor-pointer">
     {/* Base Container */}
     <div className="absolute inset-0 bg-gaming-900 border border-white/10 rounded-lg overflow-hidden flex transition-all duration-300 group-hover:scale-110 group-hover:border-white/40 group-hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] z-0 group-hover:z-20">
 
       {/* Image Half */}
       <div className="w-1/2 h-full relative">
         <img src={speaker.image} alt={speaker.name} className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" />
-        <div className={`absolute inset-0 bg-gradient-to-r ${speaker.color} mix-blend-overlay opacity-50 group-hover:opacity-0 transition-opacity`} />
+        <div className={`absolute inset-0 bg-linear-to-r ${speaker.color} mix-blend-overlay opacity-50 group-hover:opacity-0 transition-opacity`} />
       </div>
 
       {/* Text Half */}
       <div className="w-1/2 h-full bg-gaming-950 p-4 flex flex-col justify-center border-l border-white/5 relative overflow-hidden">
         {/* Animated Background Line */}
-        <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${speaker.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
+        <div className={`absolute top-0 left-0 w-1 h-full bg-linear-to-b ${speaker.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
 
-        <h3 className="text-white font-heading font-bold text-lg leading-tight mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
+        <h3 className="text-white font-heading font-bold text-lg leading-tight mb-1 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
           {speaker.name}
         </h3>
         <p className="text-gray-500 text-xs font-mono uppercase tracking-tighter line-clamp-2">
@@ -46,7 +46,7 @@ const SpeakerCard = ({ speaker }) => (
         </p>
 
         {/* Micro-Interaction Arrow */}
-        <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-all transform translate-x-[-10px] group-hover:translate-x-0">
+        <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-all transform -translate-x-2.5 group-hover:translate-x-0">
           <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
         </div>
       </div>
@@ -81,8 +81,8 @@ const MarqueeRow = ({ items, direction = "left", speed = 30 }) => {
       </motion.div>
 
       {/* Vignette Fades on Edges */}
-      <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-gaming-950 to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-gaming-950 to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 h-full w-20 bg-linear-to-r from-gaming-950 to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 h-full w-20 bg-linear-to-l from-gaming-950 to-transparent z-10 pointer-events-none" />
     </div>
   );
 };
@@ -92,7 +92,7 @@ const SpeakersSection = () => {
     <section className="relative w-full py-20 bg-gaming-950 overflow-hidden border-b border-white/5">
 
       {/* Background Tech Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size-64px_64px] mask-[radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="relative z-10">
 
@@ -104,7 +104,7 @@ const SpeakersSection = () => {
                <span className="text-red-500 font-mono text-xs tracking-widest uppercase">Live Roster</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-white leading-none">
-              LEGENDS <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">ARCHIVE</span>
+              LEGENDS <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-secondary">ARCHIVE</span>
             </h2>
           </div>
           <div className="hidden md:block">
