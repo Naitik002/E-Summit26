@@ -64,8 +64,18 @@
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
   }
 
+
+
   /* Glassmorphism Card */
   .glass-card {
     @apply bg-gaming-900/60 backdrop-blur-md border border-white/10;
   }
+
+
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+
 }

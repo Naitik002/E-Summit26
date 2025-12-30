@@ -6,6 +6,7 @@ import Iplauction from "./pages/iplauction";
 import Casestudy from "./pages/casestudy";
 import Keynote from "./pages/keynote";
 import Contact from "./pages/contact";
+import FooterSection from "./components/Naitik/footer";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
+
+
+<FooterSection />
+
       </div>
     </>
   );
