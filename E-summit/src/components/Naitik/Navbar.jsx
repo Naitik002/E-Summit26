@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: "HOME", path: "/" },
-    { name: "STARTUP EXP0", path: "https://esummit.ecellnitb.in/#" },
+    { name: "STARTUP EXPO", path: "https://esummit.ecellnitb.in/#" },
     { name: "CASE STUDY", path: "/casestudy" },
     { name: "IPL AUCTION", path: "/iplauction" },
     { name: "KEYNOTE SESSIONS", path: "/keynote" },
@@ -39,52 +39,61 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [menuOpen]);
+
   return (
     <motion.nav
-      className="bg-black text-white fixed top-0 w-full z-100 transition-transform duration-300 exo-2 shadow-md"
+      className="bg-black text-white fixed top-0 w-full z-[100] transition-transform duration-300 font-heading shadow-md"
       animate={{ y: showNavbar ? 0 : -135 }}
+      initial={{ y: 0 }}
     >
-      <div className="px-6 lg:px-16  flex justify-between items-center">
+      <div className="px-6 lg:px-16 flex justify-between items-center h-20 md:h-24">
         {/* Logo */}
         <motion.div
           whileHover={{ scale: pathname !== "/" ? 1.05 : 1 }}
           onClick={() => navigate("/")}
-          className={`h-20 w-20 md:h-40 md:w-40 cursor-pointer flex items-center justify-center` }
+          className="h-full flex items-center justify-center cursor-pointer"
         >
-          <img src="/logo.png" alt="logo.png" />
+          {/* Ensure /logo.png exists in your public folder */}
+          <img src="/logo.png" alt="logo" className="h-12 w-auto md:h-16" />
         </motion.div>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex space-x-8 text-lg font-semibold">
+        <ul className="hidden lg:flex space-x-8 text-lg font-bold tracking-wide">
           {navItems.map((item) => {
             const isExternal = item.path.startsWith("http");
+            const isActive = pathname === item.path;
 
-            return isExternal ? (
-              <a
-                key={item.name}
-                href={item.path}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`relative transition-all duration-300 hover:text-[#D66AF3] ${
-                  pathname === item.path
-                    ? "text-[#D66AF3] after:w-full"
-                    : "after:w-0 hover:after:w-full"
-                } after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-[#D66AF3] after:transition-all`}
-              >
-                {item.name}
-              </a>
-            ) : (
+            return (
               <li key={item.name}>
-                <Link
-                  to={item.path}
-                  className={`relative transition-all duration-300 hover:text-[#D66AF3] ${
-                    pathname === item.path
-                      ? "text-[#D66AF3] after:w-full"
-                      : "after:w-0 hover:after:w-full"
-                  } after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-[#D66AF3] after:transition-all`}
-                >
-                  {item.name}
-                </Link>
+                {isExternal ? (
+                  <a
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`relative transition-all duration-300 hover:text-[#D66AF3] ${
+                      isActive ? "text-[#D66AF3] after:w-full" : "after:w-0 hover:after:w-full"
+                    } after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-[#D66AF3] after:transition-all`}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`relative transition-all duration-300 hover:text-[#D66AF3] ${
+                      isActive ? "text-[#D66AF3] after:w-full" : "after:w-0 hover:after:w-full"
+                    } after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-[#D66AF3] after:transition-all`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </li>
             );
           })}
@@ -92,11 +101,11 @@ const Navbar = () => {
 
         {/* Mobile Button */}
         <button
-          className="lg:hidden text-[#D66AF3] z-100"
+          className="lg:hidden text-[#D66AF3] z-[110] relative"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <motion.div animate={{ rotate: menuOpen ? 90 : 0 }}>
-            {menuOpen ? <X size={26} /> : <Menu size={26} />}
+            {menuOpen ? <X size={32} /> : <Menu size={32} />}
           </motion.div>
         </button>
       </div>
@@ -108,14 +117,14 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 bg-black/95 backdrop-blur-md z-50 pt-24 flex flex-col items-center space-y-8 text-lg font-semibold"
+            className="fixed inset-0 bg-black z-50 pt-28 flex flex-col items-center space-y-8 text-xl font-bold font-heading h-screen"
           >
             {navItems.map((item, i) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.07 }}
+                transition={{ delay: i * 0.05 }}
               >
                 {item.path.startsWith("http") ? (
                   <a
@@ -123,7 +132,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setMenuOpen(false)}
-                    className={`${pathname == item.path ? 'text-[#D66AF3]' : ''}`}
+                    className={`${pathname === item.path ? 'text-[#D66AF3]' : 'text-white'} hover:text-[#D66AF3] transition-colors`}
                   >
                     {item.name}
                   </a>
@@ -131,7 +140,7 @@ const Navbar = () => {
                   <Link
                     to={item.path}
                     onClick={() => setMenuOpen(false)}
-                    className={`${pathname == item.path ? 'text-[#D66AF3]' : ''}`}
+                    className={`${pathname === item.path ? 'text-[#D66AF3]' : 'text-white'} hover:text-[#D66AF3] transition-colors`}
                   >
                     {item.name}
                   </Link>
