@@ -6,7 +6,7 @@ const CustomCursor = () => {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
 
-  const springConfig = { damping: 25, stiffness: 400, mass: 0.5 }; // Snappy but smooth
+  const springConfig = { damping: 25, stiffness: 400, mass: 0.5 };
   const smoothX = useSpring(cursorX, springConfig);
   const smoothY = useSpring(cursorY, springConfig);
 
@@ -31,7 +31,7 @@ const CustomCursor = () => {
         target.tagName === 'INPUT' ||
         target.closest('a') ||
         target.closest('button') ||
-        target.classList.contains('glass-card') // Added your specific class
+        target.classList.contains('glass-card')
       ) {
         setIsHovering(true);
       } else {
@@ -61,9 +61,9 @@ const CustomCursor = () => {
 
   return (
     <>
-      {/* 1. CENTER DOT (Always stays centered) */}
+      {/* 1. CENTER DOT (Made smaller: w-1 h-1) */}
       <motion.div
-        className="fixed top-0 left-0 w-1.5 h-1.5 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 w-1 h-1 bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
         style={{ x: cursorX, y: cursorY, translateX: "-50%", translateY: "-50%" }}
       />
 
@@ -73,49 +73,50 @@ const CustomCursor = () => {
         style={{ x: smoothX, y: smoothY, translateX: "-50%", translateY: "-50%" }}
       >
         <motion.div
-          className="relative w-12 h-12 flex items-center justify-center"
+          // Made smaller: w-8 h-8 (32px) instead of w-12 h-12 (48px)
+          className="relative w-8 h-8 flex items-center justify-center"
           animate={{
-            rotate: isHovering ? 0 : 360, // Spin when idle, Lock (0deg) when hovering
-            scale: isClicked ? 0.8 : (isHovering ? 1.4 : 1), // Expand on hover, shrink on click
+            rotate: isHovering ? 0 : 360,
+            scale: isClicked ? 0.8 : (isHovering ? 1.4 : 1),
           }}
           transition={{
             rotate: {
-                duration: isHovering ? 0.3 : 8, // Snap to 0 quickly on hover, spin slowly otherwise
+                duration: isHovering ? 0.3 : 8,
                 repeat: isHovering ? 0 : Infinity,
                 ease: isHovering ? "backOut" : "linear"
             },
             scale: { duration: 0.2 }
           }}
         >
-          {/* Top Left Bracket */}
+          {/* Top Left Bracket - Thinner borders, smaller size, tighter expansion */}
           <motion.div
-            className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2"
+            className="absolute top-0 left-0 w-2 h-2 border-t border-l"
             style={{ borderColor: bracketColor }}
-            animate={{ x: isHovering ? -4 : 0, y: isHovering ? -4 : 0 }} // Expand outwards on hover
+            animate={{ x: isHovering ? -3 : 0, y: isHovering ? -3 : 0 }}
           />
 
           {/* Top Right Bracket */}
           <motion.div
-            className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2"
+            className="absolute top-0 right-0 w-2 h-2 border-t border-r"
             style={{ borderColor: bracketColor }}
-            animate={{ x: isHovering ? 4 : 0, y: isHovering ? -4 : 0 }}
+            animate={{ x: isHovering ? 3 : 0, y: isHovering ? -3 : 0 }}
           />
 
           {/* Bottom Left Bracket */}
           <motion.div
-            className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2"
+            className="absolute bottom-0 left-0 w-2 h-2 border-b border-l"
             style={{ borderColor: bracketColor }}
-            animate={{ x: isHovering ? -4 : 0, y: isHovering ? 4 : 0 }}
+            animate={{ x: isHovering ? -3 : 0, y: isHovering ? 3 : 0 }}
           />
 
           {/* Bottom Right Bracket */}
           <motion.div
-            className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2"
+            className="absolute bottom-0 right-0 w-2 h-2 border-b border-r"
             style={{ borderColor: bracketColor }}
-            animate={{ x: isHovering ? 4 : 0, y: isHovering ? 4 : 0 }}
+            animate={{ x: isHovering ? 3 : 0, y: isHovering ? 3 : 0 }}
           />
 
-          {/* Optional: Center Crosshair lines that appear only on hover */}
+          {/* Center Crosshair lines */}
           <motion.div
             className="absolute w-full h-[1px] bg-cyan-400/50"
             initial={{ opacity: 0, scaleX: 0 }}
