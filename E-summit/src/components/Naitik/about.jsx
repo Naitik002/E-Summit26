@@ -116,7 +116,7 @@ const AboutSection = () => {
                    {/* Replace this iframe with your actual video ID */}
                    <iframe
                     className="w-full h-full object-cover"
-                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?controls=0&rel=0&modestbranding=1"
+                 src="https://www.youtube.com/embed/a9lfRswWt0U?si=clkZTFh_In9Ik4qO"
                     title="ESummit Aftermovie"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
