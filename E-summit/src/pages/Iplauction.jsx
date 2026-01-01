@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {
   Terminal, Crosshair, Users, Trophy, ChevronRight,
   Activity, Shield, Target, Zap, TrendingUp, AlertTriangle,
@@ -16,8 +15,21 @@ import {
 import TargetCursor from '../components/Varun/iplCursor';
 import { useNavigate } from 'react-router-dom';
 import { User, Lock } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+}
+const fadeUpStagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } }
+}
 
 const RecruitmentForm = () => {
+  // Toggle this to true/false to show or hide the form
+  const isLocked = true; 
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,126 +37,104 @@ const RecruitmentForm = () => {
     phone: '',
   });
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (isLocked) return;
     console.log("Transmission Sent:", formData);
     alert("ENLISTMENT DATA TRANSMITTED TO HIGH COMMAND");
   };
 
   return (
-    <section className="py-24 px-6 bg-slate-950 relative overflow-hidden">
+    <section id="register" className="py-24 px-6 bg-slate-950 relative overflow-hidden">
       {/* Background HUD Elements */}
-      <div className="absolute top-0 left-0 w-full h-full copacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-green-900/20 via-transparent to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-green-900/20 via-transparent to-transparent"></div>
 
       <div className="max-w-3xl mx-auto relative z-10">
         {/* Terminal Header */}
         <div className="bg-slate-900 border border-slate-800 p-4 mb-1 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <Terminal size={18} className="text-green-500" />
-            <span className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Enlistment_Portal.exe</span>
+            <span className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">
+                {isLocked ? "ACCESS_RESTRICTED.sys" : "Enlistment_Portal.exe"}
+            </span>
           </div>
           <div className="flex gap-2">
             <div className="w-2 h-2 rounded-full bg-slate-800"></div>
-            <div className="w-2 h-2 rounded-full bg-slate-800"></div>
-            <div className="w-2 h-2 rounded-full bg-green-500"></div>
+            <div className={`w-2 h-2 rounded-full ${isLocked ? 'bg-red-500 animate-pulse' : 'bg-slate-800'}`}></div>
+            <div className={`w-2 h-2 rounded-full ${isLocked ? 'bg-slate-800' : 'bg-green-500'}`}></div>
           </div>
         </div>
 
-        {/* Main Form Body */}
-        <div className="bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 md:p-12 shadow-2xl">
-          <div className="mb-10">
-            <h2 className="text-4xl font-black uppercase italic tracking-tighter mb-2">Join the Ranks</h2>
-            <p className="text-slate-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-              <Lock size={12} className="text-green-500" /> Secure 256-bit Encrypted Transmission
-            </p>
-          </div>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Full Name */}
-              <div className="space-y-2 ">
-                <label className="text-[10px] font-black uppercase text-green-500 tracking-widest ml-1">Operator Name</label>
-                <div className="relative group cursor-target">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-green-500 transition-colors" size={18} />
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="E.G. JOHN 'SOAP' MACTAVISH"
-                    className="w-full bg-slate-950 border border-slate-800 p-4 pl-12 text-sm font-bold tracking-tight focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/20 transition-all placeholder:text-slate-700 uppercase"
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-
-              {/* Squad Name */}
-              <div className="space-y-2 ">
-                <label className="text-[10px] font-black uppercase text-green-500 tracking-widest ml-1">Strike Team (Faction)</label>
-                <div className="relative group cursor-target">
-                  <Users className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-green-500 transition-colors" size={18} />
-                  <input
-                    type="text"
-                    name="squadName"
-                    required
-                    placeholder="E.G. TASK FORCE 141"
-                    className="w-full bg-slate-950 border border-slate-800 p-4 pl-12 text-sm font-bold tracking-tight focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/20 transition-all placeholder:text-slate-700 uppercase"
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Email Address */}
-            <div className="space-y-2 ">
-              <label className="text-[10px] font-black uppercase text-green-500 tracking-widest ml-1">Comm-Link ID (Email)</label>
-              <div className="relative group cursor-target">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-green-500 transition-colors" size={18} />
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="ID@DOMAIN.COM"
-                  className="w-full bg-slate-950 border border-slate-800 p-4 pl-12 text-sm font-bold tracking-tight focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/20 transition-all placeholder:text-slate-700"
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-
-            {/* Phone Number */}
-            <div className="space-y-2 ">
-              <label className="text-[10px] font-black uppercase text-green-500 tracking-widest ml-1">Secure Line (Phone)</label>
-              <div className="relative group cursor-target">
-                <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 group-focus-within:text-green-500 transition-colors" size={18} />
-                <input
-                  type="tel"
-                  name="phone"
-                  required
-                  placeholder="+91 00000 00000"
-                  className="w-full bg-slate-950 border border-slate-800 p-4 pl-12 text-sm font-bold tracking-tight focus:outline-none focus:border-green-500/50 focus:ring-1 focus:ring-green-500/20 transition-all placeholder:text-slate-700"
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
-
-            {/* Submit Button */}
-            <div className="pt-6 ">
-              <button
-                type="submit"
-                className="w-full group relative bg-green-600 p-[2px] transition-transform active:scale-[0.98] cursor-target"
-              >
-                <div className="bg-green-600 group-hover:bg-green-500 text-black font-black px-10 py-5 flex items-center justify-center gap-3 uppercase text-xl transition-colors">
-                  Submit Enlistment <ChevronRight size={24} className="group-hover:translate-x-1 transition-transform" />
-                </div>
-              </button>
-              <p className="text-center mt-4 text-[9px] text-slate-600 uppercase font-bold tracking-tighter">
-                By enlisting, you agree to follow the Rules of Engagement and Operational Protocols.
+        {/* Main Form Body Container */}
+        <div className="relative">
+          <motion.div
+            className={`bg-slate-900/50 backdrop-blur-md border border-slate-800 p-8 md:p-12 shadow-2xl transition-all duration-700 ${isLocked ? 'blur-md grayscale opacity-50' : ''}`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.15 }}
+            variants={fadeUp}
+          >
+            <div className="mb-10">
+              <h2 className="text-4xl font-black uppercase italic tracking-tighter mb-2">Join the Ranks</h2>
+              <p className="text-slate-500 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                <Lock size={12} className="text-green-500" /> Secure 256-bit Encrypted Transmission
               </p>
             </div>
-          </form>
+
+            <form onSubmit={handleSubmit} className="space-y-6 pointer-events-none">
+                {/* Form Inputs (Same as your previous code) */}
+                <div className="grid md:grid-cols-2 gap-6 opacity-20">
+                    <div className="h-12 bg-slate-800 rounded border border-slate-700"></div>
+                    <div className="h-12 bg-slate-800 rounded border border-slate-700"></div>
+                </div>
+                <div className="h-12 bg-slate-800 rounded border border-slate-700 opacity-20"></div>
+                <div className="h-12 bg-slate-800 rounded border border-slate-700 opacity-20"></div>
+                <div className="h-16 bg-green-900/20 rounded opacity-20 mt-6"></div>
+            </form>
+          </motion.div>
+
+          {/* COMING SOON OVERLAY */}
+          {isLocked && (
+            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-6">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-slate-950/80 border-2 border-red-600 p-8 shadow-[0_0_50px_rgba(220,38,38,0.2)] backdrop-blur-xl"
+              >
+                <AlertTriangle className="text-red-600 mx-auto mb-4 animate-bounce" size={48} />
+                <h3 className="text-3xl font-black uppercase italic tracking-tighter text-white mb-2">
+                  System Lockdown
+                </h3>
+                <div className="h-1 w-20 bg-red-600 mx-auto mb-6"></div>
+                <p className="text-slate-300 font-bold text-sm uppercase tracking-widest mb-8">
+                  Deployment sequence not yet initialized. <br/> 
+                  <span className="text-red-500">Recruitment opens soon...</span>
+                </p>
+
+                {/* Optional Countdown Mockup */}
+                {/* <div className="flex gap-4 justify-center font-black text-2xl italic text-white mb-8">
+                    <div className="flex flex-col"><span className="text-red-600">02</span><span className="text-[8px] not-italic tracking-widest uppercase text-slate-500">Days</span></div>
+                    <span>:</span>
+                    <div className="flex flex-col"><span className="text-red-600">14</span><span className="text-[8px] not-italic tracking-widest uppercase text-slate-500">Hrs</span></div>
+                    <span>:</span>
+                    <div className="flex flex-col"><span className="text-red-600">55</span><span className="text-[8px] not-italic tracking-widest uppercase text-slate-500">Min</span></div>
+                </div>
+
+                <button className="bg-red-600/10 border border-red-600 text-red-600 px-6 py-2 text-xs font-black uppercase tracking-widest hover:bg-red-600 hover:text-white transition-all cursor-target">
+                  Request Access Priority
+                </button> */}
+              </motion.div>
+            </div>
+          )}
         </div>
 
         {/* HUD Data Footer */}
@@ -154,13 +144,16 @@ const RecruitmentForm = () => {
             <span>Lon: 77.2090° E</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-500/50 animate-pulse font-black italic">Awaiting Uplink...</span>
+            <span className={`${isLocked ? 'text-red-500' : 'text-green-500/50'} animate-pulse font-black italic`}>
+               {isLocked ? "UPLINK_TERMINATED" : "Awaiting Uplink..."}
+            </span>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
 
 
 const OrganizingTeamSection = () => {
@@ -210,7 +203,15 @@ const OrganizingTeamSection = () => {
             <div className="flex items-center gap-2 text-green-500 font-black text-xs tracking-widest mb-2">
               <ShieldCheck size={16} /> SECURE COMMS ESTABLISHED
             </div>
-            <h2 className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter">High Command</h2>
+            <motion.h2
+              className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeUp}
+            >
+              High Command
+            </motion.h2>
           </div>
           <div className="text-left md:text-right text-slate-500 font-mono text-[10px] uppercase">
             &gt; Authentication: Level 5 Required <br />
@@ -221,7 +222,14 @@ const OrganizingTeamSection = () => {
         {/* Responsive Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {highCommand.map((member, i) => (
-            <div key={i} className="relative group w-full">
+            <motion.div
+              key={i}
+              className="relative group w-full"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.15 }}
+              variants={fadeUp}
+            >
               {/* Card Container */}
               <div className="relative bg-slate-900 border cursor-target border-slate-800 p-6 overflow-hidden transition-all duration-300 group-hover:border-green-500/50 group-hover:bg-slate-900/80 shadow-xl h-full flex flex-col items-center">
 
@@ -292,7 +300,7 @@ const OrganizingTeamSection = () => {
                   <div className="w-1 h-1 bg-slate-800"></div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -378,33 +386,51 @@ const IPLAuctionWarzone = () => {
 
         <div className="max-w-7xl mx-auto w-full relative z-20 grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-3 py-1 px-3 bg-red-500/10 border border-red-500/50 text-red-500 text-[10px] font-black uppercase tracking-widest animate-pulse">
-              <span className="w-2 h-2 bg-red-500 rounded-full"></span> Live Combat Simulation
-            </div>
-
-            <h1 className="text-7xl md:text-9xl font-black uppercase italic leading-[0.85] tracking-tighter">
+            {/* Hero Heading */}
+            <motion.h1
+              className="text-7xl md:text-9xl font-black uppercase italic leading-[0.85] tracking-tighter"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.25 }}
+              variants={fadeUp}
+            >
               STRIKE <br />
               <div className="text-transparent md:ml-20 bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">FIRST.</div>
-            </h1>
+            </motion.h1>
 
-            <div className="relative">
-              <p className="text-slate-200 text-lg max-w-md leading-tight uppercase font-bold tracking-tight drop-shadow-md">
-                High-Intensity IPL Auction Simulator. <br />
-                <span className="text-green-500 text-sm font-normal normal-case italic">Establish squad dominance through superior financial ballistics.</span>
-              </p>
-            </div>
+            {/* Hero Badge & Description */}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeUpStagger}
+              className="space-y-6"
+            >
+              <motion.div variants={fadeUp} className="inline-flex items-center gap-3 py-1 px-3 bg-red-500/10 border border-red-500/50 text-red-500 text-[10px] font-black uppercase tracking-widest animate-pulse">
+                <span className="w-2 h-2 bg-red-500 rounded-full"></span> Live Combat Simulation
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="relative">
+                <p className="text-slate-200 text-lg max-w-md leading-tight uppercase font-bold tracking-tight drop-shadow-md">
+                  High-Intensity IPL Auction Simulator. <br />
+                  <span className="text-green-500 text-sm font-normal normal-case italic">Establish squad dominance through superior financial ballistics.</span>
+                </p>
+              </motion.div>
+            </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button 
                 onClick={() => window.location.href = "#form"}
-                className="group relative bg-green-600 p-[2px] cursor-target transition-transform active:scale-95">
+                className="group relative bg-green-600 p-[2px] cursor-target transition-transform active:scale-95"
+              >
                 <div className="bg-green-600 group-hover:bg-green-500 text-black font-black px-10 py-4 flex items-center gap-3 uppercase text-lg transition-colors">
                   Deploy to AO <ChevronRight size={24} />
                 </div>
               </button>
               <button
                 onClick={() => window.location.href = "#about"}
-                className="border-2 border-slate-100/20 cursor-target hover:border-green-500/50 px-10 py-4 font-black uppercase text-lg transition-all backdrop-blur-md bg-slate-900/40">
+                className="border-2 border-slate-100/20 cursor-target hover:border-green-500/50 px-10 py-4 font-black uppercase text-lg transition-all backdrop-blur-md bg-slate-900/40"
+              >
                 Intel Briefing
               </button>
             </div>
@@ -431,7 +457,7 @@ const IPLAuctionWarzone = () => {
 
                 <div className="relative aspect-square mb-6 border border-slate-800 bg-slate-950 overflow-hidden group">
                   <div
-                    className="absolute inset-0 cursor-target bg-cover scale-115 bg-center transition-transform duration-700 group-hover:scale-118"
+                    className="absolute inset-0 cursor-target bg-cover grayscale scale-115 bg-center transition-transform duration-700 group-hover:scale-118 hover:grayscale-0"
                     style={{ backgroundImage: "url('/virat.jpg')" }}
                   ></div>
 
@@ -562,7 +588,14 @@ const IPLAuctionWarzone = () => {
                     desc: "At the end of the simulation, our proprietary algorithm calculates 'Squad Combat Effectiveness' to crown the champion."
                   }
                 ].map((protocol, i) => (
-                  <div key={i} className="flex gap-6 pb-6 border-b border-slate-800/50 last:border-0 cursor-target group">
+                  <motion.div
+                    key={i}
+                    className="flex gap-6 pb-6 border-b border-slate-800/50 last:border-0 cursor-target group"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.15 }}
+                    variants={fadeUp}
+                  >
                     <span className="text-green-500 font-black text-xl italic opacity-30 group-hover:opacity-100 transition-opacity">
                       0{i + 1}
                     </span>
@@ -570,7 +603,7 @@ const IPLAuctionWarzone = () => {
                       <h4 className="text-lg font-bold uppercase group-hover:text-green-400 transition-colors">{protocol.title}</h4>
                       <p className="text-sm text-slate-500 mt-1 leading-relaxed">{protocol.desc}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -582,7 +615,15 @@ const IPLAuctionWarzone = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-green-500 text-xs font-black tracking-[0.4em] uppercase">Select Your Arsenal</span>
-            <h2 className="text-5xl font-black uppercase italic mt-2">Operator Classes</h2>
+            <motion.h2
+              className="text-5xl font-black uppercase italic mt-2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeUp}
+            >
+              Operator Classes
+            </motion.h2>
           </div>
 
           <div className="grid md:grid-cols-4 gap-6">
@@ -592,14 +633,21 @@ const IPLAuctionWarzone = () => {
               { role: "Elite Bowlers", class: "Sniper", icon: <Crosshair />, desc: "Precision units to neutralize opponent targets." },
               { role: "All-Rounders", class: "Tactical", icon: <Shield />, desc: "Versatile operators to maintain squad balance." },
             ].map((item, i) => (
-              <div key={i} className="border cursor-target border-slate-800 p-8 hover:bg-green-600 group transition-all duration-300">
+              <motion.div
+                key={i}
+                className="border cursor-target border-slate-800 p-8 hover:bg-green-600 group transition-all duration-300"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.12 }}
+                variants={fadeUp}
+              >
                 <div className="text-green-500 group-hover:text-black mb-6 transition-colors">
                   {React.cloneElement(item.icon, { size: 40 })}
                 </div>
                 <p className="text-[10px] font-black uppercase text-slate-500 group-hover:text-black/70 mb-1">Class: {item.class}</p>
                 <h3 className="text-xl font-black uppercase italic group-hover:text-black transition-colors mb-4">{item.role}</h3>
                 <p className="text-sm text-slate-400 group-hover:text-black/80 leading-relaxed">{item.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -621,7 +669,14 @@ const IPLAuctionWarzone = () => {
                 { time: "1400 HRS", event: "Resupply Break", detail: "Tactical analysis and mid-auction regroup." },
                 { time: "1800 HRS", event: "Final Extraction", detail: "Squad finalization and victory ceremony." }
               ].map((step, i) => (
-                <div key={i} className="flex gap-8 group cursor-target">
+                <motion.div
+                  key={i}
+                  className="flex gap-8 group cursor-target"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.12 }}
+                  variants={fadeUp}
+                >
                   <div className="flex flex-col items-center">
                     <div className="w-4 h-4 rounded-full border-2 border-green-500 bg-slate-950 group-hover:bg-green-500 transition-colors shrink-0"></div>
                     <div className="w-[1px] h-full bg-slate-800"></div>
@@ -631,7 +686,7 @@ const IPLAuctionWarzone = () => {
                     <h4 className="text-xl font-black uppercase italic mt-1">{step.event}</h4>
                     <p className="text-slate-500 text-sm mt-2">{step.detail}</p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

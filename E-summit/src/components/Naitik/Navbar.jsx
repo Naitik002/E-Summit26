@@ -18,7 +18,7 @@ const Navbar = () => {
     {name: "B-PLAN", path: "/bplan" },
     { name: "CASE STUDY", path: "/casestudy" },
     { name: "IPL AUCTION", path: "/iplauction" },
-    { name: "KEYNOTE SESSIONS", path: "/keynote" },
+    { name: "KEYNOTE SESSIONS/CREATOR'S CAMP", path: "/keynote" },
     { name: "CONTACT", path: "/contact" },
   ];
 
