@@ -60,9 +60,9 @@ const Navbar = () => {
         <motion.div
           whileHover={{ scale: pathname !== "/" ? 1.05 : 1 }}
           onClick={() => navigate("/")}
-          className="h-full flex items-center justify-center cursor-pointer"
+          className="h-full flex items-center  justify-center cursor-pointer"
         >
-          {/* Ensure /logo.png exists in your public folder */}
+
           <img src="/logo.png" alt="logo" className="h-12 w-auto md:h-16" />
         </motion.div>
 
