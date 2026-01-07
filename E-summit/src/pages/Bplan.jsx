@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Target, Map, Briefcase, Zap, Globe, Shield, Users, Trophy, BarChart3  } from 'lucide-react';
+import { Play, Target, Map, Briefcase, Zap, Globe, Shield, Users, Trophy, BarChart3, Star } from 'lucide-react';
 import GTAGallery from '../components/Varun/bplangallery';
 import GTATimeline from '../components/Varun/bplantimeline';
 import BplanForm from '../components/Varun/bplanform';
@@ -18,17 +18,22 @@ const GTAPitchHero = () => {
     };
 
     return (
-        <section className="relative min-h-screen w-full bg-[#0a0a0a] overflow-x-hidden font-sans pt-10 md:pt-10 pb-12 md:py-0">
-            {/* Background with stylized tint */}
+        <section className="relative min-h-screen w-full  overflow-x-hidden font-sans pt-10 md:pt-10 pb-12 md:py-0">
+            <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black via-black/80 to-transparent z-20 pointer-events-none" />
+
+            {/* 2. BACKGROUND & TEXTURE */}
             <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                     backgroundImage: `url('bplanbg.jpg')`,
-                    filter: 'contrast(1.2) brightness(0.4)' // Slightly darker for mobile readability
+                    filter: 'contrast(1.1) brightness(0.35)' 
                 }}
             >
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a]/90 via-transparent to-[#0a0a0a]"></div>
+                {/* Subtle vignette to focus the center */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
             </div>
+            {/* Background with stylized tint */}
+            
 
             <div className="relative z-10 container mx-auto h-full px-4 md:px-6 flex flex-col justify-center">
 
@@ -112,7 +117,7 @@ const GTAPitchHero = () => {
                             <button
                                 className="px-10 py-4 font-black uppercase flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-[6px_6px_0px_rgba(0,0,0,1)] text-white"
                                 style={{ backgroundColor: colors.sapGreen }}
-                                onClick={() => {window.location.href = '#form'}}
+                                onClick={() => { window.location.href = '#form' }}
                             >
                                 <Play size={20} fill="white" />
                                 Enter Lobby
@@ -140,8 +145,8 @@ const GTAPitchHero = () => {
                             <div className="relative z-10 bg-black p-1 shadow-[20px_20px_0px_rgba(0,0,0,0.5)] overflow-hidden">
                                 <div className="absolute top-6 right-10 z-30 pointer-events-none">
                                     <div className="absolute top-8 right-8 border-4 border-red-600/40 px-4 py-2 text-red-600/80 font-black text-2xl uppercase italic -rotate-12 select-none pointer-events-none">
-                WANTED
-              </div>
+                                        WANTED
+                                    </div>
                                 </div>
                                 <img
                                     src="heroright.png"
@@ -173,8 +178,7 @@ const GTAPitchHero = () => {
                 </div>
             </div>
 
-            {/* Corner HUD Overlay (Frame) */}
-            <div className="absolute inset-0 pointer-events-none border-[8px] md:border-[16px] border-white/5"></div>
+            <div className="absolute inset-0 pointer-events-none "></div>
         </section>
     );
 };
@@ -218,28 +222,100 @@ const GTAAbout = () => {
 
     return (
         <section id='about' className="relative py-24 bg-[#0a0a0a] text-white overflow-hidden border-t-4 border-white/10">
+
+            <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <motion.div
+            animate={{ y: ["-100%", "250%"] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+            className="w-full h-[40vh] opacity-[0.1]"
+            style={{
+                background: `linear-gradient(to bottom, transparent, ${colors.sapGreen}, transparent)`
+            }}
+        />
+    </div>
+
+    {/* 2. Floating HUD Particles - Added a 'scale' animation to make them pop */}
+    <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+    {[...Array(8)].map((_, i) => (
+        <motion.div
+            key={i}
+            initial={{ opacity: 0, y: "110vh" }} // Start below the viewport
+            animate={{
+                opacity: [0, 0.3, 0],
+                y: "-110vh", // Move to above the viewport
+            }}
+            transition={{
+                duration: 10 + Math.random() * 5,
+                repeat: Infinity,
+                ease: "linear",
+                delay: i * 2,
+            }}
+            className="absolute font-mono font-bold whitespace-nowrap text-[10px]"
+            style={{ 
+                left: `${(i * 12) + 5}%`, // Distribute across the width
+                color: i % 2 === 0 ? colors.iceberg : colors.jasmine 
+            }}
+        >
+            {`ANALYZING_MARKET_0${i}... OK`}
+        </motion.div>
+    ))}
+</div>
+
+    {/* 3. Grid Texture */}
+    <div className="absolute inset-0 opacity-[0.2] pointer-events-none"
+        style={{ backgroundImage: `radial-gradient(${colors.iceberg} 1px, transparent 1px)`, backgroundSize: '40px 40px' }}>
+    </div>
             {/* Background Texture (Blueprint Grid) */}
-            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-                 style={{ backgroundImage: `radial-gradient(${colors.iceberg} 1px, transparent 1px)`, backgroundSize: '40px 40px' }}>
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+                style={{ backgroundImage: `radial-gradient(${colors.iceberg} 1px, transparent 1px)`, backgroundSize: '40px 40px' }}>
             </div>
 
             <div className="relative z-10 container mx-auto px-6">
-                
+
                 {/* Section Header */}
-                <div className="mb-20">
-                    <motion.h2 
-                        initial={{ x: -50, opacity: 0 }}
+                <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div>
+                        <motion.h2
+                            initial={{ x: -50, opacity: 0 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter"
+                        >
+                            Mission <span style={{ color: colors.sapGreen }}>Briefing</span>
+                        </motion.h2 >
+                        <div className="h-2 w-32 mt-2" style={{ backgroundColor: colors.sapGreen }}></div>
+                        <p className="mt-6 text-xl text-gray-400 max-w-2xl font-bold uppercase italic tracking-tight">
+                            You’ve got the idea. You’ve got the guts. Now it’s time to see if you can execute.
+                            This isn't a classroom—it's the streets of innovation.
+                        </p>
+                    </div>
+
+                    {/* NEW ELEMENT: GTA Style Wanted Level / HUD */}
+                    <motion.div
+                        initial={{ x: 50, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-7xl font-black italic uppercase tracking-tighter"
+                        className="hidden lg:flex flex-col items-end"
                     >
-                        Mission <span style={{ color: colors.sapGreen }}>Briefing</span>
-                    </motion.h2 >
-                    <div className="h-2 w-32 mt-2" style={{ backgroundColor: colors.sapGreen }}></div>
-                    <p className="mt-6 text-xl text-gray-400 max-w-2xl font-bold uppercase italic tracking-tight">
-                        You’ve got the idea. You’ve got the guts. Now it’s time to see if you can execute. 
-                        This isn't a classroom—it's the streets of innovation.
-                    </p>
+                        <div className="flex gap-2 mb-2">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                                <Star
+                                    key={star}
+                                    size={32}
+                                    fill={star <= 3 ? colors.jasmine : "transparent"}
+                                    stroke={star <= 3 ? colors.jasmine : "#333"}
+                                    className={star <= 3 ? "animate-pulse" : ""}
+                                />
+                            ))}
+                        </div>
+                        <div className="bg-black/80 border-r-4 px-4 py-1 text-right" style={{ borderColor: colors.jasmine }}>
+                            <span className="block text-[10px] font-mono text-gray-500 leading-none">THREAT LEVEL</span>
+                            <span className="text-xl font-black italic text-white uppercase tracking-widest">High Stakes</span>
+                        </div>
+                        <div className="mt-2 text-[10px] font-mono text-gray-600 uppercase tracking-[0.2em]">
+                            Loc: Los_Santos_Sector_B
+                        </div>
+                    </motion.div>
                 </div>
 
                 {/* Objectives Grid */}
@@ -256,14 +332,14 @@ const GTAAbout = () => {
                         >
                             {/* Icon HUD */}
                             <div className="mb-6 inline-block p-4 bg-black/50 rounded-full border border-white/10 group-hover:scale-110 transition-transform"
-                                 style={{ color: obj.color }}>
+                                style={{ color: obj.color }}>
                                 {obj.icon}
                             </div>
 
                             <h3 className="text-2xl font-black uppercase italic mb-4 tracking-tighter">
                                 {obj.title}
                             </h3>
-                            
+
                             <p className="text-gray-500 font-bold text-sm leading-relaxed uppercase">
                                 {obj.desc}
                             </p>
@@ -277,13 +353,13 @@ const GTAAbout = () => {
                 </div>
 
                 {/* "The Boss" Quote Section */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     className="mt-24 p-8 border-4 border-dashed border-white/10 bg-white/5 flex flex-col md:flex-row items-center gap-8"
                 >
                     <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 shrink-0 grayscale group-hover:grayscale-0 transition-all">
-                         <img src="rockstar.jpg" alt="Organizer" className="w-full h-full object-cover" />
+                        <img src="rockstar.jpg" alt="Organizer" className="w-full h-full object-cover" />
                     </div>
                     <div>
                         <p className="text-2xl font-black italic uppercase leading-none mb-2">
@@ -308,13 +384,12 @@ const GTAAbout = () => {
 const Bplan = () => {
     return (
         <div className="bg-black text-white min-h-screen ">
-            <GTACursor/>
             <GTAPitchHero />
-            <GTAAbout/>
+            <GTAAbout />
             <GTAGallery />
             <GTATimeline />
-            <BplanForm/>
-            <BplanTeam/>
+            <BplanForm />
+            <BplanTeam />
         </div>
     );
 }
