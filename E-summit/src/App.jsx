@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Naitik/Navbar";
 
 import Home from "./pages/Home";
-import Iplauction from "./pages/Iplauction";
+import Iplauction from "./pages/IPLAuction";
 import Casestudy from "./pages/Casestudy";
 import Keynote from "./pages/Keynote";
 import Contact from "./pages/Contact";
