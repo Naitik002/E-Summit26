@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Naitik/Navbar";
 
 import Home from "./pages/Home";
-import Iplauction from "./pages/iplauction";
-import Casestudy from "./pages/casestudy";
-import Keynote from "./pages/keynote";
-import Contact from "./pages/contact";
+import Iplauction from "./pages/Iplauction";
+import Casestudy from "./pages/Casestudy";
+import Keynote from "./pages/Keynote";
+import Contact from "./pages/Contact";
 import FooterSection from "./components/Naitik/footer";
 import Bplan from "./pages/Bplan";
 

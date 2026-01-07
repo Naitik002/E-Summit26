@@ -41,10 +41,10 @@ const CaseStudyRegistration = () => {
 
                 {/* Simulated Console Logs */}
                 <div className="w-full max-w-md bg-zinc-900/50 p-4 rounded-md border border-zinc-800 font-mono text-xs text-left text-gray-400 mb-8 space-y-2">
-                    <p>> Initializing uplink...</p>
-                    <p>> Target: <span className="text-blue-400">UNSTOP_SERVER</span></p>
-                    <p>> Encryption: <span className="text-green-500">SECURE</span></p>
-                    <p>> Waiting for user input...<span className="animate-pulse">_</span></p>
+                    <p> Initializing uplink...</p>
+                    <p> Target: <span className="text-blue-400">UNSTOP_SERVER</span></p>
+                    <p> Encryption: <span className="text-green-500">SECURE</span></p>
+                    <p> Waiting for user input...<span className="animate-pulse">_</span></p>
                 </div>
 
                 {/* THE UNSTOP BUTTON */}
