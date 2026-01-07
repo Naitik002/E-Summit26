@@ -19,11 +19,11 @@ function App() {
       <div className="pt-25 text-white bg-black min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/iplauction" element={<Iplauction/>} />
-          <Route path="/casestudy" element={<Casestudy/>} />
-          <Route path="/keynote" element={<Keynote/>} />
-          <Route path="/bplan" element={<Bplan />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/IPLAuction" element={<Iplauction/>} />
+          <Route path="/Casestudy" element={<Casestudy/>} />
+          <Route path="/Keynote" element={<Keynote/>} />
+          <Route path="/Bplan" element={<Bplan />} />
+          <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
 
