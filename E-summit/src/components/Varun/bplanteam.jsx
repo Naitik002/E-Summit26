@@ -53,7 +53,7 @@ const BplanTeam = () => {
     {
       name: "Yashika Agrawal",
       role: "The Enforcer", // Event Manager
-      specialty: "Field Operations",
+      specialty: "Field Operations & Logistics",
       icon: <Landmark size={20} />,
       color: "#F09E71", // darkSalmon
       img: "./teambplan/Yashika Agrawal.jpg",
@@ -125,11 +125,11 @@ const BplanTeam = () => {
 
                 {/* Back of Card / Info Overlay on Hover (Optional) */}
                 <div className="p-5 bg-[#151515]">
-                  <h3 className="text-xl font-black text-white uppercase italic tracking-tighter mb-1">
+                  <h3 className="text-md font-black text-white uppercase italic tracking-tighter mb-1">
                     {member.name}
                   </h3>
                   <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-4">
-                    Specialty: {member.specialty}
+                    {member.specialty}
                   </p>
                   
                   {/* Social HUD */}

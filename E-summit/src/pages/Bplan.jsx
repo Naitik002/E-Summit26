@@ -18,7 +18,7 @@ const GTAPitchHero = () => {
     };
 
     return (
-        <section className="relative min-h-screen w-full  overflow-x-hidden font-sans pt-10 md:pt-10 pb-12 md:py-0">
+        <section className="relative min-h-screen w-full  overflow-x-hidden font-sans pt-20 md:pt-10 pb-12 md:py-0">
             <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black via-black/80 to-transparent z-20 pointer-events-none" />
 
             {/* 2. BACKGROUND & TEXTURE */}
