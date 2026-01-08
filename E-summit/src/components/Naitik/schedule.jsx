@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const scheduleData = [
   {
     id: "day1",
-    date: "12",
+    date: "13",
     month: "FEB",
     dayName: "WEDNESDAY",
     title: "Level 1: The Awakening",
@@ -19,7 +19,7 @@ const scheduleData = [
   },
   {
     id: "day2",
-    date: "13",
+    date: "14",
     month: "FEB",
     dayName: "THURSDAY",
     title: "Level 2: The Grind",
@@ -33,7 +33,7 @@ const scheduleData = [
   },
   {
     id: "day3",
-    date: "14",
+    date: "15",
     month: "FEB",
     dayName: "FRIDAY",
     title: "Level 3: The Finale",
