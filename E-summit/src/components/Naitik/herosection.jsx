@@ -239,7 +239,7 @@ const HeroSection = () => {
   });
 
   useEffect(() => {
-    const countDownDate = new Date("Feb 12, 2026 00:00:00").getTime();
+    const countDownDate = new Date("Feb 13, 2026 00:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
