@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, User, Users, Mail, Phone, ChevronRight, ShieldAlert, Plus, Trash2, Terminal, AlertTriangle } from 'lucide-react';
+import { Lock, User, Users, Mail, Phone, ChevronRight, ShieldAlert, Plus, Trash2, Terminal, AlertTriangle, ExternalLink } from 'lucide-react';
 
 const Bplanform = () => {
-  const [isLocked, setIsLocked] = useState(true); // TOGGLE THIS FOR LOCKED/ACTIVE
+  // SET THIS TO false TO SHOW THE FORM, OR KEEP true TO SHOW THE LOCKED SCREEN
+  const [isLocked, setIsLocked] = useState(true) 
   const [regType, setRegType] = useState('individual');
-  const [teamMembers, setTeamMembers] = useState([{ name: '', email: '' }]);
+
+  const UNSTOP_LINK = "https://unstop.com/your-competition-link-here"; // REPLACE WITH YOUR LINK
 
   const colors = {
     sapGreen: "#47761E",
@@ -13,8 +15,10 @@ const Bplanform = () => {
     darkSalmon: "#F09E71",
   };
 
-  const addMember = () => setTeamMembers([...teamMembers, { name: '', email: '' }]);
-  const removeMember = (index) => setTeamMembers(teamMembers.filter((_, i) => i !== index));
+  const handleRedirect = () => {
+    // Adding a small delay or sound effect here can enhance the "heist" feel
+    window.open(UNSTOP_LINK, '_blank');
+  };
 
   return (
     <section id='form' className="py-24 px-6 bg-[#0a0a0a] relative overflow-hidden min-h-screen flex items-center">
@@ -54,19 +58,9 @@ const Bplanform = () => {
                   Awaiting High Command authorization.
                 </p>
 
-                {/* Heist Timer */}
-                {/* <div className="inline-grid grid-cols-4 gap-2 bg-black p-4 border-b-4 border-red-600 shadow-2xl font-mono">
-                   {['02', '14', '55', '09'].map((unit, i) => (
-                     <div key={i} className="flex flex-col">
-                        <span className="text-3xl md:text-5xl font-black text-white px-2">{unit}</span>
-                        <span className="text-[8px] text-red-600 font-bold uppercase">{['Days', 'Hrs', 'Min', 'Sec'][i]}</span>
-                     </div>
-                   ))}
-                </div> */}
-
                 <div className="mt-12">
                    <button 
-                    onClick={() => alert('Just Kidding, wait for the launch!')}
+                    onClick={() => alert('Encryption sequence not yet complete. Stand by.')}
                     className="text-[10px] font-black text-white/20 uppercase hover:text-white transition-all tracking-[0.4em]"
                    >
                      [ Click to Force Override Encryption ]
@@ -76,86 +70,48 @@ const Bplanform = () => {
             </motion.div>
           ) : (
             /* ==========================================
-               PHASE 2: ACTIVE FORM (TEAM/INDIVIDUAL) 
+               PHASE 2: REDIRECT / ACTIVE TERMINAL
                ========================================== */
             <motion.div
               key="active-form"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-[#151515] border-t-8 p-6 md:p-12 shadow-[30px_30px_0px_rgba(0,0,0,0.5)]"
+              className="bg-[#151515] border-t-8 p-6 md:p-12 shadow-[30px_30px_0px_rgba(0,0,0,0.5)] text-center"
               style={{ borderTopColor: colors.sapGreen }}
             >
-              <div className="flex justify-between items-start mb-10">
-                <h2 className="text-4xl md:text-5xl font-black text-white uppercase italic tracking-tighter">
-                  THE <span style={{ color: colors.sapGreen }}>RECRUITMENT</span>
-                </h2>
-                <Terminal className="text-white/20" size={32} />
+              <div className="flex justify-center mb-8">
+                <Terminal className="text-white/20" size={64} />
               </div>
 
-              {/* TOGGLE */}
-              <div className="flex bg-black p-2 gap-2 mb-10 border border-white/10">
-                <button 
-                  onClick={() => setRegType('individual')}
-                  className={`flex-1 py-3 font-black uppercase italic transition-all ${regType === 'individual' ? 'bg-white text-black' : 'text-gray-500 hover:text-white'}`}
-                >
-                  Solo
-                </button>
-                <button 
-                  onClick={() => setRegType('team')}
-                  className={`flex-1 py-3 font-black uppercase italic transition-all ${regType === 'team' ? 'bg-white text-black' : 'text-gray-500 hover:text-white'}`}
-                >
-                  Strike Team
-                </button>
+              <h2 className="text-4xl md:text-6xl font-black text-white uppercase italic tracking-tighter mb-6">
+                MISSION <span style={{ color: colors.sapGreen }}>PORTAL</span>
+              </h2>
+
+              <div className="bg-black/50 border border-white/10 p-6 mb-10 text-left font-mono">
+                <p className="text-gray-400 text-xs uppercase mb-2">/root/ls_network/terminal_v5.exe</p>
+                <p className="text-white text-sm"> {'>'} CONNECTION ESTABLISHED</p>
+                <p className="text-white text-sm"> {'>'} TARGET: UNSTOP_EXTERNAL_SERVER</p>
+                <p className="text-white text-sm"> {'>'} STATUS: AWAITING DEPLOYMENT</p>
               </div>
 
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase text-gray-400 tracking-widest ml-1">{regType === 'team' ? 'Leader Name' : 'Alias'}</label>
-                    <div className="relative group"><User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 group-focus-within:text-white" size={18} />
-                      <input type="text" placeholder="FRANKLIN_V" className="w-full bg-black border border-white/10 p-4 pl-12 text-white font-bold focus:border-white transition-all uppercase" />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-[10px] font-black uppercase text-gray-400 tracking-widest ml-1">Secure Line (Phone)</label>
-                    <div className="relative group"><Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 group-focus-within:text-white" size={18} />
-                      <input type="tel" placeholder="+91 XXXXX XXXXX" className="w-full bg-black border border-white/10 p-4 pl-12 text-white font-bold focus:border-white transition-all" />
-                    </div>
-                  </div>
-                </div>
+              <p className="text-gray-400 font-bold uppercase tracking-widest text-xs mb-10 max-w-md mx-auto">
+                Official registration and mission briefings are handled via the Unstop secure uplink.
+              </p>
 
-                <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase text-gray-400 tracking-widest ml-1">Comm-Link ID (Email)</label>
-                  <div className="relative group"><Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600 group-focus-within:text-white" size={18} />
-                    <input type="email" placeholder="UPLINK@LS_NETWORK.COM" className="w-full bg-black border border-white/10 p-4 pl-12 text-white font-bold focus:border-white transition-all uppercase" />
+              <div className="pt-4">
+                <button 
+                  onClick={handleRedirect}
+                  className="w-full group relative p-1 transition-transform active:scale-[0.98]" 
+                  style={{ backgroundColor: colors.sapGreen }}
+                >
+                  <div className="bg-black group-hover:bg-transparent text-white group-hover:text-black font-black px-10 py-6 flex items-center justify-center gap-4 uppercase text-2xl md:text-3xl transition-all italic">
+                    Open Secure Uplink <ExternalLink size={32} />
                   </div>
-                </div>
-
-                {/* TEAM MEMBER DYNAMIC FIELDS */}
-                {regType === 'team' && (
-                  <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="pt-6 border-t border-white/10 space-y-4">
-                    <h4 className="text-sm font-black text-white uppercase italic mb-4">Additional Crew (Min. 1 Required)</h4>
-                    {teamMembers.map((member, index) => (
-                      <div key={index} className="grid md:grid-cols-2 gap-4 p-4 bg-black/40 border-l-4 relative" style={{ borderColor: colors.darkSalmon }}>
-                        <input type="text" placeholder={`Crew Member #${index + 2} Name`} className="bg-black border border-white/5 p-3 text-white text-xs font-bold uppercase" />
-                        <input type="email" placeholder="Member Email" className="bg-black border border-white/5 p-3 text-white text-xs font-bold uppercase" />
-                        {teamMembers.length > 1 && (
-                          <button type="button" onClick={() => removeMember(index)} className="absolute -right-2 -top-2 bg-red-600 p-1 text-white"><Trash2 size={12} /></button>
-                        )}
-                      </div>
-                    ))}
-                    <button type="button" onClick={addMember} className="w-full py-2 border border-dashed border-white/10 text-white/30 text-[10px] font-black uppercase hover:text-white transition-all">+ Add Crew Member</button>
-                  </motion.div>
-                )}
-
-                <div className="pt-8">
-                  <button type="button" className="w-full group relative p-1 transition-transform active:scale-[0.98]" style={{ backgroundColor: colors.sapGreen }}>
-                    <div className="bg-black group-hover:bg-transparent text-white group-hover:text-black font-black px-10 py-5 flex items-center justify-center gap-3 uppercase text-2xl transition-all italic">
-                      Execute Mission <ChevronRight size={28} />
-                    </div>
-                  </button>
-                </div>
-              </form>
+                </button>
+                <p className="mt-4 text-[10px] text-white/20 font-black uppercase tracking-widest animate-pulse">
+                  Warning: You are leaving LS_NETWORK. Stay Frosty.
+                </p>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

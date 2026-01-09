@@ -6,6 +6,7 @@ import GTATimeline from '../components/Varun/bplantimeline';
 import BplanForm from '../components/Varun/bplanform';
 import BplanTeam from '../components/Varun/bplanteam';
 import GTACursor from '../components/Varun/bplancursor';
+import MusicPlayer from '../components/Varun/music';
 
 const GTAPitchHero = () => {
     const colors = {
@@ -26,14 +27,14 @@ const GTAPitchHero = () => {
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
                     backgroundImage: `url('bplanbg.jpg')`,
-                    filter: 'contrast(1.1) brightness(0.35)' 
+                    filter: 'contrast(1.1) brightness(0.35)'
                 }}
             >
                 {/* Subtle vignette to focus the center */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
             </div>
             {/* Background with stylized tint */}
-            
+
 
             <div className="relative z-10 container mx-auto h-full px-4 md:px-6 flex flex-col justify-center">
 
@@ -224,47 +225,47 @@ const GTAAbout = () => {
         <section id='about' className="relative py-24 bg-[#0a0a0a] text-white overflow-hidden border-t-4 border-white/10">
 
             <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <motion.div
-            animate={{ y: ["-100%", "250%"] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-            className="w-full h-[40vh] opacity-[0.1]"
-            style={{
-                background: `linear-gradient(to bottom, transparent, ${colors.sapGreen}, transparent)`
-            }}
-        />
-    </div>
+                <motion.div
+                    animate={{ y: ["-100%", "250%"] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                    className="w-full h-[40vh] opacity-[0.1]"
+                    style={{
+                        background: `linear-gradient(to bottom, transparent, ${colors.sapGreen}, transparent)`
+                    }}
+                />
+            </div>
 
-    {/* 2. Floating HUD Particles - Added a 'scale' animation to make them pop */}
-    <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
-    {[...Array(8)].map((_, i) => (
-        <motion.div
-            key={i}
-            initial={{ opacity: 0, y: "110vh" }} // Start below the viewport
-            animate={{
-                opacity: [0, 0.3, 0],
-                y: "-110vh", // Move to above the viewport
-            }}
-            transition={{
-                duration: 10 + Math.random() * 5,
-                repeat: Infinity,
-                ease: "linear",
-                delay: i * 2,
-            }}
-            className="absolute font-mono font-bold whitespace-nowrap text-[10px]"
-            style={{ 
-                left: `${(i * 12) + 5}%`, // Distribute across the width
-                color: i % 2 === 0 ? colors.iceberg : colors.jasmine 
-            }}
-        >
-            {`ANALYZING_MARKET_0${i}... OK`}
-        </motion.div>
-    ))}
-</div>
+            {/* 2. Floating HUD Particles - Added a 'scale' animation to make them pop */}
+            <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+                {[...Array(8)].map((_, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: "110vh" }} // Start below the viewport
+                        animate={{
+                            opacity: [0, 0.3, 0],
+                            y: "-110vh", // Move to above the viewport
+                        }}
+                        transition={{
+                            duration: 10 + Math.random() * 5,
+                            repeat: Infinity,
+                            ease: "linear",
+                            delay: i * 2,
+                        }}
+                        className="absolute font-mono font-bold whitespace-nowrap text-[10px]"
+                        style={{
+                            left: `${(i * 12) + 5}%`, // Distribute across the width
+                            color: i % 2 === 0 ? colors.iceberg : colors.jasmine
+                        }}
+                    >
+                        {`ANALYZING_MARKET_0${i}... OK`}
+                    </motion.div>
+                ))}
+            </div>
 
-    {/* 3. Grid Texture */}
-    <div className="absolute inset-0 opacity-[0.2] pointer-events-none"
-        style={{ backgroundImage: `radial-gradient(${colors.iceberg} 1px, transparent 1px)`, backgroundSize: '40px 40px' }}>
-    </div>
+            {/* 3. Grid Texture */}
+            <div className="absolute inset-0 opacity-[0.2] pointer-events-none"
+                style={{ backgroundImage: `radial-gradient(${colors.iceberg} 1px, transparent 1px)`, backgroundSize: '40px 40px' }}>
+            </div>
             {/* Background Texture (Blueprint Grid) */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
                 style={{ backgroundImage: `radial-gradient(${colors.iceberg} 1px, transparent 1px)`, backgroundSize: '40px 40px' }}>
@@ -385,6 +386,10 @@ const Bplan = () => {
     return (
         <div className="bg-black text-white min-h-screen ">
             <GTAPitchHero />
+            <GTACursor />
+            <MusicPlayer musicUrl="sa.mp3"
+                stationName="San Andreas Radio"
+                accentColor="#47761E" />
             <GTAAbout />
             <GTAGallery />
             <GTATimeline />

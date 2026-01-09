@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import FinalTeamSection from '../components/Varun/speakerTeam';
 import CreativeGallery from '../components/Varun/creatorGallery';
+import MusicPlayer from '../components/Varun/music';
 
 // Data Arrays
 const Keynotes = [
@@ -30,6 +31,10 @@ const marqueeDuration = typeof window !== 'undefined' && window.innerWidth < 768
 const MultiThemeGallery = () => {
   return (
     <div className="min-h-screen bg-black overflow-x-hidden font-sans scroll-smooth">
+
+      <MusicPlayer musicUrl="ss-theme.mp3"
+                stationName="Subway Radio"
+                accentColor="#2BA4D9" />
 
       {/* --- SECTION 1: GAMING UI KEYNOTES --- */}
       <section
