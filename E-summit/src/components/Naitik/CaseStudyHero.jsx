@@ -47,29 +47,30 @@ const CaseStudyHero = () => {
           </motion.div>
 
           {/* THE GLITCH TITLE */}
-          <div className="relative z-10">
-            {/* UPDATED: Typography scaled from text-5xl (mobile) to original text-7xl/9xl (laptop) */}
-            <h1 className="text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-white uppercase italic tracking-tighter leading-[0.85] mix-blend-screen">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-white">CASE</span>
-              <span className="block relative">
-                STUDY
-                {/* Decor Line */}
-                <div className="absolute -bottom-2 left-1/4 lg:left-0 w-1/2 h-1 lg:h-2 bg-purple-600"></div>
-              </span>
-            </h1>
+       <div className="relative z-10 w-fit mx-auto lg:mx-0">
+  {/* UPDATED: Typography scaled from text-5xl (mobile) to original text-7xl/9xl (laptop) */}
+  <h1 className="text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-white uppercase italic tracking-tighter leading-[0.85] mix-blend-screen">
+    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-white">
+      CASE
+    </span>
+    <span className="block relative">
+      STUDY
+      {/* Decor Line */}
+      <div className="absolute -bottom-2 left-1/4 lg:left-0 w-1/2 h-1 lg:h-2 bg-purple-600"></div>
+    </span>
+  </h1>
 
-            {/* Glitch Layer Red */}
-            <h1 className="absolute top-0 left-1 text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-red-600 uppercase italic tracking-tighter leading-[0.85] opacity-50 mix-blend-screen animate-glitch-1 pointer-events-none -z-10">
-              <span className="block">CASE</span>
-              <span className="block">STUDY</span>
-            </h1>
-            {/* Glitch Layer Blue */}
-            <h1 className="absolute top-0 -left-1 text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-cyan-600 uppercase italic tracking-tighter leading-[0.85] opacity-50 mix-blend-screen animate-glitch-2 pointer-events-none -z-10">
-              <span className="block">CASE</span>
-              <span className="block">STUDY</span>
-            </h1>
-          </div>
-
+  {/* Glitch Layer Red */}
+  <h1 className="absolute top-0 left-0.5 lg:left-1 text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-red-600 uppercase italic tracking-tighter leading-[0.85] opacity-50 mix-blend-screen animate-glitch-1 pointer-events-none -z-10">
+    <span className="block">CASE</span>
+    <span className="block">STUDY</span>
+  </h1>
+  {/* Glitch Layer Blue */}
+  <h1 className="absolute top-0 -left-0.5 lg:-left-1 text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-cyan-600 uppercase italic tracking-tighter leading-[0.85] opacity-50 mix-blend-screen animate-glitch-2 pointer-events-none -z-10">
+    <span className="block">CASE</span>
+    <span className="block">STUDY</span>
+  </h1>
+</div>
           {/* Description */}
           <motion.div
              initial={{ opacity: 0, y: 20 }}
