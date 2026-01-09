@@ -365,7 +365,7 @@ const IPLAuctionWarzone = () => {
       </div>
 
       {/* 2. HERO SECTION WITH IMAGE BG */}
-      <header className="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden border-b border-slate-900">
+      <header className="relative min-h-[90vh] flex items-center justify-center px-6 overflow-hidden border-b border-slate-900 mt-5">
 
         {/* Background Layer: iplbg.png */}
         <div
@@ -457,7 +457,7 @@ const IPLAuctionWarzone = () => {
 
                 <div className="relative aspect-square mb-6 border border-slate-800 bg-slate-950 overflow-hidden group">
                   <div
-                    className="absolute inset-0 cursor-target bg-cover grayscale scale-115 bg-center transition-transform duration-700 group-hover:scale-118 hover:grayscale-0"
+                    className="absolute inset-0 cursor-target bg-cover md:grayscale scale-115 bg-center transition-transform duration-700 group-hover:scale-118 hover:grayscale-0"
                     style={{ backgroundImage: "url('/virat.jpg')" }}
                   ></div>
 
