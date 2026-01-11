@@ -70,7 +70,7 @@ const CyberpunkCursor = () => {
 
       {/* --- LAYER 1: The Center Target (Precise) --- */}
       <motion.div
-        className="custom-cursor fixed top-0 left-0 w-2 h-2 bg-cyan-400 pointer-events-none z-[9999] mix-blend-difference"
+        className="custom-cursor fixed top-0 left-0 w-2 h-2 bg-cyan-400 pointer-events-none z-[100000] mix-blend-difference"
         style={{
           x: mouseX,
           y: mouseY,

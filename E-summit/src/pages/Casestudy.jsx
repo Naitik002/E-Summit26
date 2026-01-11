@@ -9,6 +9,7 @@ import CaseStudyTimeline from '../components/Naitik/CaseStudyTimeline';
 import CaseStudyTeam from '../components/Naitik/CaseStudyTeam';
 import CaseStudyRegistration from '../components/Naitik/CaseStudyForm';
 import CyberpunkCursor from '../components/Naitik/CaseStudyCursor';
+import MusicPlayer from '../components/Varun/music';
 
 function Casestudy() {
 
@@ -20,6 +21,12 @@ function Casestudy() {
   return (
 
 <div>
+
+ <MusicPlayer 
+    musicUrl="/cyberpunk.mp3" 
+    stationName="VIRTUAL_STRIKE_COMMS" 
+    accentColor="#8D35CC" // Tactical HUD Green
+/>
 
 <CyberpunkCursor/>  
     <div className="bg-black min-h-screen text-white font-sans selection:bg-cyan-500 selection:text-black">

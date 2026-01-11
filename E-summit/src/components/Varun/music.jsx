@@ -72,7 +72,9 @@ const MusicPlayer = ({ musicUrl, stationName, accentColor }) => {
                     )}
                     
                     {/* GTA Style Label */}
-                    <div className="absolute left-full ml-4 px-3 py-1 bg-[#FED985] text-black text-[10px] font-black uppercase italic tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap -skew-x-12">
+                    <div className="absolute left-full ml-4 px-3 py-1  text-black text-[10px] font-black uppercase italic tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap -skew-x-12"
+                        style={{ backgroundColor: hasError ? "#ef4444" : accentColor }}>
+                        
                         {hasError ? "Signal Lost" : (isPlaying ? `Station: ${stationName}` : "Radio Off")}
                     </div>
                 </button>
