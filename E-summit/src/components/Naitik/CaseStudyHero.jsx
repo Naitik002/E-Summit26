@@ -47,47 +47,47 @@ const CaseStudyHero = () => {
           </motion.div>
 
           {/* THE GLITCH TITLE */}
-       <div className="relative z-10 w-fit mx-auto lg:mx-0">
-  {/* UPDATED: Typography scaled from text-5xl (mobile) to original text-7xl/9xl (laptop) */}
-  <h1 className="text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-white uppercase italic tracking-tighter leading-[0.85] mix-blend-screen">
-    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-white">
-      CASE
-    </span>
-    <span className="block relative">
-      STUDY
-      {/* Decor Line */}
-      <div className="absolute -bottom-2 left-1/4 lg:left-0 w-1/2 h-1 lg:h-2 bg-purple-600"></div>
-    </span>
-  </h1>
+          <div className="relative z-10 w-fit mx-auto lg:mx-0">
+            {/* UPDATED: Typography scaled from text-5xl (mobile) to original text-7xl/9xl (laptop) */}
+            <h1 className="text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-white uppercase italic tracking-tighter leading-[0.85] mix-blend-screen">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-fuchsia-500 to-white">
+                CASE
+              </span>
+              <span className="block relative">
+                STUDY
+                {/* Decor Line */}
+                <div className="absolute -bottom-2 left-1/4 lg:left-0 w-1/2 h-1 lg:h-2 bg-purple-600"></div>
+              </span>
+            </h1>
 
-  {/* Glitch Layer Red */}
-  <h1 className="absolute top-0 left-0.5 lg:left-1 text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-red-600 uppercase italic tracking-tighter leading-[0.85] opacity-50 mix-blend-screen animate-glitch-1 pointer-events-none -z-10">
-    <span className="block">CASE</span>
-    <span className="block">STUDY</span>
-  </h1>
-  {/* Glitch Layer Blue */}
-  <h1 className="absolute top-0 -left-0.5 lg:-left-1 text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-cyan-600 uppercase italic tracking-tighter leading-[0.85] opacity-50 mix-blend-screen animate-glitch-2 pointer-events-none -z-10">
-    <span className="block">CASE</span>
-    <span className="block">STUDY</span>
-  </h1>
-</div>
+            {/* Glitch Layer Red */}
+            <h1 className="absolute top-0 left-0.5 lg:left-1 text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-red-600 uppercase italic tracking-tighter leading-[0.85] opacity-50 mix-blend-screen animate-glitch-1 pointer-events-none -z-10">
+              <span className="block">CASE</span>
+              <span className="block">STUDY</span>
+            </h1>
+            {/* Glitch Layer Blue */}
+            <h1 className="absolute top-0 -left-0.5 lg:-left-1 text-5xl sm:text-7xl lg:text-7xl xl:text-9xl font-black text-cyan-600 uppercase italic tracking-tighter leading-[0.85] opacity-50 mix-blend-screen animate-glitch-2 pointer-events-none -z-10">
+              <span className="block">CASE</span>
+              <span className="block">STUDY</span>
+            </h1>
+          </div>
           {/* Description */}
           <motion.div
-             initial={{ opacity: 0, y: 20 }}
-             animate={{ opacity: 1, y: 0 }}
-             transition={{ delay: 0.4 }}
-             // UPDATED: Border hidden on mobile to save space, visible on laptop
-             className="relative lg:pl-6 lg:border-l-2 border-purple-500"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            // UPDATED: Border hidden on mobile to save space, visible on laptop
+            className="relative lg:pl-6 lg:border-l-2 border-purple-500"
           >
-             {/* UPDATED: Text size adjusted for mobile */}
-             <p className="text-gray-400 text-lg lg:text-xl xl:text-2xl font-mono font-light max-w-lg leading-relaxed mx-auto lg:mx-0">
-               Decode the <strong className="text-white font-black">Corporate Matrix</strong>.
-               Analyze the data streams.
-               <span className="text-cyan-400 font-bold bg-cyan-950/30 px-1 ml-1">Hack the solution.</span>
-             </p>
-             <p className="text-xs text-gray-600 mt-4 font-mono uppercase tracking-widest">
+            {/* UPDATED: Text size adjusted for mobile */}
+            <p className="text-gray-400 text-lg lg:text-xl xl:text-2xl font-mono font-light max-w-lg leading-relaxed mx-auto lg:mx-0">
+              Decode the <strong className="text-white font-black">Corporate Matrix</strong>.
+              Analyze the data streams.
+              <span className="text-cyan-400 font-bold bg-cyan-950/30 px-1 ml-1">Hack the solution.</span>
+            </p>
+            <p className="text-xs text-gray-600 mt-4 font-mono uppercase tracking-widest">
                // The future belongs to the disruptors.
-             </p>
+            </p>
           </motion.div>
 
           {/* CTA Buttons */}
@@ -101,7 +101,7 @@ const CaseStudyHero = () => {
             {/* UPDATED: Reduced padding for mobile */}
             <button className="relative px-6 py-3 lg:px-8 lg:py-4 bg-purple-600 text-white font-bold uppercase tracking-widest overflow-hidden group hover:bg-purple-500 transition-all clip-path-polygon shadow-[0_0_30px_rgba(147,51,234,0.3)] hover:shadow-[0_0_50px_rgba(147,51,234,0.6)] text-sm lg:text-base">
               <span className="relative z-10 flex items-center justify-center gap-3">
-                 Initiate Protocol <ChevronRight size={20} />
+                Initiate Protocol <ChevronRight size={20} />
               </span>
               <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 skew-x-12"></div>
             </button>
@@ -119,61 +119,61 @@ const CaseStudyHero = () => {
         {/* --- RIGHT COLUMN: HOLOGRAPHIC CORTEX --- */}
         <div className="lg:col-span-5 relative flex items-center justify-center">
 
-           {/* The Core Container */}
-           {/* UPDATED: Added responsive width/height. Mobile: 280px, Desktop: 500px */}
-           <motion.div
-             initial={{ opacity: 0, scale: 0.8 }}
-             animate={{ opacity: 1, scale: 1 }}
-             transition={{ duration: 1, ease: "backOut" }}
-             className="relative w-[280px] h-[350px] sm:w-[400px] sm:h-[500px] lg:w-[400px] lg:h-[500px] xl:w-[500px] xl:h-[600px]"
-           >
-             {/* Rotating Rings */}
-             <div className="absolute inset-0 border border-purple-500/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
-             <div className="absolute inset-6 lg:inset-10 border border-dashed border-cyan-500/20 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
-             <div className="absolute inset-12 lg:inset-20 border-2 border-dotted border-pink-500/20 rounded-full animate-[spin_30s_linear_infinite]"></div>
+          {/* The Core Container */}
+          {/* UPDATED: Added responsive width/height. Mobile: 280px, Desktop: 500px */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, ease: "backOut" }}
+            className="relative w-[280px] h-[350px] sm:w-[400px] sm:h-[500px] lg:w-[400px] lg:h-[500px] xl:w-[500px] xl:h-[600px]"
+          >
+            {/* Rotating Rings */}
+            <div className="absolute inset-0 border border-purple-500/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
+            <div className="absolute inset-6 lg:inset-10 border border-dashed border-cyan-500/20 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+            <div className="absolute inset-12 lg:inset-20 border-2 border-dotted border-pink-500/20 rounded-full animate-[spin_30s_linear_infinite]"></div>
 
-             {/* Holographic Image Container */}
-             <div className="absolute inset-4 lg:inset-12 bg-black overflow-hidden rounded-full border border-purple-500/50 shadow-[0_0_50px_rgba(168,85,247,0.2)] group">
-                 {/* IMAGE SOURCE placeholder */}
-                 <img
-                   src="/casestudy.jpg"
-                   alt="Cyberpunk Data Core"
-                   className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 scale-110 group-hover:scale-100"
-                 />
+            {/* Holographic Image Container */}
+            <div className="absolute inset-4 lg:inset-12 bg-black overflow-hidden rounded-full border border-purple-500/50 shadow-[0_0_50px_rgba(168,85,247,0.2)] group">
+              {/* IMAGE SOURCE placeholder */}
+              <img
+                src="/casestudy.jpg"
+                alt="Cyberpunk Data Core"
+                className="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 scale-110 group-hover:scale-100"
+              />
 
-                 {/* Image Overlays */}
-                 <div className="absolute inset-0 bg-purple-900/40 mix-blend-color"></div>
-                 <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] pointer-events-none"></div>
+              {/* Image Overlays */}
+              <div className="absolute inset-0 bg-purple-900/40 mix-blend-color"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] pointer-events-none"></div>
 
-                 {/* Scanning Bar */}
-                 <div className="absolute top-0 left-0 w-full h-2 bg-cyan-400/50 shadow-[0_0_20px_#22d3ee] animate-[scan_3s_linear_infinite]"></div>
-             </div>
+              {/* Scanning Bar */}
+              <div className="absolute top-0 left-0 w-full h-2 bg-cyan-400/50 shadow-[0_0_20px_#22d3ee] animate-[scan_3s_linear_infinite]"></div>
+            </div>
 
-             {/* Floating Data Widgets around the Core */}
-             {/* UPDATED: Adjusted positioning to prevent overflow on mobile. Used 'right-0' for mobile and '-right-4' for laptop */}
-             <motion.div
-               animate={{ y: [0, -10, 0] }}
-               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-               className="absolute -right-4 lg:-right-4 top-[15%] lg:top-1/4 bg-black/80 backdrop-blur border border-cyan-500/30 p-3 lg:p-4 rounded-sm shadow-xl z-20"
-             >
-                 <Globe size={20} className="text-cyan-400 mb-2 animate-spin-slow lg:w-6 lg:h-6" />
-                 <div className="text-[8px] lg:text-[10px] font-mono text-gray-400 uppercase">Global_Uplink</div>
-                 <div className="text-xs lg:text-sm font-bold text-white">Online</div>
-             </motion.div>
+            {/* Floating Data Widgets around the Core */}
+            {/* UPDATED: Adjusted positioning to prevent overflow on mobile. Used 'right-0' for mobile and '-right-4' for laptop */}
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -right-4 lg:-right-4 top-[15%] lg:top-1/4 bg-black/80 backdrop-blur border border-cyan-500/30 p-3 lg:p-4 rounded-sm shadow-xl z-20"
+            >
+              <Globe size={20} className="text-cyan-400 mb-2 animate-spin-slow lg:w-6 lg:h-6" />
+              <div className="text-[8px] lg:text-[10px] font-mono text-gray-400 uppercase">Global_Uplink</div>
+              <div className="text-xs lg:text-sm font-bold text-white">Online</div>
+            </motion.div>
 
-             <motion.div
-               animate={{ y: [0, 10, 0] }}
-               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-               className="absolute -left-4 lg:-left-8 bottom-[15%] lg:bottom-1/4 bg-black/80 backdrop-blur border border-purple-500/30 p-3 lg:p-4 rounded-sm shadow-xl flex items-center gap-3 z-20"
-             >
-                 <Cpu size={20} className="text-purple-400 lg:w-6 lg:h-6" />
-                 <div>
-                    <div className="text-[8px] lg:text-[10px] font-mono text-gray-400 uppercase">Processing</div>
-                    <div className="text-xs lg:text-sm font-bold text-white">88.4 TB/s</div>
-                 </div>
-             </motion.div>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute -left-4 lg:-left-8 bottom-[15%] lg:bottom-1/4 bg-black/80 backdrop-blur border border-purple-500/30 p-3 lg:p-4 rounded-sm shadow-xl flex items-center gap-3 z-20"
+            >
+              <Cpu size={20} className="text-purple-400 lg:w-6 lg:h-6" />
+              <div>
+                <div className="text-[8px] lg:text-[10px] font-mono text-gray-400 uppercase">Processing</div>
+                <div className="text-xs lg:text-sm font-bold text-white">88.4 TB/s</div>
+              </div>
+            </motion.div>
 
-           </motion.div>
+          </motion.div>
         </div>
 
       </div>

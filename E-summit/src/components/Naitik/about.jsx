@@ -21,10 +21,10 @@ const itemVariants = {
 
 // --- Mock Data ---
 const stats = [
-  { label: "Footfall", value: "15K+" },
-  { label: "Startups", value: "100+" },
-  { label: "Events", value: "25+" },
-  { label: "Speakers", value: "50+" },
+  { label: "Footfall", value: "30K+" },
+  { label: "Startups", value: "50+" },
+  { label: "Events", value: "10+" },
+  { label: "Investors", value: "100+" },
 ];
 
 const AboutSection = () => {
