@@ -50,7 +50,7 @@ const CaseStudyTeam = () => {
                         <div className="h-1 w-full bg-gradient-to-r from-zinc-800 to-transparent group-hover:from-purple-500 transition-all duration-500"></div>
 
                         {/* Image Area (Square/Rectangular for tech look) */}
-                        <div className="relative h-[300px] overflow-hidden border-b border-zinc-800">
+                        <div className="relative h-[300px] w-[300px] overflow-hidden border-b border-zinc-800">
                            <div className="absolute inset-0 bg-purple-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity mix-blend-overlay"></div>
 
                            {/* Scanning Line Effect */}
