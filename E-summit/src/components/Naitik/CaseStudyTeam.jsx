@@ -5,7 +5,7 @@ import { Linkedin, Mail, Instagram, Shield, Cpu } from 'lucide-react';
 const CaseStudyTeam = () => {
    // REPLACE THESE WITH REAL ORGANIZERS
    const team = [
-      { name: "Sanskar Srivastava", role: "Web Development Lead", img: "./teamCase/Sanskar Shrivastava (2).png", linkedin: "https://www.linkedin.com/in/sanskar-shrivastava-813322206?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      { name: "Sanskar Srivastava", role: "Web Development Lead", img: "./teamCase/Sanskar Shrivastava.jpeg", linkedin: "https://www.linkedin.com/in/sanskar-shrivastava-813322206?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     insta: "https://www.instagram.com/sanskar.shrivastava_95?igsh=a2VpbWEyemwweXRv",
     mail: "mailto:snskrshrvstv@gmail.com"},
       { name: "Hiya Sanghvi", role: "Events Lead", img: "./teamCase/Hiya Sanghvi.webp",linkedin: "http://www.linkedin.com/in/hiya-sanghvi10",
