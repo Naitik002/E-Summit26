@@ -234,19 +234,21 @@ const MultiThemeGallery = () => {
           {/* INFINITE KEYNOTE TRACK */}
           <div 
             className="relative flex overflow-hidden py-6 md:py-10 -mx-4 md:mx-0"
-            onMouseEnter={() => keynoteTween.current?.pause()}
-            onMouseLeave={() => keynoteTween.current?.play()}
+            
           >
             <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-cyan-500/40 z-20 pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-cyan-500/40 z-20 pointer-events-none" />
 
-            <div ref={keynoteTrackRef} className="flex gap-4 md:gap-8 whitespace-nowrap w-max">
+            <div ref={keynoteTrackRef} className="flex gap-4 md:gap-8 whitespace-nowrap w-max"
+            onMouseEnter={() => keynoteTween.current?.pause()}
+            onMouseLeave={() => keynoteTween.current?.play()}
+            >
               {[...Keynotes, ...Keynotes].map((s, idx) => (
                 <div key={idx} className="w-[220px] md:w-[320px] group flex-shrink-0 cursor-crosshair">
                   <div className="bg-slate-900 border border-slate-800 group-hover:border-cyan-500/50 p-1 clip-path-gaming transition-all duration-500 shadow-xl relative overflow-hidden">
                     <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%)] bg-[size:100%_4px] pointer-events-none z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div className="relative overflow-hidden aspect-[1/1]">
-                      <img src={s.img} alt={s.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+                      <img src={s.img} alt={s.name} className="w-full h-full object-cover  group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
                       <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4">
                         <span className="bg-cyan-600 text-[7px] md:text-[10px] px-1.5 py-0.5 md:px-2 md:py-1 font-bold text-black uppercase shadow-[1px_1px_0px_#000]">
