@@ -156,36 +156,20 @@ const RecruitmentForm = () => {
 const OrganizingTeamSection = () => {
   const highCommand = [
     {
-      imgLink: "./teamipl/Krish Jaiswal.jpg",
-      personName: "Krish Jaiswal",
-      personVertical: "Event Manager",
-      linkedin: "https://www.linkedin.com/in/krish-jaiswal-b6770123b",
-      insta: "https://www.instagram.com/philosophical_krish",
-      mail: "kjkrishh0982@gmail.com"
+      imgLink: "./teamipl/gaurvint.webp",
+      personName: "Gaurvint Verma",
+      personVertical: "Events Secretary",
+      linkedin: "https://www.linkedin.com/in/gaurvint-verma-554329302/",
+    insta: "http://instagram.com/gaurvint",
+    mail: "mailto:gaurvint@gmail.com"
     },
     {
-      imgLink: "./teamipl/Talha H.jpg",
-      personName: "Md. Talha Hussain",
-      personVertical: "Event Manager",
-      linkedin: "https://www.linkedin.com/in/talha-hussain-9aa84031a",
-      insta: "https://www.instagram.com/h_talha147",
-      mail: "talhahussain946@gmail.com"
-    },
-    {
-      imgLink: "./teamipl/Gyana Singh.jpg",
-      personName: "Gyana Singh",
-      personVertical: "Event Manager",
-      linkedin: "https://www.linkedin.com/in/gyana-singh-aa9676325",
-      insta: "https://www.instagram.com/gyana0905",
-      mail: "gyanasingh940@gmail.com"
-    },
-    {
-      imgLink: "./teamipl/Nikunj Mandhanya.jpg",
-      personName: "Nikunj Mandhanya",
-      personVertical: "Event Manager",
-      linkedin: "https://www.linkedin.com/in/nikunj-mandhanya-564666326",
-      insta: "https://www.instagram.com/nikunj_mandhanya_05",
-      mail: "nikunjmandhanya5@gmail.com"
+      imgLink: "./teamipl/Krish Shukla.webp",
+      personName: "Krish Shukla",
+      personVertical: "Creatives Lead",
+      linkedin: "https://www.linkedin.com/in/krish-shukla-037a9b307/",
+    insta: "https://www.instagram.com/shukrishh/",
+    mail: "mailto:shuklakrish215@gmail.com"
     },
   ];
 
@@ -217,7 +201,7 @@ const OrganizingTeamSection = () => {
         </div>
 
         {/* Responsive Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="flex max-w-3xl mx-auto items-center justify-center gap-4">
           {highCommand.map((member, i) => (
             <motion.div
               key={i}

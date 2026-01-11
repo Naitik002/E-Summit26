@@ -12,57 +12,27 @@ const BplanTeam = () => {
 
   const crewMembers = [
     {
-      name: "Athak Ramgir",
-      role: "The Fixer", // Event Manager
-      specialty: "Mission Coordination",
-      icon: <ShieldCheck size={20} />,
+      name: "Harsh Malik",
+      specialty: "Public Relations Lead",
       color: "#61B5CB", // iceberg
-      img: "./teambplan/Athak Ramgir.jpg",
+      img: "./teambplan/Harsh malik.webp",
       socials: {
-        linkedin: "https://www.linkedin.com/in/athak-ramgir-717a94323/",
-        insta: "https://www.instagram.com/athak_ramgir/",
-        mail: "mailto:athakramgir39@gmail.com"
+        linkedin: "https://www.linkedin.com/in/harsh13malik",
+    insta: "https://www.instagram.com/harsh_._malik?igsh=MXI4NXhqdjcxYmlvaA==",
+    mail: "mailto:harshmalik96433@gmail.com"
       }
     },
     {
-      name: "Harsh Salunkhe",
-      role: "The Architect", // Web Developer
-      specialty: "System Infiltration",
-      icon: <Laptop size={20} />,
+      name: "Gurleen Kaur",
+      specialty: "Public Relations Secretary",
       color: "#FED985", // jasmine
-      img: "./teambplan/Harsh Salunkhe.jpg",
+      img: "./teambplan/Gurleen Kaur Bhatia.webp",
       socials: {
-        linkedin: "https://www.linkedin.com/in/harsh-salunkhe-136638337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        insta: "https://www.instagram.com/harsh_salunkhe05?igsh=a3JmNDNzY3FqcWNm",
-        mail: "mailto:harshsalunkhe120526@gmail.com"
+        linkedin: "https://www.linkedin.com/in/gurleen-kaur-bhatia-8613a2290/",
+    insta: "https://instagram.com/gurleenkaurbhatia_/",
+    mail: "mailto:gurleenbhatia211359@gmail.com"
       }
     },
-    {
-      name: "Samridhi Bhargava",
-      role: "The Intel", // Content Writer
-      specialty: "Manifesto & Comms",
-      icon: <Zap size={20} />,
-      color: "#D5A0C4", // orchid
-      img: "./teambplan/Samridhi.jpg",
-      socials: {
-        linkedin: "https://www.linkedin.com/in/samridhi-bhargava-aab847358?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        insta: "https://www.instagram.com/sam.ridhi_bhargava?igsh=dm8ya2g5bjkyZGp5",
-        mail: "mailto:samridhibhargava2432005@gmail.com"
-      }
-    },
-    {
-      name: "Yashika Agrawal",
-      role: "The Enforcer", // Event Manager
-      specialty: "Field Operations & Logistics",
-      icon: <Landmark size={20} />,
-      color: "#F09E71", // darkSalmon
-      img: "./teambplan/Yashika Agrawal.jpg",
-      socials: {
-        linkedin: "https://www.linkedin.com/in/yashika-agrawal-965bb6313?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        insta: "https://www.instagram.com/_yashikaagrawal?igsh=MW04ZzZ3NmNhY3pnZw==",
-        mail: "mailto:27yashikaagrawal@gmail.com"
-      }
-    }
 ];
 
   return (
@@ -95,7 +65,7 @@ const BplanTeam = () => {
         </div>
 
         {/* Crew Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4">
+        <div className="mx-auto flex max-w-3xl justify-center gap-8 md:gap-4">
           {crewMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -108,7 +78,7 @@ const BplanTeam = () => {
               {/* Character Card */}
               <div className="relative overflow-hidden bg-black p-1 transition-all duration-300 group-hover:-translate-y-4">
                 {/* The Character Image */}
-                <div className="relative aspect-[3/4] overflow-hidden transition-all duration-500 border-b-8" style={{ borderBottomColor: member.color }}>
+                <div className="relative h-[300px] overflow-hidden transition-all duration-500 border-b-8" style={{ borderBottomColor: member.color }}>
                   <img 
                     src={member.img} 
                     alt={member.name} 
