@@ -15,12 +15,12 @@ const GTAGallery = () => {
     };
 
     const pastEvents = [
-        { id: 1, loc: "Sector A", color: colors.iceberg, img: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1200" },
-        { id: 2, loc: "The Hub", color: colors.darkSalmon, img: "https://images.unsplash.com/photo-1540575861501-7cf05a4b125a?q=80&w=1200" },
-        { id: 3, loc: "Main Stage", color: colors.sapGreen, img: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200" },
-        { id: 4, loc: "Pitch Room", color: colors.jasmine, img: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1200" },
-        { id: 5, loc: "VIP Lounge", color: colors.orchid, img: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200" },
-        { id: 6, loc: "Tech Expo", color: colors.darkSeaGreen, img: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200" },
+        { id: 1, loc: "Sector A", color: colors.iceberg, img: "./bplanImgs/img1.jpg" },
+        { id: 2, loc: "The Hub", color: colors.darkSalmon, img: "./bplanImgs/img2.jpg" },
+        { id: 3, loc: "Main Stage", color: colors.sapGreen, img: "./bplanImgs/img3.jpg" },
+        { id: 4, loc: "Pitch Room", color: colors.jasmine, img: "./bplanImgs/img4.jpg" },
+        { id: 5, loc: "VIP Lounge", color: colors.orchid, img: "./bplanImgs/img5.jpg" },
+        { id: 6, loc: "Tech Expo", color: colors.darkSeaGreen, img: "./bplanImgs/img6.jpg" },
     ];
 
     return (
@@ -77,8 +77,8 @@ const GTAGallery = () => {
                                 </div>
                             </div>
                             <div className="mt-4 flex items-center gap-2 text-[10px] text-gray-500 font-bold uppercase tracking-widest">
-                                <MapPin size={10} />
-                                <span>{event.loc} // ARCHIVE_0{event.id}</span>
+                                
+                                <span> // ARCHIVE_0{event.id}</span>
                             </div>
                         </motion.div>
                     ))}
@@ -106,7 +106,7 @@ const GTAGallery = () => {
                             <div className="flex justify-between items-center bg-black p-4 border-b border-white/10">
                                 <div className="flex items-center gap-3">
                                     <div className="w-3 h-3 bg-red-600 animate-pulse rounded-full"></div>
-                                    <span className="text-white font-black italic uppercase tracking-widest text-xs">Mission_Intel_Report_{selectedImg.id}</span>
+                                    <span className="text-white font-black italic uppercase tracking-widest text-xs">ARCHIVE_{selectedImg.id}</span>
                                 </div>
                                 <button onClick={() => setSelectedImg(null)} className="text-white/50 hover:text-white transition-colors">
                                     <X size={24} />
@@ -118,7 +118,7 @@ const GTAGallery = () => {
                                 <div className="relative">
                                     <img src={selectedImg.img} className="w-full h-full object-cover border border-white/10" alt="Full Intel" />
                                     <div className="absolute top-4 left-4 bg-black/80 px-4 py-2 text-[10px] font-mono text-[#FED985] uppercase tracking-[0.2em] border-l-4 border-[#FED985]">
-                                        Location: {selectedImg.loc}
+                                        
                                     </div>
                                 </div>
 
