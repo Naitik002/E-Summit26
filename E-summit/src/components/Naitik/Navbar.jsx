@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: "HOME", path: "/" },
-    { name: "STARTUP EXPO", path: "https://esummit.ecellnitb.in/#" },
+    { name: "STARTUP EXPO", path: "https://startupexpo.ecellnitb.in/" },
     {name: "B-PLAN", path: "/bplan" },
     { name: "CASE STUDY", path: "/casestudy" },
     { name: "IPL AUCTION", path: "/iplauction" },

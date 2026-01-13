@@ -41,28 +41,28 @@ const Contact = () => {
     {
       name: "Alex Viper",
       role: "Event Lead",
-      img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=800",
+      img: "/assets/teamContact/alex viper.jpg",
       color: "from-cyan-500 to-blue-500",
       socials: { linkedin: "#", insta: "#", mail: "mailto:alex@ecell.in", phone: "tel:+919876543210" }
     },
     {
       name: "Sarah Glitch",
       role: "Tech Head",
-      img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800",
+      img: "/assets/teamContact/sarah glitch.jpg",
       color: "from-purple-500 to-pink-500",
       socials: { linkedin: "#", insta: "#", mail: "mailto:sarah@ecell.in", phone: "tel:+919876543210" }
     },
     {
       name: "Mike Tank",
       role: "Logistics",
-      img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=800",
+      img: "/assets/teamContact/mike tank.jpg",
       color: "from-yellow-500 to-orange-500",
       socials: { linkedin: "#", insta: "#", mail: "mailto:mike@ecell.in", phone: "tel:+919876543210" }
     },
     {
       name: "Dav Snipe",
       role: "Outreach",
-      img: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&q=80&w=800",
+      img: "/assets/teamContact/dav snipe.jpg",
       color: "from-green-500 to-emerald-500",
       socials: { linkedin: "#", insta: "#", mail: "mailto:dav@ecell.in", phone: "tel:+919876543210" }
     },

@@ -62,10 +62,10 @@ const AboutSection = () => {
             {/* Main Text */}
             <motion.div variants={itemVariants} className="space-y-4 text-gray-300 font-sans leading-relaxed text-lg">
               <p>
-                <strong className="text-white">Entrepreneurship Cell NIT Bhopal</strong> is a voluntary organization aimed at fostering a vibrant startup culture and nurturing a comprehensive entrepreneurial ecosystem among the youth.
+                <strong className="text-white">Entrepreneurship Cell MANIT Bhopal is a voluntary, student-run organisation focused on creating a thriving entrepreneurial environment and an innovative startup culture among the youth community.</strong>
               </p>
               <p>
-                Every year, we organize <span className="text-brand-accent">Central India's Largest Entrepreneurial Fest</span>, bringing together a diverse community of budding entrepreneurs, innovators, and creators. E-Summit is not just an event; it's a catalyst for creativity, collaboration, and the growth of the next generation of titans.
+                With a dynamic lineup of events including <span className="text-brand-accent">Startup Expo, IPL Auction Simulation, Business Plan Competition, Keynote sessions, Stock Trading Simulation, and many more</span> under Central India’s largest entrepreneurial fest E-Summit and our official podcast series Pe-Charcha, we aim to feature industry leaders, venture capitalists, alumni founders and investors, to nurture budding innovators and young visionaries. Backed with a strong network of alumni and sponsors, every year E-Cell continues to ignite ambition and inspire bold ideas, empowering the youth to make things happen.
               </p>
             </motion.div>
 
@@ -141,7 +141,7 @@ const AboutSection = () => {
                  {/* Sponsor Logo Placeholder */}
                  <div className="w-full sm:w-1/3 bg-white p-4 rounded flex items-center justify-center h-16">
                     {/* Use an actual img tag here */}
-                    <span className="text-black font-bold font-heading text-xl">SAIL</span>
+                    <img src="assets/currentSponsor/Sail_logo.jpg" alt="Steel Authority of India Limited Logo" className="max-h-full object-contain" />
                  </div>
 
                  <div className="flex-1 text-center sm:text-left">
