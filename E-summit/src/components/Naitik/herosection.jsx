@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import { Gamepad2, Headphones, Zap} from 'lucide-react';
 // Animation Variants
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -165,88 +165,109 @@ const HeroSection = () => {
         </motion.div>
 
         {/* --- Right Column: Visuals --- */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="relative h-[400px] md:h-[600px] flex items-center justify-center"
-        >
-           {/* Abstract Floating Tech Elements */}
-           <motion.div
-             variants={floatingAnimation}
-             animate="animate"
-             className="relative w-full h-full flex items-center justify-center"
-           >
-             {/* Back Layer: Grid Ring */}
-             <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] border border-brand-secondary/20 rounded-full animate-pulse" />
 
-             {/* Middle Layer: Glowing Core */}
-             <div className="absolute w-[200px] h-[200px] bg-gradient-to-tr from-brand-secondary to-brand-primary rounded-full blur-[60px] opacity-60" />
+ <motion.div
+  initial={{ opacity: 0, x: 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.5 }}
+  className="relative h-[400px] md:h-[600px] flex items-center justify-center"
+>
+    {/* Abstract Floating Tech Elements */}
+    <motion.div
+      variants={floatingAnimation}
+      animate="animate"
+      className="relative w-full h-full flex items-center justify-center"
+    >
+      {/* Back Layer: Grid Ring */}
+      <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] border border-brand-secondary/20 rounded-full animate-pulse" />
 
-             {/* Front Layer: The "Card" */}
-             <div className="relative z-10 glass-card p-6 md:p-8 rounded-2xl border-t border-brand-accent/50 w-[280px] md:w-[350px] shadow-2xl backdrop-blur-xl">
-                {/* Decoration Lines */}
-                <div className="flex justify-between mb-4 opacity-50">
-                   <div className="h-1 w-10 bg-brand-accent rounded-full" />
-                   <div className="h-1 w-2 bg-white rounded-full" />
-                </div>
+      {/* Middle Layer: Glowing Core */}
+      <div className="absolute w-[200px] h-[200px] bg-gradient-to-tr from-brand-secondary to-brand-primary rounded-full blur-[60px] opacity-60" />
 
-                {/* --- COUNTDOWN TIMER CONTAINER --- */}
-                <div className="w-full h-40 bg-gaming-900/80 rounded-lg border border-white/10 mb-4 flex flex-col items-center justify-center relative overflow-hidden group">
-                   <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 to-transparent" />
+      {/* Front Layer: The "Card" */}
+      <div className="relative z-10 glass-card p-6 md:p-8 rounded-2xl border-t border-brand-accent/50 w-[280px] md:w-[350px] shadow-2xl backdrop-blur-xl">
+        {/* Decoration Lines */}
+        <div className="flex justify-between mb-4 opacity-50">
+           <div className="h-1 w-10 bg-brand-accent rounded-full" />
+           <div className="h-1 w-2 bg-white rounded-full" />
+        </div>
 
-                   <span className="text-[10px] text-gray-400 font-mono tracking-[0.2em] mb-2 z-10 uppercase">
-                     T-Minus to Launch
-                   </span>
+        {/* --- COUNTDOWN TIMER CONTAINER --- */}
+        <div className="w-full h-40 bg-gaming-900/80 rounded-lg border border-white/10 mb-4 flex flex-col items-center justify-center relative overflow-hidden group">
+           <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 to-transparent" />
 
-                   <div className="flex gap-3 z-10">
-                      <div className="text-center">
-                        <span className="block text-2xl md:text-3xl font-mono font-bold text-white">{timeLeft.days}</span>
-                        <span className="text-[8px] text-brand-accent font-bold">DAYS</span>
-                      </div>
-                      <span className="text-2xl md:text-3xl font-mono text-gray-600">:</span>
-                      <div className="text-center">
-                        <span className="block text-2xl md:text-3xl font-mono font-bold text-white">{timeLeft.hours}</span>
-                        <span className="text-[8px] text-brand-accent font-bold">HRS</span>
-                      </div>
-                      <span className="text-2xl md:text-3xl font-mono text-gray-600">:</span>
-                      <div className="text-center">
-                        <span className="block text-2xl md:text-3xl font-mono font-bold text-white">{timeLeft.minutes}</span>
-                        <span className="text-[8px] text-brand-accent font-bold">MIN</span>
-                      </div>
-                      <span className="text-2xl md:text-3xl font-mono text-gray-600">:</span>
-                      <div className="text-center">
-                        <span className="block text-2xl md:text-3xl font-mono font-bold text-brand-primary animate-pulse">{timeLeft.seconds}</span>
-                        <span className="text-[8px] text-brand-primary font-bold">SEC</span>
-                      </div>
-                   </div>
-                </div>
+           <span className="text-[10px] text-gray-400 font-mono tracking-[0.2em] mb-2 z-10 uppercase">
+             T-Minus to Launch
+           </span>
 
-                <h3 className="text-2xl font-heading font-bold text-white mb-1">LEVEL UP</h3>
-                <p className="text-sm text-gray-400 font-sans mb-4">
-                  Unlock networking opportunities, funding, and mentorship.
-                </p>
+           <div className="flex gap-3 z-10">
+              <div className="text-center">
+                <span className="block text-2xl md:text-3xl font-mono font-bold text-white">{timeLeft.days}</span>
+                <span className="text-[8px] text-brand-accent font-bold">DAYS</span>
+              </div>
+              <span className="text-2xl md:text-3xl font-mono text-gray-600">:</span>
+              <div className="text-center">
+                <span className="block text-2xl md:text-3xl font-mono font-bold text-white">{timeLeft.hours}</span>
+                <span className="text-[8px] text-brand-accent font-bold">HRS</span>
+              </div>
+              <span className="text-2xl md:text-3xl font-mono text-gray-600">:</span>
+              <div className="text-center">
+                <span className="block text-2xl md:text-3xl font-mono font-bold text-white">{timeLeft.minutes}</span>
+                <span className="text-[8px] text-brand-accent font-bold">MIN</span>
+              </div>
+              <span className="text-2xl md:text-3xl font-mono text-gray-600">:</span>
+              <div className="text-center">
+                <span className="block text-2xl md:text-3xl font-mono font-bold text-brand-primary animate-pulse">{timeLeft.seconds}</span>
+                <span className="text-[8px] text-brand-primary font-bold">SEC</span>
+              </div>
+           </div>
+        </div>
 
-                <div className="flex justify-between items-center text-xs text-brand-accent font-mono">
-                  <span>STATUS: ONLINE</span>
-                  <div className="flex items-center gap-1">
-                     <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                     <span>LIVE</span>
-                  </div>
-                </div>
-             </div>
+        <h3 className="text-2xl font-heading font-bold text-white mb-1">LEVEL UP</h3>
+        <p className="text-sm text-gray-400 font-sans mb-4">
+          Unlock networking opportunities, funding, and mentorship.
+        </p>
 
-             {/* Orbiting Elements */}
-             <motion.div
-               animate={{ rotate: 360 }}
-               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-               className="absolute w-[340px] h-[340px] md:w-[450px] md:h-[450px] border border-dashed border-white/10 rounded-full"
-             >
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-brand-primary rounded-full shadow-[0_0_10px_#d946ef]" />
-             </motion.div>
+        <div className="flex justify-between items-center text-xs text-brand-accent font-mono">
+          <span>STATUS: ONLINE</span>
+          <div className="flex items-center gap-1">
+             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+             <span>LIVE</span>
+          </div>
+        </div>
+      </div>
 
-           </motion.div>
-        </motion.div>
+      {/* --- ORBIT 1: OUTER RING (Clockwise) --- */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        className="absolute w-[340px] h-[340px] md:w-[450px] md:h-[450px] border border-dashed border-white/10 rounded-full"
+      >
+         {/* Icon 1: Gamepad (Top) */}
+         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 bg-gaming-950 border border-brand-primary/50 rounded-full shadow-[0_0_15px_#d946ef] flex items-center justify-center">
+             <Gamepad2 size={20} className="text-brand-primary drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]" />
+         </div>
+
+         {/* Icon 2: Headphones (Bottom) */}
+         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 p-2 bg-gaming-950 border border-cyan-500/50 rounded-full shadow-[0_0_15px_#06b6d4] flex items-center justify-center">
+             <Headphones size={20} className="text-cyan-400 drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]" />
+         </div>
+      </motion.div>
+
+      {/* --- ORBIT 2: INNER RING (Counter-Clockwise) --- */}
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        className="absolute w-[260px] h-[260px] md:w-[320px] md:h-[320px] border border-dotted border-brand-accent/30 rounded-full"
+      >
+         {/* Icon 3: Zap/Energy (Right side) */}
+         <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2  p-2 bg-gaming-950 border border-yellow-500/50 rounded-full shadow-[0_0_15px_#eab308] flex items-center justify-center">
+             <Zap size={18} className="text-yellow-400 fill-yellow-400 drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]" />
+         </div>
+      </motion.div>
+
+    </motion.div>
+</motion.div>
 
       </div>
 
