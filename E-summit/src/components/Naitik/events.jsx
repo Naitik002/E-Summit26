@@ -257,7 +257,7 @@ const events = [
     id: 1,
     title: "Startup Expo",
     type: "EXHIBITION",
-    desc: "The Startup Expo is a dynamic showcase of innovation, bringing founders presenting their startups to executives, investors, venture capitalists and students on the same platform. Being the cornerstone event of E-Summit, the event attracted a staggering footfall of 30,000+ and showcased the vision and innovation of entrepreneurs. The participation of startups was recognized through prizes and grants, providing a great opportunity for funding, networking, and mentorship.",
+    desc: "Startup Expo, the flagship event of E-Summit, provides a dynamic platform for early-stage startups to pitch their ideas to industry experts, investors, and incubators. The event aims to provide funding, networking and mentorship opportunities for promising ventures. In its last edition, Startup Expo brought together 55+ innovative startups, 85+ investors and incubators, 5000+ professionals and 30,000+ attendees.",
     icon: "🚀",
     color: "border-brand-primary",
     registerLink: "https://expo.ecellnitb.in/",

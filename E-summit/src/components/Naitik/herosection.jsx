@@ -96,7 +96,7 @@ const HeroSection = () => {
           {/* Badge / Top Label */}
           <motion.div variants={itemVariants}>
             <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest text-brand-accent border border-brand-accent/30 bg-brand-accent/10 rounded-sm font-heading uppercase">
-              Start . Innovate . Conquer
+             #Make Things Happen
             </span>
           </motion.div>
 
@@ -132,7 +132,7 @@ const HeroSection = () => {
 
           {/* Description */}
           <motion.p variants={itemVariants} className="mt-4 max-w-lg text-lg text-gray-400 border-l-2 border-brand-secondary/50 pl-4">
-            Enter the arena of innovation. Join founders, investors, and disruptors in the ultimate battle for the future. The game is on—are you ready to play?
+         Enter a new of era of innovation with E-Summit'26, uniting ambitious minds and bold strategists. Each level is a new challenge to overcome in every battlefield of games.
           </motion.p>
 
           {/* CTAs */}

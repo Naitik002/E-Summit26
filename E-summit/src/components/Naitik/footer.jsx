@@ -364,8 +364,7 @@ const FooterSection = () => {
                E-CELL <span className="text-brand-primary">MANIT</span>
              </h2>
              <p className="text-gray-300 text-sm font-mono leading-relaxed mb-8 border-l-2 border-brand-primary/50 pl-4">
-               // The central nervous system of entrepreneurship in Central India.
-               We build founders, fund dreams, and disrupt the status quo.
+               // Central India's Hub for entrepreneurial excellence. Equipping founders and changemakers with the dream to redefine the rules of the arena.
              </p>
 
              <ul className="space-y-3 text-sm text-gray-300 font-mono">

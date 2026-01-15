@@ -8,7 +8,7 @@ const scheduleData = [
     date: "13",
     month: "FEB",
     dayName: "WEDNESDAY",
-    title: "Level 1: The Awakening",
+    title: "Level 1: The Genesis",
     status: "COMPLETED", // Visual style: Dimmed / Checked
     events: [
       { time: "09:00 AM", title: "Inauguration Ceremony", type: "CEREMONY", location: "Main Auditorium" },
@@ -22,7 +22,7 @@ const scheduleData = [
     date: "14",
     month: "FEB",
     dayName: "THURSDAY",
-    title: "Level 2: The Grind",
+    title: "Level 2: The Ascent",
     status: "ACTIVE", // Visual style: Glowing / Pulsing
     events: [
       { time: "10:00 AM", title: "Robo Wars", type: "COMBAT", location: "Arena Ground" },
@@ -36,7 +36,7 @@ const scheduleData = [
     date: "15",
     month: "FEB",
     dayName: "FRIDAY",
-    title: "Level 3: The Finale",
+    title: "Level 3: The Victory",
     status: "LOCKED", // Visual style: Grayed out / Locked Icon
     events: [
       { time: "09:00 AM", title: "Startup Expo", type: "EXHIBITION", location: "Exhibition Ground" },
@@ -83,7 +83,7 @@ const ScheduleSection = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-heading font-bold text-white uppercase tracking-tighter">
-            Mission <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Schedule</span>
+            THE LEVEL <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">PLAN</span>
           </h2>
         </div>
 

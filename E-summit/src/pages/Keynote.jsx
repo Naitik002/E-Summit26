@@ -12,134 +12,134 @@ import MusicPlayer from '../components/Varun/music';
 
 // Data Arrays
 const Keynotes = [
-  { 
-    id: 1, 
-    name: "Ashneer Grover", 
-    power: "Shark Logic", 
-    icon: <Zap size={14} />, 
-    img: "/guests/ashneer-grover.avif" 
+  {
+    id: 1,
+    name: "Ashneer Grover",
+    power: "Shark Logic",
+    icon: <Zap size={14} />,
+    img: "/guests/ashneer-grover.avif"
   },
-  { 
-    id: 2, 
-    name: "Tanu Jain", 
-    power: "Visionary Admin", 
-    icon: <Sparkles size={14} />, 
-    img: "/guests/tanu-jain.jpeg" 
+  {
+    id: 2,
+    name: "Tanu Jain",
+    power: "Visionary Admin",
+    icon: <Sparkles size={14} />,
+    img: "/guests/tanu-jain.jpeg"
   },
-  { 
-    id: 3, 
-    name: "Prafull Billore", 
-    power: "Brewing Success", 
-    icon: <Rocket size={14} />, 
-    img: "/guests/prafull-billore.jpeg" 
+  {
+    id: 3,
+    name: "Prafull Billore",
+    power: "Brewing Success",
+    icon: <Rocket size={14} />,
+    img: "/guests/prafull-billore.jpeg"
   },
-  { 
-    id: 4, 
-    name: "Sandeep Jain", 
-    power: "Algorithm Master", 
-    icon: <Terminal size={14} />, 
-    img: "/guests/sandeep-jain.jpeg" 
+  {
+    id: 4,
+    name: "Sandeep Jain",
+    power: "Algorithm Master",
+    icon: <Terminal size={14} />,
+    img: "/guests/sandeep-jain.jpeg"
   },
-  { 
-    id: 5, 
-    name: "Anubhav Dubey", 
-    power: "Chai Empire", 
-    icon: <Gamepad2 size={14} />, 
-    img: "/guests/anubhav-dubey.jpg" 
+  {
+    id: 5,
+    name: "Anubhav Dubey",
+    power: "Chai Empire",
+    icon: <Gamepad2 size={14} />,
+    img: "/guests/anubhav-dubey.jpg"
   },
-  { 
-    id: 6, 
-    name: "Nitin Vijay", 
-    power: "Motion Physics", 
-    icon: <Cpu size={14} />, 
-    img: "/guests/nitin-vijay.jpeg" 
+  {
+    id: 6,
+    name: "Nitin Vijay",
+    power: "Motion Physics",
+    icon: <Cpu size={14} />,
+    img: "/guests/nitin-vijay.jpeg"
   },
-  { 
-    id: 7, 
-    name: "Dr. Gajendra Purohit", 
-    power: "Maths Wizard", 
-    icon: <Sparkles size={14} />, 
-    img: "/guests/gajendra-purohit.jpeg" 
+  {
+    id: 7,
+    name: "Dr. Gajendra Purohit",
+    power: "Maths Wizard",
+    icon: <Sparkles size={14} />,
+    img: "/guests/gajendra-purohit.jpeg"
   },
-  { 
-    id: 8, 
-    name: "Zev Siegl", 
-    power: "Global Roast", 
-    icon: <Zap size={14} />, 
-    img: "/guests/zey-siegel.jpeg" 
+  {
+    id: 8,
+    name: "Zev Siegl",
+    power: "Global Roast",
+    icon: <Zap size={14} />,
+    img: "/guests/zey-siegel.jpeg"
   },
-  { 
-    id: 9, 
-    name: "Sanjeev Agrawal", 
-    power: "Sage Wisdom", 
-    icon: <Trophy size={14} />, 
-    img: "/guests/sanjeev-agrawal.jpeg" 
+  {
+    id: 9,
+    name: "Sanjeev Agrawal",
+    power: "Sage Wisdom",
+    icon: <Trophy size={14} />,
+    img: "/guests/sanjeev-agrawal.jpeg"
   },
-  { 
-    id: 10, 
-    name: "Vikas Swarup", 
-    power: "Diplomatic Script", 
-    icon: <MapPin size={14} />, 
-    img: "/guests/vikas-swarup.jpeg" 
+  {
+    id: 10,
+    name: "Vikas Swarup",
+    power: "Diplomatic Script",
+    icon: <MapPin size={14} />,
+    img: "/guests/vikas-swarup.jpeg"
   },
-  { 
-    id: 11, 
-    name: "Siddharth Chaturvedi", 
-    power: "Skill Architect", 
-    icon: <Cpu size={14} />, 
-    img: "/guests/siddharth-chaturvedi.jpg" 
+  {
+    id: 11,
+    name: "Siddharth Chaturvedi",
+    power: "Skill Architect",
+    icon: <Cpu size={14} />,
+    img: "/guests/siddharth-chaturvedi.jpg"
   },
-  { 
-    id: 12, 
-    name: "Uttaran Nayak", 
-    power: "Creative Flow", 
-    icon: <Paintbrush size={14} />, 
-    img: "/guests/uttaran-nayak.jpg" 
+  {
+    id: 12,
+    name: "Uttaran Nayak",
+    power: "Creative Flow",
+    icon: <Paintbrush size={14} />,
+    img: "/guests/uttaran-nayak.jpg"
   },
 ];
 
 const Creators = [
-  { 
-    id: 1, 
-    name: "Abhishek Upmanyu", 
-    style: "Stand-up Comic", 
-    icon: <Music size={18} />, 
-    img: "/guests/abhishek-upmanyu.jpg" 
+  {
+    id: 1,
+    name: "Abhishek Upmanyu",
+    style: "Stand-up Comic",
+    icon: <Music size={18} />,
+    img: "/guests/abhishek-upmanyu.jpg"
   },
-  { 
-    id: 2, 
-    name: "Haseeb Khan", 
-    style: "Stand-up Comic", 
-    icon: <Zap size={18} />, 
-    img: "/guests/haseeb-khan.jpeg" 
+  {
+    id: 2,
+    name: "Haseeb Khan",
+    style: "Stand-up Comic",
+    icon: <Zap size={18} />,
+    img: "/guests/haseeb-khan.jpeg"
   },
-  { 
-    id: 3, 
-    name: "Nidhi Narwal", 
-    style: "Live Performer", 
-    icon: <Sparkles size={18} />, 
-    img: "/guests/nidhi-narwal.jpeg" 
+  {
+    id: 3,
+    name: "Nidhi Narwal",
+    style: "Live Performer",
+    icon: <Sparkles size={18} />,
+    img: "/guests/nidhi-narwal.jpeg"
   },
-  { 
-    id: 4, 
-    name: "Gaurav Juyal", 
-    style: "Experience Designer", 
-    icon: <Paintbrush size={18} />, 
-    img: "/guests/gaurav-juyal.jpeg" 
+  {
+    id: 4,
+    name: "Gaurav Juyal",
+    style: "Experience Designer",
+    icon: <Paintbrush size={18} />,
+    img: "/guests/gaurav-juyal.jpeg"
   },
-  { 
-    id: 5, 
-    name: "Laksh Maheshwari", 
-    style: "Storyteller", 
-    icon: <Camera size={18} />, 
-    img: "/guests/laksh-maheshwari.jpeg" 
+  {
+    id: 5,
+    name: "Laksh Maheshwari",
+    style: "Storyteller",
+    icon: <Camera size={18} />,
+    img: "/guests/laksh-maheshwari.jpeg"
   },
-  { 
-    id: 7, 
-    name: "Mohit Yodha", 
-    style: "Pop Culture", 
-    icon: <Gamepad2 size={18} />, 
-    img: "/guests/mohit-yodha.png" 
+  {
+    id: 7,
+    name: "Mohit Yodha",
+    style: "Pop Culture",
+    icon: <Gamepad2 size={18} />,
+    img: "/guests/mohit-yodha.png"
   }
 ];
 
@@ -189,7 +189,7 @@ const MultiThemeGallery = () => {
         style={{ backgroundImage: `linear-gradient(to bottom, rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.95)), url('https://r.jina.ai/i/0f10c634b33b499997ca6834160a0f82')` }}
       >
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-10 pointer-events-none" />
-        
+
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -214,7 +214,7 @@ const MultiThemeGallery = () => {
                 <div className="absolute -top-px left-4 w-12 md:w-20 h-[2px] bg-cyan-400 shadow-[0_0_10px_#22d3ee]" />
                 <div className="text-slate-300 font-mono text-[10px] md:text-sm leading-relaxed">
                   <Terminal className="inline mr-2 text-cyan-500" size={14} />
-                  <p className="inline">Enter the Nexus Stage where industry titans deconstruct the future of interactive media. Expect deep-dives into procedural generation, neural rendering, and the next meta-shift in global gaming economies.</p>
+                  <p className="inline">Step into the next stage with your favourite influential creators and artists who share their journeys to success and recognition. Engage, interact and level up your entrepreneurial game through inspiring talks and dynamic Q&A rounds.</p>
                 </div>
               </div>
             </div>
@@ -232,9 +232,9 @@ const MultiThemeGallery = () => {
           </p>
 
           {/* INFINITE KEYNOTE TRACK */}
-          <div 
+          <div
             className="relative flex overflow-hidden py-6 md:py-10 -mx-4 md:mx-0"
-            
+
           >
             <div className="absolute top-0 left-0 w-6 h-6 border-t border-l border-cyan-500/40 z-20 pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-cyan-500/40 z-20 pointer-events-none" />
@@ -313,7 +313,7 @@ const MultiThemeGallery = () => {
         </div>
 
         {/* INFINITE CREATOR TRACK */}
-        <div 
+        <div
           className="relative w-full overflow-hidden py-8 md:py-12"
           onMouseEnter={() => creatorTween.current?.pause()}
           onMouseLeave={() => creatorTween.current?.play()}
