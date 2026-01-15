@@ -15,7 +15,7 @@ export default function Home() {
         <div className="min-h-screen relative text-white selection:bg-cyan-500 selection:text-black">
 
 
-<CustomCursor />
+{/* <CustomCursor /> */}
 
 
 
