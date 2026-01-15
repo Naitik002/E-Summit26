@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, User, Mail, MessageSquare, MapPin, Globe, Gamepad2, Headphones, MousePointer2, Zap, Sword, Linkedin, Instagram, Phone, CheckCircle, Loader2 } from 'lucide-react';
 
-// --- CONFIGURATION ---
-// 1. Create a Google Sheet
-// 2. Go to Extensions > Apps Script
-// 3. Paste the Script (I will provide it below the code)
-// 4. Deploy as Web App > Access: "Anyone"
-// 5. PASTE YOUR WEB APP URL HERE:
 const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE";
 
 
@@ -37,36 +31,68 @@ const Contact = () => {
   const [formStatus, setFormStatus] = useState("idle"); // idle, submitting, success, error
 
   // --- TEAM DATA ---
-  const team = [
-    {
-      name: "Alex Viper",
-      role: "Event Lead",
-      img: "/assets/teamContact/alex viper.jpg",
-      color: "from-cyan-500 to-blue-500",
-      socials: { linkedin: "#", insta: "#", mail: "mailto:alex@ecell.in", phone: "tel:+919876543210" }
-    },
-    {
-      name: "Sarah Glitch",
-      role: "Tech Head",
-      img: "/assets/teamContact/sarah glitch.jpg",
-      color: "from-purple-500 to-pink-500",
-      socials: { linkedin: "#", insta: "#", mail: "mailto:sarah@ecell.in", phone: "tel:+919876543210" }
-    },
-    {
-      name: "Mike Tank",
-      role: "Logistics",
-      img: "/assets/teamContact/mike tank.jpg",
-      color: "from-yellow-500 to-orange-500",
-      socials: { linkedin: "#", insta: "#", mail: "mailto:mike@ecell.in", phone: "tel:+919876543210" }
-    },
-    {
-      name: "Dav Snipe",
-      role: "Outreach",
-      img: "/assets/teamContact/dav snipe.jpg",
-      color: "from-green-500 to-emerald-500",
-      socials: { linkedin: "#", insta: "#", mail: "mailto:dav@ecell.in", phone: "tel:+919876543210" }
-    },
-  ];
+ const team = [
+  {
+    name: "Nachiket Bakshi",
+    role: "Joint Secretary",
+    img: "./team_images/Nachiket Bakshi.webp",
+    color: "from-cyan-500 to-blue-500",
+    socials: {
+        linkedin: "https://www.linkedin.com/in/BakshiNachiket",
+        insta: "https://instagram.com/nachiketbakshi",
+        mail: "mailto:nachiket11bakshi@gmail.com",
+        phone: "7000616813"
+    }
+  },
+  {
+    name: "Khushi Verma",
+    role: "Administrative Lead",
+    img: "./team_images/Khushi Verma.webp",
+    color: "from-purple-500 to-pink-500",
+    socials: {
+        linkedin: "https://www.linkedin.com/in/khushi-verma-966416290",
+        insta: "https://www.instagram.com/_khushi_.verma?igsh=ZzJjY25uZ2JrdDI3",
+        mail: "mailto:kv6265@gmail.com",
+        phone: "6265872942"
+    }
+  },
+  {
+    name: "Nidhi Singh Thakur",
+    role: "Promotions Lead",
+    img: "./team_images/Nidhi Singh Thakur.webp",
+    color: "from-yellow-500 to-orange-500",
+    socials: {
+        linkedin: "https://www.linkedin.com/in/nidhi-singh-thakur-17a69a290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        insta: "https://www.instagram.com/_nidhiix_?igsh=MWgzc3BpYm9tYndndQ==",
+        mail: "mailto:pvt.nidhisingh07@gmail.com",
+        phone: "9479606424"
+    }
+  },
+  {
+    name: "Sannidhya Srivastava",
+    role: "Strategic Lead",
+    img: "./team_images/Sannidhya Srivastava.webp",
+    color: "from-green-500 to-emerald-500",
+    socials: {
+        linkedin: "https://www.linkedin.com/in/sannidhya-srivastava-4976a9277/",
+        insta: "https://www.instagram.com/_sann1dh_/",
+        mail: "mailto:sannidhya123567@gmail.com",
+        phone: "7024107999"
+    }
+  },
+  {
+    name: "Hiya Sanghvi",
+    role: "Events Lead",
+    img: "./team_images/Hiya Sanghvi.webp",
+    color: "from-rose-500 to-red-500",
+    socials: {
+        linkedin: "http://www.linkedin.com/in/hiya-sanghvi10",
+        insta: "https://instagram.com/_._hiyaaa_._/",
+        mail: "mailto:hiyasanghvi037@gmail.com",
+        phone: "7000092259"
+    }
+  }
+];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -241,7 +267,7 @@ const Contact = () => {
                                 <a href={member.socials.linkedin} className="hover:text-blue-500 hover:scale-110 transition-all"><Linkedin size={18} /></a>
                                 <a href={member.socials.insta} className="hover:text-pink-500 hover:scale-110 transition-all"><Instagram size={18} /></a>
                                 <a href={member.socials.mail} className="hover:text-white hover:scale-110 transition-all"><Mail size={18} /></a>
-                                <a href={member.socials.phone} className="hover:text-green-500 hover:scale-110 transition-all"><Phone size={18} /></a>
+                             <a href={`tel:${member.socials.phone}`} className="hover:text-green-500 hover:scale-110 transition-all"><Phone size={18} /></a>
                             </div>
                         </div>
                     </motion.div>

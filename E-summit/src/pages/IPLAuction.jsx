@@ -33,7 +33,7 @@ import {Wifi} from 'lucide-react';
 
 
 const RecruitmentForm = () => {
-  const isLocked = true; 
+  const isLocked = true;
   const UNSTOP_LINK = "https://unstop.com/your-mission-link";
 
   const handleDeployment = () => {
@@ -52,7 +52,7 @@ const RecruitmentForm = () => {
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,2px_100%]"></div>
 
       <div className="max-w-3xl mx-auto relative z-10 ">
-        
+
         {/* COD STYLE HEADER */}
         <div className="bg-[#0f1115] border-t-2 border-x-2 border-white/10 p-4 flex justify-between items-center ">
           <div className="flex items-center gap-3">
@@ -89,7 +89,7 @@ const RecruitmentForm = () => {
                 {/* Corner Accents */}
                 <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[#00A63D]" />
                 <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[#00A63D]" />
-                
+
                 <div className="space-y-2 text-xs font-bold uppercase tracking-widest leading-relaxed">
                     <p className="text-white/40">{'>'} INITIALIZING DEPLOYMENT SEQUENCE...</p>
                     <p className="text-white/40">{'>'} ENCRYPTING BIO-SIGNATURES...</p>
@@ -98,7 +98,7 @@ const RecruitmentForm = () => {
                 </div>
             </div>
 
-            <button 
+            <button
                 onClick={handleDeployment}
                 className="group relative w-full p-1 bg-white/10 hover:bg-[#00A63D]/20 transition-all active:scale-[0.98] cursor-target"
             >
@@ -106,7 +106,7 @@ const RecruitmentForm = () => {
                     Initiate Deployment <ChevronRight size={32} />
                 </div>
             </button>
-            
+
             <p className="mt-4 text-[9px] text-center text-white/30 uppercase tracking-[0.2em]">
                 Clicking above authorizes external data transmission to Unstop servers.
             </p>
@@ -115,7 +115,7 @@ const RecruitmentForm = () => {
           {/* SYSTEM LOCKDOWN OVERLAY */}
           {isLocked && (
             <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center p-6 cursor-target">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="bg-black/90 border-2 border-red-600 p-8 shadow-[0_0_50px_rgba(220,38,38,0.3)] backdrop-blur-2xl cursor-target"
@@ -126,7 +126,7 @@ const RecruitmentForm = () => {
                 </h3>
                 <div className="h-1 w-20 bg-red-600 mx-auto mb-6"></div>
                 <p className="text-slate-300 font-bold text-[10px] uppercase tracking-[0.3em] mb-8 leading-loose">
-                  Uplink Interrupted by High Command. <br/> 
+                  Uplink Interrupted by High Command. <br/>
                   <span className="text-red-600 animate-pulse">Recruitment Terminal: OFFLINE</span>
                 </p>
               </motion.div>
@@ -171,6 +171,22 @@ const OrganizingTeamSection = () => {
     insta: "https://www.instagram.com/shukrishh/",
     mail: "mailto:shuklakrish215@gmail.com"
     },
+    {
+    "imgLink": "./team_images/Tarun Jaiswal.webp",
+    "personName": "Tarun Jaiswal",
+    "personVertical": "Social Media Lead",
+    "linkedin": "https://in.linkedin.com/in/tarun-jaiswal-1602822b1",
+    "insta": "https://instagram.com/tarunjaiswal621",
+    "mail": "mailto:jaiswalt54@gmail.com"
+  },
+   {
+    "imgLink": "./team_images/Geet Talati.webp",
+    "personName": "Geet Talati",
+    "personVertical": "Hospitality Lead",
+    "linkedin": "https://www.linkedin.com/in/geet-talati-868851285",
+    "insta": "https://instagram.com/_geet14/",
+    "mail": "mailto:geett590@gmail.com"
+  },
   ];
 
   return (
@@ -328,12 +344,12 @@ const IPLAuctionWarzone = () => {
   const navigate = useNavigate();
 
   return (
-    
+
     <div className="min-h-screen bg-slate-950 text-slate-100 font-mono selection:bg-green-500/30">
 
-      <MusicPlayer 
-    musicUrl="/cod-theme.mp3" 
-    stationName="COMMS: OVERLORD" 
+      <MusicPlayer
+    musicUrl="/cod-theme.mp3"
+    stationName="COMMS: OVERLORD"
     accentColor="#00753A" // Tactical HUD Green
 />
 
@@ -407,7 +423,7 @@ const IPLAuctionWarzone = () => {
             </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button 
+              <button
                 onClick={() => window.location.href = "#form"}
                 className="group relative bg-green-600 p-[2px] cursor-target transition-transform active:scale-95"
               >

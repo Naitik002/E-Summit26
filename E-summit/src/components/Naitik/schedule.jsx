@@ -67,7 +67,7 @@ const cardVariants = {
 
 const ScheduleSection = () => {
   return (
-    <section className="relative w-full py-24 px-6 bg-gaming-950 overflow-hidden">
+    <section id="ScheduleSection" className="relative w-full py-24 px-6 bg-gaming-950 overflow-hidden">
 
       {/* Background Grid & Ambience */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />

@@ -96,7 +96,7 @@ const HeroSection = () => {
           {/* Badge / Top Label */}
           <motion.div variants={itemVariants}>
             <span className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest text-brand-accent border border-brand-accent/30 bg-brand-accent/10 rounded-sm font-heading uppercase">
-              Start . Grind . Conquer
+              Start . Innovate . Conquer
             </span>
           </motion.div>
 
@@ -138,7 +138,8 @@ const HeroSection = () => {
           {/* CTAs */}
           <motion.div variants={itemVariants} className="mt-10 flex flex-wrap gap-4">
             {/* Primary Button */}
-            <motion.button
+            <motion.a
+href="#ScheduleSection"
               whileHover={{ scale: 1.05, filter: "brightness(1.2)" }}
               whileTap={{ scale: 0.95 }}
               className="relative px-8 py-4 bg-brand-primary text-white font-bold font-heading tracking-wider uppercase clip-path-gaming group overflow-hidden"
@@ -146,9 +147,9 @@ const HeroSection = () => {
                 clipPath: "polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%)"
               }}
             >
-              <span className="relative z-10">Register Now</span>
+              <span className="relative z-10">Know More</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </motion.button>
+            </motion.a>
 
             {/* Secondary Button */}
            <motion.a

@@ -41,8 +41,7 @@
 
 import React, { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
-import { Loader2 } from "lucide-react"; // Make sure you have lucide-react installed
-
+import { Loader2 } from "lucide-react"; 
 import Navbar from "./components/Naitik/Navbar";
 import FooterSection from "./components/Naitik/footer";
 import LoadingScreen from "./components/Naitik/loader";
