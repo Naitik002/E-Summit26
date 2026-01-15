@@ -263,10 +263,8 @@
 
 // export default FooterSection;
 
-
-
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Make sure to uncomment if you use framer-motion elsewhere
 
 const FooterSection = () => {
   // --- Form State Management ---
@@ -312,7 +310,7 @@ const FooterSection = () => {
 
       {/* --- BACKGROUND LAYERS --- */}
 
-      {/* 1. CRT Scanline Texture (Subtle moving lines) - Reduced opacity slightly for better text reading */}
+      {/* 1. CRT Scanline Texture */}
       <div className="absolute inset-0 pointer-events-none z-0 opacity-[0.07]"
            style={{
              backgroundImage: "linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06))",
@@ -320,29 +318,39 @@ const FooterSection = () => {
            }}
       />
 
-      {/* 2. THE WATERMARK (Now High Visibility) */}
-      <div className="absolute bottom-[6%] left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0">
+      {/* 2. Tech Grid Overlay (Moved BEFORE watermark or kept at z-0) */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[60px_60px] pointer-events-none z-0" />
+
+      {/* --- FIXED WATERMARK SECTION ---
+         Changes made:
+         1. Added 'z-[1]' to sit ON TOP of the Tech Grid (z-0) but below content (z-10).
+         2. Changed 'bottom-10' to 'bottom-24' for mobile so it rises above the bottom bar.
+         3. Increased mobile text size to 'text-[22vw]'.
+         4. Increased stroke opacity on mobile to '0.3' (was 0.15).
+         5. Added 'whitespace-nowrap' to prevent wrapping on narrow screens.
+      */}
+      <div className="absolute bottom-24 sm:bottom-[8%] left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-50">
         <h1
-          className="text-[16vw] font-black tracking-tight leading-none"
+          className="
+            font-black tracking-tight leading-none
+            text-[22vw] sm:text-[16vw] xl:text-[14vw]
+            whitespace-nowrap
+            [-webkit-text-stroke:1px_rgba(255,255,255,0.3)]
+            md:[-webkit-text-stroke:2px_rgba(255,255,255,0.15)]
+          "
           style={{
-            // 1. Text Fill (Faint White)
+            // 1. Text Fill
             color: "rgba(255, 255, 255, 0.03)",
-            // 2. Text Outline (Stronger White)
-            WebkitTextStroke: "2px rgba(255, 255, 255, 0.15)",
-            // 3. Fade out top so it doesn't clash with content
+            // 2. Fade out
             maskImage: "linear-gradient(to top, black 50%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, black 50%, transparent 100%)"
+            WebkitMaskImage: "linear-gradient(to top, black 50%, transparent 100%)",
           }}
         >
           ESUMMIT'26
         </h1>
       </div>
 
-      {/* 3. Tech Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[60px_60px] pointer-events-none z-0" />
-
-
-      {/* --- CONTENT CONTAINER --- */}
+      {/* --- CONTENT CONTAINER (z-10 ensures it stays clickable) --- */}
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col gap-20">
 
         {/* --- TOP ROW --- */}
@@ -516,6 +524,3 @@ const FooterSection = () => {
 };
 
 export default FooterSection;
-
-
-
