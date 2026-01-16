@@ -68,7 +68,7 @@ const GTAPitchHero = () => {
                             animate={{ scale: 1, opacity: 1 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-[120px] font-black text-white italic leading-[0.85] tracking-tighter uppercase drop-shadow-[6px_6px_0px_rgba(0,0,0,0.8)]">
+                            <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-[100px] font-black text-white italic leading-[0.85] tracking-tighter uppercase drop-shadow-[6px_6px_0px_rgba(0,0,0,0.8)]">
                                 THE <br />
                                 <span style={{ color: colors.sapGreen }}>
                                     {/* BIG PITCH */}
