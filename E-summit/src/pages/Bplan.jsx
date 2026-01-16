@@ -59,7 +59,7 @@ const GTAPitchHero = () => {
                             style={{ backgroundColor: colors.jasmine, color: '#000' }}
                         >
                             <Target size={18} />
-                            <span>Objective: Pitch the Empire</span>
+                            <span>Objective: Grand Pitching Opportunity</span>
                         </motion.div>
 
                         {/* Main Title - Scaled for screens */}
@@ -70,7 +70,10 @@ const GTAPitchHero = () => {
                         >
                             <h1 className="text-7xl sm:text-7xl md:text-8xl lg:text-[120px] font-black text-white italic leading-[0.85] tracking-tighter uppercase drop-shadow-[6px_6px_0px_rgba(0,0,0,0.8)]">
                                 THE <br />
-                                <span style={{ color: colors.sapGreen }}>BIG PITCH</span>
+                                <span style={{ color: colors.sapGreen }}>
+                                    {/* BIG PITCH */}
+                                    B-PLAN COMPETITION
+                                    </span>
                             </h1>
                         </motion.div>
 
@@ -104,8 +107,8 @@ const GTAPitchHero = () => {
                             transition={{ delay: 0.7 }}
                             className="mt-6 max-w-xl mx-auto lg:mx-0 text-base md:text-xl text-white font-semibold italic uppercase tracking-tight leading-tight"
                         >
-                            The city is waiting for the next mastermind. <br className="hidden md:block" />
-                            <span className="text-gray-400">Assemble your deck, gear up your crew, and prepare to seize the market.</span>
+                         The startup world is waiting for the next breakthrough. <br className="hidden md:block" />
+                            <span className="text-gray-400">Assemble your deck, gear up your ideas, and prepare to seize the market.</span>
                         </motion.p>
 
                         {/* Buttons */}
@@ -157,7 +160,7 @@ const GTAPitchHero = () => {
 
                                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black p-6">
                                     <p className="text-[10px] font-black uppercase tracking-widest" style={{ color: colors.iceberg }}>Crew Status</p>
-                                    <h3 className="text-2xl font-black text-white italic uppercase tracking-tighter">The Syndicates</h3>
+                                    <h3 className="text-2xl font-black text-white italic uppercase tracking-tighter">The Innovators</h3>
                                 </div>
                             </div>
 
@@ -172,7 +175,7 @@ const GTAPitchHero = () => {
                                     <div className="animate-pulse w-2 h-2 rounded-full bg-red-500"></div>
                                     <span className="text-[10px] font-black text-gray-400 uppercase">Live Intel Feed</span>
                                 </div>
-                                <p className="text-[10px] md:text-xs text-white font-bold uppercase">Target: VC Row. Sequence initiated.</p>
+                                <p className="text-[10px] md:text-xs text-white font-bold uppercase">Target: Scalable business ideas.</p>
                             </motion.div>
                         </motion.div>
                     </div>
@@ -196,26 +199,26 @@ const GTAAbout = () => {
 
     const objectives = [
         {
-            title: "The Blueprint",
-            desc: "Submit your business plan. No fluff, just the raw strategy to dominate your market.",
+            title: "THE STRATEGY",
+            desc: "Present a clear, data-backed business plan focused on problem, solution, market opportunity, and scalability.",
             icon: <Shield size={32} />,
             color: colors.iceberg
         },
         {
-            title: "The Crew",
-            desc: "Connect with elite founders and ruthless investors looking for their next big score.",
+            title: "THE NETWORK",
+            desc: "Engage with experienced founders, mentors, and investors shaping the next generation of ventures.",
             icon: <Users size={32} />,
             color: colors.orchid
         },
         {
-            title: "The Take",
-            desc: "Pitch to a board of industry kingpins. Secure the resources to scale your empire.",
+            title: "THE PITCH",
+            desc: "Pitch to a panel of industry leaders and investors. Demonstrate clarity, feasibility, and growth potential.",
             icon: <Trophy size={32} />,
             color: colors.jasmine
         },
         {
-            title: "The Reputation",
-            desc: "In this city, respect is everything. Build a brand that the street never forgets.",
+            title: "THE IMPACT",
+            desc: "Build credibility through execution. Strong ideas earn recognition, trust, and long-term value.",
             icon: <BarChart3 size={32} />,
             color: colors.darkSalmon
         }
@@ -286,8 +289,7 @@ const GTAAbout = () => {
                         </motion.h2 >
                         <div className="h-2 w-32 mt-2" style={{ backgroundColor: colors.sapGreen }}></div>
                         <p className="mt-6 text-xl text-gray-400 max-w-2xl font-bold uppercase italic tracking-tight">
-                            You’ve got the idea. You’ve got the guts. Now it’s time to see if you can execute.
-                            This isn't a classroom—it's the streets of innovation.
+                           An idea is the beginning. Execution and presentation defines success. Step onto the path to convert your ideas to scalable innovation and business with clarity and confidence.
                         </p>
                     </div>
 

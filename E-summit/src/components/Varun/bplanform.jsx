@@ -4,7 +4,7 @@ import { Lock, User, Users, Mail, Phone, ChevronRight, ShieldAlert, Plus, Trash2
 
 const Bplanform = () => {
   // SET THIS TO false TO SHOW THE FORM, OR KEEP true TO SHOW THE LOCKED SCREEN
-  const [isLocked, setIsLocked] = useState(true) 
+  const [isLocked, setIsLocked] = useState(true)
   const [regType, setRegType] = useState('individual');
 
   const UNSTOP_LINK = "https://unstop.com/your-competition-link-here"; // REPLACE WITH YOUR LINK
@@ -29,9 +29,9 @@ const Bplanform = () => {
         <AnimatePresence mode="wait">
           {isLocked ? (
             /* ==========================================
-               PHASE 1: MISSION LOCKED (COMING SOON) 
+               PHASE 1: MISSION LOCKED (COMING SOON)
                ========================================== */
-            <motion.div 
+            <motion.div
               key="locked-screen"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -54,16 +54,16 @@ const Bplanform = () => {
                 </h2>
 
                 <p className="text-gray-500 font-bold uppercase tracking-widest text-xs mb-10 max-w-sm mx-auto">
-                  Uplink encrypted. Recruitment terminal offline. <br/>
-                  Awaiting High Command authorization.
+                  Uplink encrypted, registrations currently inactive. <br/>
+                  Access will be enabled once registrations open.
                 </p>
 
                 <div className="mt-12">
-                   <button 
+                   <button
                     onClick={() => alert('Encryption sequence not yet complete. Stand by.')}
                     className="text-[10px] font-black text-white/20 uppercase hover:text-white transition-all tracking-[0.4em]"
                    >
-                     [ Click to Force Override Encryption ]
+                     [ From blueprint to breakthrough, make it happen! ]
                    </button>
                 </div>
               </div>
@@ -99,9 +99,9 @@ const Bplanform = () => {
               </p>
 
               <div className="pt-4">
-                <button 
+                <button
                   onClick={handleRedirect}
-                  className="w-full group relative p-1 transition-transform active:scale-[0.98]" 
+                  className="w-full group relative p-1 transition-transform active:scale-[0.98]"
                   style={{ backgroundColor: colors.sapGreen }}
                 >
                   <div className="bg-black group-hover:bg-transparent text-white group-hover:text-black font-black px-10 py-6 flex items-center justify-center gap-4 uppercase text-2xl md:text-3xl transition-all italic">

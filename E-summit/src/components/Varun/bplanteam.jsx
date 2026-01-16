@@ -77,7 +77,7 @@ const BplanTeam = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-6xl md:text-8xl font-black text-white italic uppercase tracking-tighter leading-none">
-              CREW <span style={{ color: colors.sapGreen }}>MEMBERS</span>
+              CONTACT <span style={{ color: colors.sapGreen }}>TEAM</span>
             </h2>
             <p className="mt-4 text-gray-500 font-bold uppercase tracking-[0.2em] text-xs">Assemble the ultimate syndicate for the big pitch</p>
           </motion.div>
