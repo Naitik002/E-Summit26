@@ -110,7 +110,7 @@ const CaseStudyAbout = () => {
                   <div className="text-gray-600">V.20.24</div>
               </div>
 
-              
+
             </div>
           </motion.div>
         </div>
@@ -132,8 +132,12 @@ const CaseStudyAbout = () => {
 
           {/* Description */}
           <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-light border-l-2 border-zinc-800 pl-6">
-            The Case Study Competition is an intellectually stimulating event designed to challenge participants with <strong className="text-white">real-world business problems</strong>.
-            It is the ultimate test of your <span className="text-cyan-400 font-mono">analytical_skills</span> and strategic thinking.
+            {/* The Case Study Competition is an intellectually stimulating event designed to challenge participants with <strong className="text-white">real-world business problems</strong>.
+            It is the ultimate test of your <span className="text-cyan-400 font-mono">analytical_skills</span> and strategic thinking. */}
+
+The Case Study Competition drops you into a simulated business battlefield where every decision matters.<strong className="text-white"> Analyze real-world scenarios </strong>, uncover hidden patterns and deploy solutions that can survive scrutiny.
+
+
           </p>
 
           {/* Feature Cards - UPDATED WITH YOUR STATS */}

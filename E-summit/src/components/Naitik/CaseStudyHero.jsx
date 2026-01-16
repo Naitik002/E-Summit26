@@ -82,8 +82,9 @@ const CaseStudyHero = () => {
             {/* UPDATED: Text size adjusted for mobile */}
             <p className="text-gray-400 text-lg lg:text-xl xl:text-2xl font-mono font-light max-w-lg leading-relaxed mx-auto lg:mx-0">
               Decode the <strong className="text-white font-black">Corporate Matrix</strong>.
-              Analyze the data streams.
-              <span className="text-cyan-400 font-bold bg-cyan-950/30 px-1 ml-1">Hack the solution.</span>
+              {/* Analyze the data streams. */}
+              Evaluate market signals.
+              <span className="text-cyan-400 font-bold bg-cyan-950/30 px-1 ml-1">Engineer the solution.</span>
             </p>
             <p className="text-xs text-gray-600 mt-4 font-mono uppercase tracking-widest">
                // The future belongs to the disruptors.

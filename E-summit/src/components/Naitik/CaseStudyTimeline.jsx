@@ -8,19 +8,19 @@ const CaseStudyTimeline = () => {
       phase: "Round 01",
       title: "The Screening",
       date: "Online Mode",
-      desc: "A high-stakes online quiz testing analytical skills. In the last edition, 700+ teams battled for the top spots."
+      desc: "Begin your quest with a fast paced online challenge designed to test logic and decision making. Only the sharpest minds unlock the next stage and move ahead in the game."
     },
     {
       phase: "Round 02",
       title: "Strategy Submission",
       date: "Submission Deadline",
-      desc: "Qualified teams transform raw data into actionable strategies via a detailed PowerPoint submission."
+      desc: "The course is charted and the mission goes live. Shortlisted teams break down the challenge, gather intel and build a winning approach. Ideas are submitted as structured presentations."
     },
     {
       phase: "Round 03",
       title: "The Grand Finale",
       date: "On-Campus",
-      desc: "Shortlisted teams present solutions live to industry judges and an audience of 200+. The ultimate test of composure."
+      desc: "Top teams take the spotlight to pitch live before industry leaders and experts. This is where ideas face real world questions, high stakes evaluation and the chance to claim victory."
     },
   ];
 
