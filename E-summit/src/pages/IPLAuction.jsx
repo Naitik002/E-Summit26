@@ -550,7 +550,7 @@ const IPLAuctionWarzone = () => {
           <div className="space-y-6">
             {/* Hero Heading */}
             <motion.h1
-              className="text-7xl md:text-9xl font-black uppercase italic leading-[0.85] tracking-tighter"
+              className="text-7xl md:text-9xl font-black mt-10  md:mt-0 lg:mt-0 uppercase italic leading-[0.85] tracking-tighter"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.25 }}
