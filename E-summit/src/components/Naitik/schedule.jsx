@@ -226,7 +226,7 @@ const scheduleData = [
     id: "day1",
     date: "13",
     month: "FEB",
-    dayName: "WEDNESDAY",
+    dayName: "FRIDAY",
     title: "Level 1: The Genesis",
     status: "LOCKED",
     events: [] // Empty array triggers the "Revealing Soon" UI
@@ -235,7 +235,7 @@ const scheduleData = [
     id: "day2",
     date: "14",
     month: "FEB",
-    dayName: "THURSDAY",
+    dayName: "SATURDAY",
     title: "Level 2: The Ascent",
     status: "LOCKED",
     events: []
@@ -244,7 +244,7 @@ const scheduleData = [
     id: "day3",
     date: "15",
     month: "FEB",
-    dayName: "FRIDAY",
+    dayName: "SUNDAY",
     title: "Level 3: The Victory",
     status: "LOCKED",
     events: []
