@@ -160,41 +160,41 @@ const OrganizingTeamSection = () => {
       personName: "Gaurvint Verma",
       personVertical: "Events Secretary",
       linkedin: "https://www.linkedin.com/in/gaurvint-verma-554329302/",
-    insta: "http://instagram.com/gaurvint",
-    mail: "mailto:gaurvint@gmail.com"
+      insta: "http://instagram.com/gaurvint",
+      mail: "mailto:gaurvint@gmail.com"
     },
     {
       imgLink: "./teamipl/Krish Shukla.webp",
       personName: "Krish Shukla",
       personVertical: "Creatives Lead",
       linkedin: "https://www.linkedin.com/in/krish-shukla-037a9b307/",
-    insta: "https://www.instagram.com/shukrishh/",
-    mail: "mailto:shuklakrish215@gmail.com"
+      insta: "https://www.instagram.com/shukrishh/",
+      mail: "mailto:shuklakrish215@gmail.com"
     },
     {
-    "imgLink": "./team_images/Tarun Jaiswal.webp",
-    "personName": "Tarun Jaiswal",
-    "personVertical": "Social Media Lead",
-    "linkedin": "https://in.linkedin.com/in/tarun-jaiswal-1602822b1",
-    "insta": "https://instagram.com/tarunjaiswal621",
-    "mail": "mailto:jaiswalt54@gmail.com"
-  },
-   {
-    "imgLink": "./team_images/Geet Talati.webp",
-    "personName": "Geet Talati",
-    "personVertical": "Hospitality Lead",
-    "linkedin": "https://www.linkedin.com/in/geet-talati-868851285",
-    "insta": "https://instagram.com/_geet14/",
-    "mail": "mailto:geett590@gmail.com"
-  },
+      "imgLink": "./team_images/Tarun Jaiswal.webp",
+      "personName": "Tarun Jaiswal",
+      "personVertical": "Social Media Lead",
+      "linkedin": "https://in.linkedin.com/in/tarun-jaiswal-1602822b1",
+      "insta": "https://instagram.com/tarunjaiswal621",
+      "mail": "mailto:jaiswalt54@gmail.com"
+    },
+    {
+      "imgLink": "./team_images/Geet Talati.webp",
+      "personName": "Geet Talati",
+      "personVertical": "Hospitality Lead",
+      "linkedin": "https://www.linkedin.com/in/geet-talati-868851285",
+      "insta": "https://instagram.com/_geet14/",
+      "mail": "mailto:geett590@gmail.com"
+    },
   ];
 
   return (
-
-
     <section className="py-24 px-6 bg-slate-950 border-t border-slate-900">
       <div className="max-w-7xl mx-auto">
+
         {/* Header Section */}
+        {/* I restored this to flex so the Title is on the left and Status is on the right */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
             <div className="flex items-center gap-2 text-green-500 font-black text-xs tracking-widest mb-2">
@@ -216,8 +216,13 @@ const OrganizingTeamSection = () => {
           </div>
         </div>
 
-        {/* Responsive Grid */}
-        <div className="flex max-w-3xl mx-auto items-center justify-center gap-4">
+        {/* --- THE FIX IS HERE --- */}
+        {/* Changed 'flex' to 'grid'.
+            grid-cols-1 = 1 card per row (Mobile)
+            md:grid-cols-2 = 2 cards per row (Tablet)
+            lg:grid-cols-4 = 4 cards per row (Desktop)
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {highCommand.map((member, i) => (
             <motion.div
               key={i}
@@ -235,7 +240,7 @@ const OrganizingTeamSection = () => {
 
                 <div className="flex flex-col items-center text-center w-full">
                   {/* Profile Image */}
-                  <div className="relative w-24 h-24 md:w-40 md:h-40 mb-6 shrink-0">
+                  <div className="relative w-24 h-24 md:w-32 md:h-32 mb-6 shrink-0">
                     <div className="absolute inset-0 rounded-full border-2 border-dashed border-green-500/30 animate-[spin_15s_linear_infinite]"></div>
                     <div className="absolute inset-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800">
                       <img
@@ -249,7 +254,7 @@ const OrganizingTeamSection = () => {
                   {/* Identification */}
                   <div className="space-y-1">
                     <p className="text-[10px] font-black text-green-500 uppercase tracking-widest">{member.personVertical}</p>
-                    <h3 className="md:text-md text-lg font-black uppercase italic leading-tight text-slate-100 group-hover:text-green-400 transition-colors">
+                    <h3 className="text-md md:text-lg font-black uppercase italic leading-tight text-slate-100 group-hover:text-green-400 transition-colors">
                       {member.personName}
                     </h3>
                   </div>
@@ -304,6 +309,159 @@ const OrganizingTeamSection = () => {
     </section>
   );
 };
+
+
+// const OrganizingTeamSection = () => {
+//   const highCommand = [
+//     {
+//       imgLink: "./teamipl/gaurvint.webp",
+//       personName: "Gaurvint Verma",
+//       personVertical: "Events Secretary",
+//       linkedin: "https://www.linkedin.com/in/gaurvint-verma-554329302/",
+//     insta: "http://instagram.com/gaurvint",
+//     mail: "mailto:gaurvint@gmail.com"
+//     },
+//     {
+//       imgLink: "./teamipl/Krish Shukla.webp",
+//       personName: "Krish Shukla",
+//       personVertical: "Creatives Lead",
+//       linkedin: "https://www.linkedin.com/in/krish-shukla-037a9b307/",
+//     insta: "https://www.instagram.com/shukrishh/",
+//     mail: "mailto:shuklakrish215@gmail.com"
+//     },
+//     {
+//     "imgLink": "./team_images/Tarun Jaiswal.webp",
+//     "personName": "Tarun Jaiswal",
+//     "personVertical": "Social Media Lead",
+//     "linkedin": "https://in.linkedin.com/in/tarun-jaiswal-1602822b1",
+//     "insta": "https://instagram.com/tarunjaiswal621",
+//     "mail": "mailto:jaiswalt54@gmail.com"
+//   },
+//    {
+//     "imgLink": "./team_images/Geet Talati.webp",
+//     "personName": "Geet Talati",
+//     "personVertical": "Hospitality Lead",
+//     "linkedin": "https://www.linkedin.com/in/geet-talati-868851285",
+//     "insta": "https://instagram.com/_geet14/",
+//     "mail": "mailto:geett590@gmail.com"
+//   },
+//   ];
+
+//   return (
+
+
+//     <section className="py-24 px-6 bg-slate-950 border-t border-slate-900">
+//       <div className="max-w-7xl mx-auto">
+//         {/* Header Section */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+//           <div>
+//             <div className="flex items-center gap-2 text-green-500 font-black text-xs tracking-widest mb-2">
+//               <ShieldCheck size={16} /> SECURE COMMS ESTABLISHED
+//             </div>
+//             <motion.h2
+//               className="text-4xl md:text-5xl font-black uppercase italic tracking-tighter"
+//               initial="hidden"
+//               whileInView="visible"
+//               viewport={{ once: true, amount: 0.2 }}
+//               variants={fadeUp}
+//             >
+//               High Command
+//             </motion.h2>
+//           </div>
+//           <div className="text-left md:text-right text-slate-500 font-mono text-[10px] uppercase">
+//             &gt; Authentication: Level 5 Required <br />
+//             &gt; Status: Online / En-Route
+//           </div>
+//         </div>
+
+//         {/* Responsive Grid */}
+//         <div className="flex max-w-3xl mx-auto items-center justify-center gap-4">
+//           {highCommand.map((member, i) => (
+//             <motion.div
+//               key={i}
+//               className="relative group w-full"
+//               initial="hidden"
+//               whileInView="visible"
+//               viewport={{ once: true, amount: 0.15 }}
+//               variants={fadeUp}
+//             >
+//               {/* Card Container */}
+//               <div className="relative bg-slate-900 border cursor-target border-slate-800 p-6 overflow-hidden transition-all duration-300 group-hover:border-green-500/50 group-hover:bg-slate-900/80 shadow-xl h-full flex flex-col items-center">
+
+//                 {/* Visual Glitch Decor */}
+//                 <div className="absolute top-0 right-0 w-12 h-12 bg-green-500/5 -mr-6 -mt-6 rotate-45 group-hover:bg-green-500/10 transition-colors"></div>
+
+//                 <div className="flex flex-col items-center text-center w-full">
+//                   {/* Profile Image */}
+//                   <div className="relative w-24 h-24 md:w-40 md:h-40 mb-6 shrink-0">
+//                     <div className="absolute inset-0 rounded-full border-2 border-dashed border-green-500/30 animate-[spin_15s_linear_infinite]"></div>
+//                     <div className="absolute inset-2 rounded-full border border-slate-700 overflow-hidden bg-slate-800">
+//                       <img
+//                         src={member.imgLink}
+//                         alt={member.personName}
+//                         className="w-full h-full object-cover contrast-110 group-hover:grayscale-0 group-hover:contrast-125 transition-all duration-500"
+//                       />
+//                     </div>
+//                   </div>
+
+//                   {/* Identification */}
+//                   <div className="space-y-1">
+//                     <p className="text-[10px] font-black text-green-500 uppercase tracking-widest">{member.personVertical}</p>
+//                     <h3 className="md:text-md text-lg font-black uppercase italic leading-tight text-slate-100 group-hover:text-green-400 transition-colors">
+//                       {member.personName}
+//                     </h3>
+//                   </div>
+
+//                   <div className="mt-4 h-[1px] w-12 bg-green-500/30"></div>
+
+//                   {/* Comm-Links */}
+//                   <div className="mt-8 w-full space-y-2">
+//                     <a
+//                       href={member.mail}
+//                       className="flex items-center cursor-target justify-between p-3 bg-slate-950 border border-slate-800 hover:bg-green-500 hover:text-black transition-all group/link"
+//                     >
+//                       <span className="text-[10px] font-black uppercase tracking-tighter">Secure Email</span>
+//                       <Mail size={14} />
+//                     </a>
+
+//                     <div className="grid grid-cols-2 gap-2">
+//                       <a
+//                         href={member.insta}
+//                         target="_blank"
+//                         rel="noreferrer"
+//                         className="flex items-center cursor-target justify-center p-3 bg-slate-950 border border-slate-800 hover:border-pink-500 hover:text-pink-500 transition-all"
+//                       >
+//                         <Instagram size={16} />
+//                       </a>
+//                       <a
+//                         href={member.linkedin}
+//                         target="_blank"
+//                         rel="noreferrer"
+//                         className="flex items-center cursor-target justify-center p-3 bg-slate-950 border border-slate-800 hover:border-blue-500 hover:text-blue-500 transition-all"
+//                       >
+//                         <Linkedin size={16} />
+//                       </a>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+
+//               {/* HUD Footer Decor */}
+//               <div className="mt-2 flex justify-between items-center px-2 opacity-30">
+//                 <Terminal size={12} className="text-slate-500" />
+//                 <div className="h-[1px] flex-1 mx-4 bg-slate-800"></div>
+//                 <div className="flex gap-1">
+//                   <div className="w-1 h-1 bg-green-500"></div>
+//                   <div className="w-1 h-1 bg-slate-800"></div>
+//                 </div>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
 
 
 

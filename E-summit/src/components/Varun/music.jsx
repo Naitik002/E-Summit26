@@ -37,9 +37,9 @@ const MusicPlayer = ({ musicUrl, stationName, accentColor }) => {
 
     return (
         <div className="fixed bottom-10 left-10 z-[10000] flex items-center gap-4">
-            <audio 
-                ref={audioRef} 
-                loop 
+            <audio
+                ref={audioRef}
+                loop
                 preload="auto"
                 onError={() => setHasError(true)}
             >
@@ -70,11 +70,11 @@ const MusicPlayer = ({ musicUrl, stationName, accentColor }) => {
                     ) : (
                         <VolumeX className={hasError ? "text-red-500" : "text-white opacity-50"} size={24} />
                     )}
-                    
+
                     {/* GTA Style Label */}
                     <div className="absolute left-full ml-4 px-3 py-1  text-black text-[10px] font-black uppercase italic tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap -skew-x-12"
                         style={{ backgroundColor: hasError ? "#ef4444" : accentColor }}>
-                        
+
                         {hasError ? "Signal Lost" : (isPlaying ? `Station: ${stationName}` : "Radio Off")}
                     </div>
                 </button>
