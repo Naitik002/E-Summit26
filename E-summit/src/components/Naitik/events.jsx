@@ -446,16 +446,16 @@ const events = [
     registerLink: null,
     knowMoreLink: null
   },
-  {
-    id: 10,
-    title: "Junior B-Plan",
-    type: "JUNIOR",
-    desc: "Gives 1st and 2nd year students a platform to showcase entrepreneurial skills. Pitch ideas to a jury of experts and turn passion into opportunities.",
-    icon: <Lightbulb className="w-6 h-6" />,
-    color: "border-red-500",
-    registerLink: "#",
-    knowMoreLink: null
-  },
+  // {
+  //   id: 10,
+  //   title: "Junior B-Plan",
+  //   type: "JUNIOR",
+  //   desc: "Gives 1st and 2nd year students a platform to showcase entrepreneurial skills. Pitch ideas to a jury of experts and turn passion into opportunities.",
+  //   icon: <Lightbulb className="w-6 h-6" />,
+  //   color: "border-red-500",
+  //   registerLink: "#",
+  //   knowMoreLink: null
+  // },
 ];
 
 // --- Animations ---
