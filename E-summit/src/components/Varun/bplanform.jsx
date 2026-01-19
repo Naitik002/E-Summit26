@@ -4,10 +4,10 @@ import { Lock, User, Users, Mail, Phone, ChevronRight, ShieldAlert, Plus, Trash2
 
 const Bplanform = () => {
   // SET THIS TO false TO SHOW THE FORM, OR KEEP true TO SHOW THE LOCKED SCREEN
-  const [isLocked, setIsLocked] = useState(true)
+  const [isLocked, setIsLocked] = useState(false)
   const [regType, setRegType] = useState('individual');
 
-  const UNSTOP_LINK = "https://unstop.com/your-competition-link-here"; // REPLACE WITH YOUR LINK
+  const UNSTOP_LINK = "https://unstop.com/competitions/case-study-competition-e-summit26--1625099"; // REPLACE WITH YOUR LINK
 
   const colors = {
     sapGreen: "#47761E",

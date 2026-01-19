@@ -33,8 +33,8 @@ import {Wifi} from 'lucide-react';
 
 
 const RecruitmentForm = () => {
-  const isLocked = true;
-  const UNSTOP_LINK = "https://unstop.com/your-mission-link";
+  const isLocked = false;
+  const UNSTOP_LINK = "https://unstop.com/competitions/ipl-auction-simulation-26-e-summit26--1624967";
 
   const handleDeployment = () => {
     if (isLocked) return;
@@ -703,7 +703,7 @@ const IPLAuctionWarzone = () => {
               </div>
 
               <h2 className="text-5xl font-black uppercase italic leading-tight">
-                A BATTLEFIELD OF 
+                A BATTLEFIELD OF
 <br />
                 <span className="text-green-500">BIDS.</span>
               </h2>
