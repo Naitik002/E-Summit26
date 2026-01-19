@@ -100,7 +100,7 @@ const CaseStudyHero = () => {
           >
             {/* Primary Button */}
             {/* UPDATED: Reduced padding for mobile */}
-            <button className="relative px-6 py-3 lg:px-8 lg:py-4 bg-purple-600 text-white font-bold uppercase tracking-widest overflow-hidden group hover:bg-purple-500 transition-all clip-path-polygon shadow-[0_0_30px_rgba(147,51,234,0.3)] hover:shadow-[0_0_50px_rgba(147,51,234,0.6)] text-sm lg:text-base">
+            <button onClick={() => document.getElementById('form').scrollIntoView({ behavior: 'smooth' })} className=" relative px-6 py-3 lg:px-8 lg:py-4 bg-purple-600 text-white font-bold uppercase tracking-widest overflow-hidden group hover:bg-purple-500 transition-all clip-path-polygon shadow-[0_0_30px_rgba(147,51,234,0.3)] hover:shadow-[0_0_50px_rgba(147,51,234,0.6)] text-sm lg:text-base">
               <span className="relative z-10 flex items-center justify-center gap-3">
                 Initiate Protocol <ChevronRight size={20} />
               </span>
@@ -108,9 +108,9 @@ const CaseStudyHero = () => {
             </button>
 
             {/* Secondary Button */}
-            <button className="px-6 py-3 lg:px-8 lg:py-4 border border-cyan-500/30 text-cyan-400 font-mono text-xs lg:text-sm uppercase tracking-widest hover:bg-cyan-950/30 hover:border-cyan-400 transition-all flex items-center justify-center gap-2 group">
+            <button button onClick={() => document.getElementById('casetimeline').scrollIntoView({ behavior: 'smooth' })} className="px-6 py-3 lg:px-8 lg:py-4 border border-cyan-500/30 text-cyan-400 font-mono text-xs lg:text-sm uppercase tracking-widest hover:bg-cyan-950/30 hover:border-cyan-400 transition-all flex items-center justify-center gap-2 group">
               <Terminal size={16} className="group-hover:text-cyan-300" />
-              <span>Download_Brief.pdf</span>
+              <span>Event_timeline.txt</span>
             </button>
           </motion.div>
 

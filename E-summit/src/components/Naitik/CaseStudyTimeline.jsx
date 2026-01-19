@@ -25,7 +25,7 @@ const CaseStudyTimeline = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-black relative">
+    <section className="py-24 px-6 bg-black relative" id="casetimeline">
        {/* Circuit Lines Background */}
        <div className="absolute inset-0 opacity-20 pointer-events-none"></div>
 

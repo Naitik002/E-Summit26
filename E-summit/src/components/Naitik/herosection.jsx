@@ -153,7 +153,7 @@ href="#ScheduleSection"
 
             {/* Secondary Button */}
            <motion.a
-              href="https://www.youtube.com/watch?v=ZesEJmDMlZI"
+              href="https://www.youtube.com/watch?v=IUHNSvzvLxc"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.05)" }}

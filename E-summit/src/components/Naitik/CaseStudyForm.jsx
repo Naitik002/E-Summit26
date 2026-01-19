@@ -8,7 +8,7 @@ const CaseStudyRegistration = () => {
   const unstopLink = "https://unstop.com/competitions/case-study-competition-e-summit26--1625099";
 
   return (
-    <section className="py-24 px-6 bg-black relative border-t border-purple-900/30">
+    <section className="py-24 px-6 bg-black relative border-t border-purple-900/30" id="form" >
        <div className="max-w-2xl mx-auto">
 
           <div className="bg-black border border-zinc-800 shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden group hover:border-zinc-700 transition-colors">

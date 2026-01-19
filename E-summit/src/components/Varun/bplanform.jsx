@@ -7,7 +7,7 @@ const Bplanform = () => {
   const [isLocked, setIsLocked] = useState(false)
   const [regType, setRegType] = useState('individual');
 
-  const UNSTOP_LINK = "https://unstop.com/competitions/case-study-competition-e-summit26--1625099"; // REPLACE WITH YOUR LINK
+  const UNSTOP_LINK = "https://unstop.com/competitions/business-plan-pitching-competition26-e-summit26--1625734"; // REPLACE WITH YOUR LINK
 
   const colors = {
     sapGreen: "#47761E",
