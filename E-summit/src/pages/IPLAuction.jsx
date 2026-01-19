@@ -622,7 +622,7 @@ const IPLAuctionWarzone = () => {
 
                 <div className="relative aspect-square mb-6 border border-slate-800 bg-slate-950 overflow-hidden group">
                   <div
-                    className="absolute inset-0 cursor-target bg-cover md:grayscale scale-115 bg-position[50%_center] transition-transform duration-700 group-hover:scale-118 hover:grayscale-0"
+                    className="absolute inset-0 cursor-target bg-cover md:grayscale scale-115 bg-center translate-x-3 transition-transform duration-700 group-hover:scale-118 hover:grayscale-0"
                     style={{ backgroundImage: "url('/virat.jpg')" }}
                   ></div>
 
