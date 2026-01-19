@@ -550,14 +550,15 @@ const IPLAuctionWarzone = () => {
           <div className="space-y-6">
             {/* Hero Heading */}
             <motion.h1
-              className="text-7xl md:text-9xl font-black mt-10  md:mt-0 lg:mt-0 uppercase italic leading-[0.85] tracking-tighter"
+              className="text-7xl md:text-8xl font-black mt-10  md:mt-0 lg:mt-0 uppercase italic leading-[0.85] tracking-tighter"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.25 }}
               variants={fadeUp}
             >
-              STRIKE <br />
-              <div className="text-transparent md:ml-20 bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">FIRST.</div>
+             BATTLE FOR THE
+ <br />
+              <div className="text-transparent text-7xl md:text-9xl bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">BEST XI</div>
             </motion.h1>
 
             {/* Hero Badge & Description */}
@@ -574,8 +575,10 @@ const IPLAuctionWarzone = () => {
 
               <motion.div variants={fadeUp} className="relative">
                 <p className="text-slate-200 text-lg max-w-md leading-tight uppercase font-bold tracking-tight drop-shadow-md">
-                  High-Intensity IPL Auction Simulator. <br />
-                  <span className="text-green-500 text-sm font-normal normal-case italic">Establish squad dominance through superior financial ballistics.</span>
+                  Take control of your franchise.
+ <br />
+                  <span className="text-green-500 text-sm font-normal normal-case italic">Weaponize your budget. Outplay every bid.
+</span>
                 </p>
               </motion.div>
             </motion.div>
@@ -586,7 +589,7 @@ const IPLAuctionWarzone = () => {
                 className="group relative bg-green-600 p-[2px] cursor-target transition-transform active:scale-95"
               >
                 <div className="bg-green-600 group-hover:bg-green-500 text-black font-black px-10 py-4 flex items-center gap-3 uppercase text-lg transition-colors">
-                  Deploy to AO <ChevronRight size={24} />
+                  Deploy to Auction <ChevronRight size={24} />
                 </div>
               </button>
               <button
@@ -619,7 +622,7 @@ const IPLAuctionWarzone = () => {
 
                 <div className="relative aspect-square mb-6 border border-slate-800 bg-slate-950 overflow-hidden group">
                   <div
-                    className="absolute inset-0 cursor-target bg-cover md:grayscale scale-115 bg-center transition-transform duration-700 group-hover:scale-118 hover:grayscale-0"
+                    className="absolute inset-0 cursor-target bg-cover md:grayscale scale-115 bg-center translate-x-3 transition-transform duration-700 group-hover:scale-118 hover:grayscale-0"
                     style={{ backgroundImage: "url('/virat.jpg')" }}
                   ></div>
 
@@ -696,16 +699,19 @@ const IPLAuctionWarzone = () => {
             {/* Left Column: Mission Narrative */}
             <div className="lg:col-span-5 space-y-8">
               <div className="inline-flex items-center cursor-target gap-2 text-green-500 font-black text-xs tracking-widest bg-green-500/10 px-3 py-1 border border-green-500/20">
-                <ShieldAlert size={14} /> DECLASSIFIED DOCUMENT // 2025
+                <ShieldAlert size={14} /> DECLASSIFIED DOCUMENT // 2026
               </div>
 
               <h2 className="text-5xl font-black uppercase italic leading-tight">
-                THE ULTIMATE <br />
-                <span className="text-green-500">SIMULATION.</span>
+                A BATTLEFIELD OF 
+<br />
+                <span className="text-green-500">BIDS.</span>
               </h2>
 
               <p className="text-slate-400 leading-relaxed border-l-2 border-slate-800 pl-6 italic">
-                "This isn't just about picking players; it's about resource management under extreme pressure. Every bid is a bullet. Every squad is a strike force."
+                "Think fast. Bid faster. In this ultimate challenge, your budget is the only ammunition, and time the only opponent.
+
+
                 <br />
                 <span className="text-xs font-bold text-slate-600 not-italic">— COMMANDER’S BRIEFING</span>
               </p>
@@ -735,19 +741,19 @@ const IPLAuctionWarzone = () => {
                 {[
                   {
                     title: "Strategic Budgeting",
-                    desc: "Each faction is deployed with a 100 Crore ammo supply. Over-expenditure results in immediate squad disqualification."
+                    desc: "Participating teams are armed with 100 crore in bidding power. Exceeding the provided budget results in a disqualification of your squad."
                   },
                   {
-                    title: "Target Acquisition",
-                    desc: "Players are released in waves. Use your bidding paddles to engage. Speed and timing are critical for cost-efficiency."
+                    title: "Player Acquisition",
+                    desc: "Players are deployed sequentially. Timely bids and precision in budgeting are key to securing players and building a stronger squad."
                   },
                   {
-                    title: "Roster Composition",
-                    desc: "A valid strike force must contain 11 operators, satisfying the required balance of specialists (Batsmen, Bowlers, Keepers)."
+                    title: "Squad Assembly",
+                    desc: "Gather a combat-ready squad consisting of 11 players with optimal role distribution across batting, bowling, and wicketkeeping."
                   },
                   {
-                    title: "Victory Condition",
-                    desc: "At the end of the simulation, our proprietary algorithm calculates 'Squad Combat Effectiveness' to crown the champion."
+                    title: "Emerge Victorious",
+                    desc: "Final rankings are determined through algorithmic squad evaluation measuring overall performance and balance."
                   }
                 ].map((protocol, i) => (
                   <motion.div
@@ -790,10 +796,10 @@ const IPLAuctionWarzone = () => {
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { role: "Frontline Batsmen", class: "Assault", icon: <Target />, desc: "High impact scorers for early dominance." },
-              { role: "Power Hitters", class: "Heavy", icon: <Zap />, desc: "Finishers designed for maximum collateral damage." },
+              { role: "Frontline Batsmen", class: "Assault", icon: <Target />, desc: "High impact scorers for an early advantage." },
+              { role: "Power Hitters", class: "Heavy", icon: <Zap />, desc: "Fearless finishers for maximum collateral damage." },
               { role: "Elite Bowlers", class: "Sniper", icon: <Crosshair />, desc: "Precision units to neutralize opponent targets." },
-              { role: "All-Rounders", class: "Tactical", icon: <Shield />, desc: "Versatile operators to maintain squad balance." },
+              { role: "All-Rounders", class: "Tactical", icon: <Shield />, desc: "Versatile troopers to maintain squad balance" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -826,10 +832,10 @@ const IPLAuctionWarzone = () => {
 
             <div className="space-y-12">
               {[
-                { time: "0900 HRS", event: "In-Fill & Briefing", detail: "Squad registration and budget allocation." },
-                { time: "1100 HRS", event: "Engagement Phase I", detail: "Marquee player bidding begins." },
-                { time: "1400 HRS", event: "Resupply Break", detail: "Tactical analysis and mid-auction regroup." },
-                { time: "1800 HRS", event: "Final Extraction", detail: "Squad finalization and victory ceremony." }
+                { time: "0900 HRS", event: "Mission Briefing", detail: "Team registration and budget allocation." },
+                { time: "1100 HRS", event: "Engagement Phase I", detail: "Player bidding begins." },
+                { time: "1400 HRS", event: "Reload Break", detail: "Tactical analysis and mid-auction regroup." },
+                { time: "1800 HRS", event: "Final Extraction", detail: "Squad finalization and prize distibution." }
               ].map((step, i) => (
                 <motion.div
                   key={i}
@@ -864,7 +870,7 @@ const IPLAuctionWarzone = () => {
               <img
                 src="/asset1ipl.png"
                 alt="Mission Visual"
-                className="w-full h-full scale-103 object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-108 transition-all duration-700"
+                className="w-full h-full scale-103 object-cover opacity-60 group-hover:opacity-100 group-hover:scale-108 transition-all duration-700"
               />
 
               {/* Scanned Overlay Effect */}

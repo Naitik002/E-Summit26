@@ -1,7 +1,72 @@
 
 import { motion } from 'framer-motion';
 
-const FinalTeamSection = ({ members = Creators }) => {
+import {
+    Twitter,
+    Linkedin,
+    Github,
+    Instagram,
+    Globe,
+    Zap,
+    Shield,
+    Cpu,
+    Target,
+    Mail,
+    InstagramIcon
+} from 'lucide-react';
+
+const members = [
+    {
+        id: 1,
+        name: "Sannidhya Srivastava",
+        style: "Strategic Lead",
+        img: "teamCamp/Sannidhya Srivastava.webp",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/sannidhya-srivastava-4976a9277/",
+            insta: "https://www.instagram.com/_sann1dh_/",
+            mail: "mailto:sannidhya123567@gmail.com"
+        },
+        icon: <Zap className="h-6 w-6" />,
+    },
+    {
+        id: 2,
+        name: "Dev Bansal",
+        style: "Events Lead",
+        img: "teamCamp/Dev Bansal.webp",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/dev-bansal-22a54a282/",
+            insta: "https://www.instagram.com/db_devbansal/",
+            mail: "mailto:bansaldev894@gmail.com"
+        },
+        icon: <Shield className="h-6 w-6" />,
+    },
+    {
+        id: 3,
+        name: "Khushi Verma",
+        style: "Adminstrative Lead",
+        img: "teamCamp/Khushi Verma.webp",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/khushi-verma-966416290",
+            insta: "https://www.instagram.com/_khushi_.verma?igsh=ZzJjY25uZ2JrdDI3",
+            mail: "mailto:kv6265@gmail.com"
+        },
+        icon: <Cpu className="h-6 w-6" />,
+    },
+    {
+        id: 4,
+        name: "Manu GS Parmar",
+        style: "Finance Lead",
+        img: "teamCamp/Manu Parmar.jpg",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/manugsparmar/",
+            insta: "https://www.instagram.com/manuxparmar/",
+            mail: "mailto:manugsparmar@gmail.com"
+        },
+        icon: <Target className="h-6 w-6" />,
+    }
+];
+
+const FinalTeamSection = () => {
     return (
         <section className=" bg-[#020617] relative overflow-hidden mb-10">
             {/* Background Decor - Fusion of both themes */}
@@ -27,7 +92,7 @@ const FinalTeamSection = ({ members = Creators }) => {
                 </div>
 
                 {/* Team Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
                     {members.map((person, idx) => (
                         <motion.div
                             key={person.id}
@@ -38,14 +103,15 @@ const FinalTeamSection = ({ members = Creators }) => {
                             className="relative group"
                         >
                             {/* The "Frame" */}
-                            <div className="bg-white border-4 border-black p-4 shadow-[10px_10px_0px_0px_rgba(34,211,238,1)] transition-all group-hover:shadow-[15px_15px_0px_0px_rgba(236,72,153,1)]">
+                            <div className="bg-white border-4 border-black group p-4 shadow-[10px_10px_0px_0px_rgba(34,211,238,1)] transition-all group-hover:shadow-[15px_15px_0px_0px_rgba(236,72,153,1)]">
                                 {/* Photo */}
-                                <div className="aspect-[3/4] overflow-hidden border-4 border-black mb-4 relative bg-slate-200">
+                                <div className="aspect-[3/4] overflow-hidden border-4 group border-black mb-4 relative bg-slate-200">
                                     <img
                                         src={person.img}
                                         alt={person.name}
-                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
                                     />
+
                                     {/* Status Indicator */}
                                     <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-black/80 px-2 py-1 rounded-full border border-white/20">
                                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -53,22 +119,39 @@ const FinalTeamSection = ({ members = Creators }) => {
                                     </div>
                                 </div>
 
+                                
+
                                 {/* Info */}
                                 <div className="space-y-2">
                                     <div className="flex justify-between items-start">
-                                        <h3 className="font-black text-2xl text-black uppercase leading-none italic">{person.name}</h3>
+                                        <h3 className="font-black text-lg text-black uppercase leading-none italic">{person.name}</h3>
                                         <div className="text-pink-600 group-hover:rotate-12 transition-transform">
                                             {person.icon}
                                         </div>
                                     </div>
 
                                     <div className="flex items-center gap-2">
-                                        <span className="bg-black text-white text-[10px] font-black px-2 py-0.5 uppercase tracking-tighter">
-                                            Core Team
-                                        </span>
                                         <span className="text-slate-500 font-bold text-[10px] uppercase tracking-widest">
-                                            {person.style || person.power}
+                                            {person.style}
                                         </span>
+                                    </div>
+
+                                    <div className="pt-3 border-t-2 border-slate-100 flex flex-wrap gap-2">
+                                        {person.socials.linkedin && (
+                                            <a href={person.socials.linkedin} target="_blank" className="p-1.5 bg-slate-100 text-black hover:bg-cyan-400 hover:text-white transition-all border border-black">
+                                                <Linkedin size={14} />
+                                            </a>
+                                        )}
+                                        {person.socials.insta && (
+                                            <a href={person.socials.twitter} target="_blank" className="p-1.5 bg-slate-100 text-black hover:bg-red-400 hover:text-white transition-all border border-black">
+                                                <InstagramIcon size={14} />
+                                            </a>
+                                        )}
+                                        {person.socials.mail && (
+                                            <a href={person.socials.github} target="_blank" className="p-1.5 bg-slate-100 text-black hover:bg-pink-500 hover:text-white transition-all border border-black">
+                                                <Mail size={14} />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
 
@@ -82,7 +165,7 @@ const FinalTeamSection = ({ members = Creators }) => {
                 </div>
 
                 {/* Footer Note */}
-                
+
             </div>
         </section>
     );

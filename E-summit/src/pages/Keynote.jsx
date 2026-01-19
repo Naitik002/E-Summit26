@@ -355,7 +355,7 @@ const MultiThemeGallery = () => {
         />
       </div>
 
-      <FinalTeamSection members={Creators} />
+      <FinalTeamSection />
 
       <style jsx>{`
         .clip-path-gaming { clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%); }
