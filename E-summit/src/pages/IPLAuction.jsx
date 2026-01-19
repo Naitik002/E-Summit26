@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import { User, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import MusicPlayer from '../components/Varun/music';
+import TacticalGallery from '../components/Varun/iplgalley';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -820,6 +821,8 @@ const IPLAuctionWarzone = () => {
           </div>
         </div>
       </section>
+
+      <TacticalGallery/>
 
       <section className="py-24 px-6 border-t border-slate-900 bg-[radial-gradient(circle_at_top_right,var(--tw-gradient-stops))] from-green-900/10 via-slate-950 to-slate-950">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
