@@ -17,7 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import { User, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import MusicPlayer from '../components/Varun/music';
-import TacticalGallery from '../components/Varun/iplgalley';
+import TacticalGallery from '../components/Varun/iplgallery';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
