@@ -377,7 +377,7 @@ const EventsSection = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   return (
-    <section className="relative w-full py-24 px-6 bg-gaming-950 overflow-hidden min-h-screen">
+    <section className="relative w-full py-24 px-6 bg-gaming-950 overflow-hidden min-h-screen" id="events-section">
 
       {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gaming-800 via-gaming-950 to-gaming-950 opacity-40 -z-10" />
