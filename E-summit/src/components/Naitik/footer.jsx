@@ -588,7 +588,7 @@ const FooterSection = () => {
     { label: "E-cell", href: "https://www.ecellnitb.in/" },
     { label: "Startup Expo", href: "https://startupexpo.ecellnitb.in/" },
     { label: "Campus Ambassadors", href: "https://ca.ecellnitb.in/" },
-    { label: "Fresher's Representative", href: "https://frprogramme.ecellnitb.in/" },
+    { label: "Freshers' Representative", href: "https://frprogramme.ecellnitb.in/" },
   ];
 
   return (
