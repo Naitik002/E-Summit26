@@ -87,8 +87,8 @@ const AboutSection = () => {
               </button>
             </motion.div> */}
 
-            <motion.div variants={itemVariants} className="mt-4">
-              {/* Change <button> to <a> */}
+            {/* <motion.div variants={itemVariants} className="mt-4">
+
               <a
                 href="/broucher.pdf"
                 download="Manifesto.pdf"
@@ -97,7 +97,22 @@ const AboutSection = () => {
                 <span>Read Full Manifesto</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
-            </motion.div>
+            </motion.div> */}
+
+
+<motion.div variants={itemVariants} className="mt-4">
+  <a
+    href="/broucher.pdf"
+    target="_blank"            
+    rel="noopener noreferrer"
+    className="group flex items-center gap-3 text-brand-primary font-heading font-bold tracking-widest uppercase hover:text-white transition-colors"
+  >
+    <span>Read Full Manifesto</span>
+    <span className="group-hover:translate-x-1 transition-transform">→</span>
+  </a>
+</motion.div>
+
+
 
 
           </motion.div>
