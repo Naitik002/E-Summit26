@@ -376,7 +376,7 @@ const SponsorsSection = () => {
                    className={`w-40 h-32 md:w-48 md:h-36 bg-white border border-white/5 rounded-lg flex flex-col items-center justify-between p-4 hover:shadow-lg transition-all duration-300 group relative ${sponsor.isPlaceholder ? "opacity-80 border-dashed border-gray-400 bg-transparent justify-center" : ""}`}
                  >
                     {sponsor.isPlaceholder ? (
-                        <div className="flex flex-col items-center text-gray-400 group-hover:text-white">
+                        <div className="flex flex-col items-center text-gray-400 group-hover:text-gray-600">
                             <span className="text-2xl mb-1">+</span>
                             <span className="text-xs font-mono">Partner With Us</span>
                         </div>
