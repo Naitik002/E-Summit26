@@ -257,11 +257,11 @@ import { motion } from "framer-motion";
 // --- 1. CURRENT DATA (2025) ---
 const newSponsors = {
   topTier: [
-    { id: 'n1', role: "Powered By", name: "SAGE University", logo: "assets/2026/sage.png", link: "https://sageuniversity.in/" },
+    { id: 'n1', role: "Powered By", name: "SAGE University", logo: "assets/2026/sage.webp", link: "https://sageuniversity.in/" },
     { id: 'n2', role: "Co-Powered By", name: "B-Nest", logo: "assets/2026/bnest.png", link: "https://bnest.in/" }
   ],
   partners: [
-    { id: 'n3', role: "EV Partner", name: "Kinetic Green", logo: "assets/2026/kinetic.png", link: "https://kineticgreenvehicles.com/" },
+    { id: 'n3', role: "EV Partner", name: "Kinetic Green", logo: "assets/2026/kinetic.jpg", link: "https://kineticgreenvehicles.com/" },
     { id: 'n4', role: "Supporting Partner", name: "Ruh Cafe", logo: "assets/2026/ruh.jpeg", link: "http://zoma.to/r/20889009" },
     { id: 'n5', role: "Supporting Partner", name: "Badastoor", logo: "assets/2026/badastoor.png", link: "https://share.google/sw09s0C5MCo0HjVv3" },
     { id: 'n6', role: "Your Logo", name: "Join Us", logo: "", isPlaceholder: true, link: "/contact" }
