@@ -10,6 +10,7 @@ import CaseStudyTeam from '../components/Naitik/CaseStudyTeam';
 import CaseStudyRegistration from '../components/Naitik/CaseStudyForm';
 import CyberpunkCursor from '../components/Naitik/CaseStudyCursor';
 import MusicPlayer from '../components/Varun/music';
+import CyberGallery from '../components/Varun/caseGallery';
 
 function Casestudy() {
 
@@ -38,7 +39,8 @@ function Casestudy() {
 
         {/* 3. Problem Statement (Hacked Data File) */}
         <CaseStudyAbout />
-
+        {/* Cyber Gallery Section */}
+        <CyberGallery />
         {/* 4. Roadmap (Circuit Board Timeline) */}
         <CaseStudyTimeline />
 

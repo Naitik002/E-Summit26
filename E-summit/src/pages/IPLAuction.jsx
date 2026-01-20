@@ -17,7 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import { User, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import MusicPlayer from '../components/Varun/music';
-import TacticalGallery from '../components/Varun/iplgalley';
+import TacticalGallery from '../components/Varun/iplgallery';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -157,7 +157,7 @@ const RecruitmentForm = () => {
 const OrganizingTeamSection = () => {
   const highCommand = [
     {
-      imgLink: "./teamipl/gaurvint.webp",
+      imgLink: "./team_images/Gaurvint verma.webp",
       personName: "Gaurvint Verma",
       personVertical: "Events Secretary",
       linkedin: "https://www.linkedin.com/in/gaurvint-verma-554329302/",
@@ -173,7 +173,7 @@ const OrganizingTeamSection = () => {
       mail: "mailto:shuklakrish215@gmail.com"
     },
     {
-      "imgLink": "./team_images/Tarun Jaiswal.webp",
+      "imgLink": "./team_images/Tarun jaiswal.png",
       "personName": "Tarun Jaiswal",
       "personVertical": "Social Media Lead",
       "linkedin": "https://in.linkedin.com/in/tarun-jaiswal-1602822b1",

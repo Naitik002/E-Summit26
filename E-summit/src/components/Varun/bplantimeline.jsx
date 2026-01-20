@@ -106,10 +106,6 @@ const GTATimeline = () => {
                                             <span className="text-[10px] font-black uppercase tracking-[0.2em]" style={{ color: step.color }}>
                                                 {step.phase}
                                             </span>
-                                            <div className="flex items-center gap-1 text-gray-500 font-bold text-[10px] uppercase italic">
-                                                <Calendar size={12} />
-                                                {step.date}
-                                            </div>
                                         </div>
                                         <h3 className="text-2xl font-black text-white uppercase italic tracking-tighter mb-2 group-hover:text-yellow-400 transition-colors">
                                             {step.title}
