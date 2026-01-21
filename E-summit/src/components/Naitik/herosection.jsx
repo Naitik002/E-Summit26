@@ -132,7 +132,7 @@ const HeroSection = () => {
 
           {/* Description */}
           <motion.p variants={itemVariants} className="mt-4 max-w-lg text-lg text-gray-400 border-l-2 border-brand-secondary/50 pl-4">
-         Enter a new of era of innovation with E-Summit'26, uniting ambitious minds and bold strategists. Each level is a new challenge to overcome in every battlefield of games.
+         Enter a new era of innovation with E-Summit'26, uniting ambitious minds and bold strategists. Each level is a new challenge to overcome in every battlefield of games.
           </motion.p>
 
           {/* CTAs */}
