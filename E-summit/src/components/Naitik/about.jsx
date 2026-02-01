@@ -100,17 +100,17 @@ const AboutSection = () => {
             </motion.div> */}
 
 
-<motion.div variants={itemVariants} className="mt-4">
-  <a
-    href="/broucher.pdf"
-    target="_blank"            
-    rel="noopener noreferrer"
-    className="group flex items-center gap-3 text-brand-primary font-heading font-bold tracking-widest uppercase hover:text-white transition-colors"
-  >
-    <span>Read Full Manifesto</span>
-    <span className="group-hover:translate-x-1 transition-transform">→</span>
-  </a>
-</motion.div>
+            <motion.div variants={itemVariants} className="mt-4">
+              <a
+                href="/broucher.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 text-brand-primary font-heading font-bold tracking-widest uppercase hover:text-white transition-colors"
+              >
+                <span>Read Full Manifesto</span>
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </motion.div>
 
 
 
@@ -169,15 +169,22 @@ const AboutSection = () => {
 
               <div className="glass-card p-6 rounded-xl border border-white/5 flex flex-col sm:flex-row items-center gap-6">
                 {/* Sponsor Logo Placeholder */}
-                <div className="w-full sm:w-1/3 bg-white p-4 rounded flex items-center justify-center h-16">
-                  {/* Use an actual img tag here */}
-                  <img src="assets/currentSponsor/Sail_logo.jpg" alt="Steel Authority of India Limited Logo" className="max-h-full object-contain" />
+                {/* Sponsor Logo Placeholder */}
+                <div className="w-full sm:w-1/3 bg-white p-1 rounded flex items-center justify-center h-24">
+                  {/* Reduced padding to p-1 and increased height to h-24 to give it more "breathing room" to grow */}
+
+                  <img
+                    src="assets/2026/Samara.jpeg"
+                    alt="Samara Group Logo"
+                    className="w-full h-full object-contain"
+                  />
+                  {/* Changed max-h-full to w-full h-full + object-contain to force it to fill the container boundaries */}
                 </div>
 
                 <div className="flex-1 text-center sm:text-left">
-                  <h4 className="text-white font-heading font-bold text-lg">Steel Authority of India Limited</h4>
+                  <h4 className="text-white font-heading font-bold text-lg">Samara Group</h4>
                   <p className="text-sm text-gray-400 mt-1 line-clamp-2">
-                    Driving India's progress for decades. A hallmark of excellence in the nation's steel industry.
+                    Building Trust, Delivering Dreams.
                   </p>
                   <a href="#" className="text-brand-accent text-xs mt-2 inline-block hover:underline">
                     Initiate Protocol (Know More) &gt;
