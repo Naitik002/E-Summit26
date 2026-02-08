@@ -3,8 +3,17 @@
 // import React from "react";
 // import { motion } from "framer-motion";
 
-// // --- 1. CURRENT DATA (2025) ---
+// // --- 1. CURRENT DATA (2025/2026) ---
 // const newSponsors = {
+//   // NEW: Title Sponsor Data
+//   title: {
+//     id: 't1',
+//     role: "Title Sponsor",
+//     name: "Samara Group",
+
+//     logo: "assets/2026/Samara.jpeg",
+//     link: "#"
+//   },
 //   topTier: [
 //     { id: 'n1', role: "Powered By", name: "SAGE University", logo: "assets/2026/sage.webp", link: "https://sageuniversity.in/" },
 //     { id: 'n2', role: "Co-Powered By", name: "B-Nest", logo: "assets/2026/bnest.png", link: "https://bnest.in/" }
@@ -22,7 +31,7 @@
 
 // // --- 2. PAST DATA (Split into 3 Tiers for the 3 Rows) ---
 
-// // ROW 1: THE GIANTS (Big Corps, Banks, Famous Brands)
+// // ROW 1: THE GIANTS
 // const pastRow1 = [
 //   { id: 201, logo: "assets/Sponsors/adani.webp" },
 //   { id: 8, logo: "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/organization/6513dff2b47f991415b97010/theme/assets/logo.585ee55e92cbfa83ebf252e23e095a4b.png" },
@@ -86,7 +95,36 @@
 //           </p>
 //         </div>
 
-//         {/* --- 1. CURRENT HEADLINERS --- */}
+//         {/* --- 0. TITLE SPONSOR (NEW SECTION) --- */}
+//         <div className="mb-20 flex flex-col items-center">
+//           {/* Custom Gold Divider/Label */}
+//           <div className="flex items-center justify-center gap-4 mb-8">
+//             <div className="h-[2px] w-16 md:w-32 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-80"></div>
+//             <span className="text-yellow-400 font-bold font-heading text-lg md:text-xl tracking-[0.25em] uppercase text-center drop-shadow-[0_0_10px_rgba(234,179,8,0.5)]">
+//               Title Sponsor
+//             </span>
+//             <div className="h-[2px] w-16 md:w-32 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-80"></div>
+//           </div>
+
+//           <a href={newSponsors.title.link} target="_blank" rel="noopener noreferrer" className="relative z-10">
+//             <motion.div
+//               whileHover={{ scale: 1.02 }}
+//               className="w-[90vw] max-w-[420px] h-48 md:h-64 bg-white rounded-2xl flex items-center justify-center p-8 shadow-[0_0_60px_rgba(234,179,8,0.15)] border border-yellow-500/30 hover:shadow-[0_0_80px_rgba(234,179,8,0.3)] hover:border-yellow-400/60 transition-all duration-500 relative overflow-hidden group"
+//             >
+//               {/* Shine Effect */}
+//               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-20" />
+
+//               {/* Logo */}
+//               <img
+//                 src={newSponsors.title.logo}
+//                 alt={newSponsors.title.name}
+//                 className="max-w-full max-h-full object-contain relative z-10 drop-shadow-sm"
+//               />
+//             </motion.div>
+//           </a>
+//         </div>
+
+//         {/* --- 1. POWERED & CO-POWERED --- */}
 //         <div className="mb-24">
 //           <div className="flex items-center justify-center gap-4 mb-10 opacity-70">
 //             <div className="h-[1px] w-12 md:w-20 bg-gradient-to-r from-transparent to-brand-accent"></div>
@@ -116,7 +154,7 @@
 //           </div>
 //         </div>
 
-//         {/* --- 2. CURRENT PARTNERS (Fixed Overlapping) --- */}
+//         {/* --- 2. CURRENT PARTNERS --- */}
 //         <div className="mb-24">
 //           <h3 className="text-center text-xl font-heading font-bold text-white mb-8">Official Partners</h3>
 //           <div className="flex flex-wrap justify-center gap-6">
@@ -124,7 +162,6 @@
 //               <a key={sponsor.id} href={sponsor.link} target={sponsor.isPlaceholder ? "_self" : "_blank"} rel="noopener noreferrer">
 //                 <motion.div
 //                   whileHover={{ scale: 1.05 }}
-//                   // FIX: Added 'justify-between' and specific padding. Removed absolute positioning.
 //                   className={`w-40 h-32 md:w-48 md:h-36 bg-white border border-white/5 rounded-lg flex flex-col items-center justify-between p-4 hover:shadow-lg transition-all duration-300 group relative ${sponsor.isPlaceholder ? "opacity-80 border-dashed border-gray-400 bg-transparent justify-center" : ""}`}
 //                 >
 //                   {sponsor.isPlaceholder ? (
@@ -134,12 +171,9 @@
 //                     </div>
 //                   ) : (
 //                     <>
-//                       {/* FIX: Dedicated container for the logo that takes up space but doesn't overlap */}
 //                       <div className="w-full h-20 flex items-center justify-center overflow-hidden">
 //                         <img src={sponsor.logo} alt={sponsor.name} className="max-h-full max-w-full object-contain" />
 //                       </div>
-
-//                       {/* FIX: Static text block that sits under the logo */}
 //                       <span className="text-[10px] text-gray-500 font-mono uppercase tracking-tighter text-center w-full leading-tight">
 //                         {sponsor.role}
 //                       </span>
@@ -158,7 +192,6 @@
 //           </div>
 
 //           <div className="flex flex-col gap-6 relative">
-
 //             {/* Gradient Masks */}
 //             <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-gaming-950 to-transparent pointer-events-none"></div>
 //             <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-gaming-950 to-transparent pointer-events-none"></div>
@@ -206,38 +239,53 @@
 // export default SponsorsSection;
 
 
+
+
 import React from "react";
 import { motion } from "framer-motion";
 
 // --- 1. CURRENT DATA (2025/2026) ---
 const newSponsors = {
-  // NEW: Title Sponsor Data
+  // NEW: Presented By Data (Highest Tier)
+  presentedBy: {
+    id: 'p1',
+    role: "Presented By",
+    name: "Raj Express",
+    logo: "assets/2026/rajexp2.png", // Replace with actual logo path
+    link: "https://www.rajexpress.com/en"
+  },
+  // Title Sponsor Data
   title: {
     id: 't1',
     role: "Title Sponsor",
     name: "Samara Group",
-   
     logo: "assets/2026/Samara.jpeg",
     link: "#"
   },
   topTier: [
     { id: 'n1', role: "Powered By", name: "SAGE University", logo: "assets/2026/sage.webp", link: "https://sageuniversity.in/" },
-    { id: 'n2', role: "Co-Powered By", name: "B-Nest", logo: "assets/2026/bnest.png", link: "https://bnest.in/" }
+    { id: 'n2', role: "Co-Powered By", name: "B-Nest", logo: "assets/2026/bnest.png", link: "https://bnest.in/" },
+    { id: 'n3', role: "Diamond Sponser", name: "AIC-RNTU", logo: "assets/2026/aicrntu.png", link: "https://www.aicrntu.com/" }
   ],
   partners: [
     { id: 'n3', role: "EV Partner", name: "Kinetic Green", logo: "assets/2026/kinetic.jpg", link: "https://kineticgreenvehicles.com/" },
     { id: 'n4', role: "Supporting Partner", name: "Ruh Cafe", logo: "assets/2026/ruh.jpeg", link: "http://zoma.to/r/20889009" },
     { id: 'n5', role: "Supporting Partner", name: "Badastoor", logo: "assets/2026/badastoor.png", link: "https://share.google/sw09s0C5MCo0HjVv3" },
-    { id: 'n6', role: "Esport Partner", name: "Meta Space", logo: "assets/2026/metaspace.png", link: "" },
+    { id: 'n6', role: "Esport Partner", name: "Meta Space", logo: "assets/2026/metaspace.png", link: "/" },
     { id: 'n7', role: "EdTech Partner", name: "Koed", logo: "assets/2026/Koed.png", link: "https://koed.co.in/" },
     { id: 'n8', role: "Venture Partner", name: "Tie Indore", logo: "assets/2026/teindore.JPG", link: "https://indore.tie.org/" },
-    { id: 'n9', role: "Your Logo", name: "Join Us", logo: "", isPlaceholder: true, link: "/contact" }
+    { id: 'n9', role: "Official Cloud Partner", name: "utho", logo: "assets/2026/utho.jpg", link: "https://utho.com/" },
+    { id: 'n10', role: "BookFair Partner", name: "Kitab Lovers", logo: "assets/2026/kitab.png", link: "/" },
+    { id: 'n11', role: "Supporting Partner(Auto Expo)", name: "Adventure Garage", logo: "assets/2026/advgarage.png", link: "" },
+
+    { id: 'n12', role: "Gifting Partner", name: "Shekunj", logo: "assets/2026/shekunj.png", link: "https://www.shekunj.com/" },
+    { id: 'n13', role: "Gifting Partner", name: "Awansh Textiles", logo: "assets/2026/awash.png", link: "/" },
+    { id: 'n14', role: "Merchandise Partner", name: "Doon Merchandise", logo: "assets/2026/doon.png", link: "https://www.instagram.com/offiicial_doon/?hl=en" },
+    { id: 'n15', role: "Your Logo", name: "Join Us", logo: "", isPlaceholder: true, link: "/contact" }
   ]
 };
 
-// --- 2. PAST DATA (Split into 3 Tiers for the 3 Rows) ---
-
-// ROW 1: THE GIANTS
+// --- 2. PAST DATA ---
 const pastRow1 = [
   { id: 201, logo: "assets/Sponsors/adani.webp" },
   { id: 8, logo: "https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/organization/6513dff2b47f991415b97010/theme/assets/logo.585ee55e92cbfa83ebf252e23e095a4b.png" },
@@ -253,7 +301,6 @@ const pastRow1 = [
   { id: 43, logo: "assets/currentSponsor/lapino.png" },
 ];
 
-// ROW 2: ECOSYSTEM & TECH
 const pastRow2 = [
   { id: 2, logo: "assets/currentSponsor/unstop.png" },
   { id: 11, logo: "assets/currentSponsor/wadhwani.jpg" },
@@ -270,7 +317,6 @@ const pastRow2 = [
   { id: 12, logo: "assets/currentSponsor/images (3).jpg" },
 ];
 
-// ROW 3: STARTUPS & COMMUNITY
 const pastRow3 = [
   { id: 101, logo: "assets/currentSponsor/startupnewsfyi.jpeg" },
   { id: 213, logo: "assets/Sponsors/startupvisors.webp" },
@@ -301,9 +347,41 @@ const SponsorsSection = () => {
           </p>
         </div>
 
-        {/* --- 0. TITLE SPONSOR (NEW SECTION) --- */}
-        <div className="mb-20 flex flex-col items-center">
-          {/* Custom Gold Divider/Label */}
+        {/* ============================================== */}
+        {/* --- 0. PRESENTED BY (BIGGEST - NEW ADDITION) --- */}
+        {/* ============================================== */}
+        <div className="mb-24 flex flex-col items-center">
+          {/* Platinum/Silver Divider */}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-[3px] w-20 md:w-40 bg-gradient-to-r from-transparent via-white to-transparent opacity-90"></div>
+            <span className="text-white font-black font-heading text-xl md:text-3xl tracking-[0.25em] uppercase text-center drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
+              Presented By
+            </span>
+            <div className="h-[3px] w-20 md:w-40 bg-gradient-to-r from-transparent via-white to-transparent opacity-90"></div>
+          </div>
+
+          <a href={newSponsors.presentedBy.link} target="_blank" rel="noopener noreferrer" className="relative z-10">
+            <motion.div
+              whileHover={{ scale: 1.03 }}
+              // Larger Dimensions: max-w-[600px] and h-60/80
+              className="w-[95vw] max-w-[600px] h-60 md:h-80 bg-white rounded-3xl flex items-center justify-center p-10 shadow-[0_0_80px_rgba(255,255,255,0.2)] border-2 border-white/50 hover:shadow-[0_0_100px_rgba(255,255,255,0.4)] hover:border-white transition-all duration-500 relative overflow-hidden group"
+            >
+              {/* Intense Shine Effect */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/60 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-20" />
+
+              {/* Logo */}
+              <img
+                src={newSponsors.presentedBy.logo}
+                alt={newSponsors.presentedBy.name}
+                className="max-w-full max-h-full object-contain relative z-10 drop-shadow-lg"
+              />
+            </motion.div>
+          </a>
+        </div>
+
+        {/* --- 0.1 TITLE SPONSOR --- */}
+        <div className="mb-20 flex flex-col items-center scale-90 md:scale-100">
+          {/* Gold Divider */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-[2px] w-16 md:w-32 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-80"></div>
             <span className="text-yellow-400 font-bold font-heading text-lg md:text-xl tracking-[0.25em] uppercase text-center drop-shadow-[0_0_10px_rgba(234,179,8,0.5)]">
@@ -317,10 +395,7 @@ const SponsorsSection = () => {
               whileHover={{ scale: 1.02 }}
               className="w-[90vw] max-w-[420px] h-48 md:h-64 bg-white rounded-2xl flex items-center justify-center p-8 shadow-[0_0_60px_rgba(234,179,8,0.15)] border border-yellow-500/30 hover:shadow-[0_0_80px_rgba(234,179,8,0.3)] hover:border-yellow-400/60 transition-all duration-500 relative overflow-hidden group"
             >
-              {/* Shine Effect */}
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-20" />
-
-              {/* Logo */}
               <img
                 src={newSponsors.title.logo}
                 alt={newSponsors.title.name}
@@ -398,7 +473,6 @@ const SponsorsSection = () => {
           </div>
 
           <div className="flex flex-col gap-6 relative">
-            {/* Gradient Masks */}
             <div className="absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-gaming-950 to-transparent pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-gaming-950 to-transparent pointer-events-none"></div>
 
