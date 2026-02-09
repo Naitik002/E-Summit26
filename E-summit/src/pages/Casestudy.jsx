@@ -11,6 +11,7 @@ import CaseStudyRegistration from '../components/Naitik/CaseStudyForm';
 import CyberpunkCursor from '../components/Naitik/CaseStudyCursor';
 import MusicPlayer from '../components/Varun/music';
 import CyberGallery from '../components/Varun/caseGallery';
+import ResultsR2 from '../components/Varun/results';
 
 function Casestudy() {
 
@@ -44,8 +45,12 @@ function Casestudy() {
         {/* 4. Roadmap (Circuit Board Timeline) */}
         <CaseStudyTimeline />
 
+
+
         {/* 5. Registration (Netrunner Login Terminal) */}
-        <CaseStudyRegistration />
+        {/* <CaseStudyRegistration /> */}
+
+        <ResultsR2/>
 
         {/* 6. Organizing Team (Character Select Screen) */}
         <CaseStudyTeam />
