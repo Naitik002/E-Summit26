@@ -76,7 +76,7 @@ const HeroSection = () => {
   return (
     // FIXED: Added 'bg-gaming-950' and 'border-b' to match other sections exactly
     <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden px-6 lg:px-20 py-5 md:py-10 bg-gaming-950 border-b border-white/5">
-        <ScrollAlert />
+        {/* <ScrollAlert /> */}
       {/* --- Ambient Background Glows (Refined) --- */}
       {/* Increased size and blur for smoother blending */}
       <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-brand-primary/10 blur-[150px] rounded-full pointer-events-none" />

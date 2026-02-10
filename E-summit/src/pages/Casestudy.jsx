@@ -50,7 +50,7 @@ function Casestudy() {
         {/* 5. Registration (Netrunner Login Terminal) */}
         {/* <CaseStudyRegistration /> */}
 
-        <ResultsR2/>
+        {/* <ResultsR2/> */}
 
         {/* 6. Organizing Team (Character Select Screen) */}
         <CaseStudyTeam />
