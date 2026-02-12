@@ -4,14 +4,10 @@ import { Terminal, FileText, ChevronRight, Activity } from 'lucide-react';
 
 const ResultsR2 = () => {
   const qualifiers = [
-    { team: "Data Slicers", inst: "Woxsen University, Hyderabad" },
-    { team: "chaurasiaaditya539", inst: "IIIT Bhopal" },
     { team: "Silverstone", inst: "MANIT" },
     { team: "Team Vincent", inst: "SIT, RGPV, Bhopal" },
-    { team: "Solo Strategist", inst: "Alliance School of Business, Bangalore" },
+    {team: "Team Helix", inst: "MANIT"},
     { team: "ThinkX", inst: "MANIT" },
-    { team: "2023uce0055", inst: "IIT, Jammu" },
-    { team: "TPM", inst: "NIT, Kurukshetra" },
     { team: "ARTHASHASTRA", inst: "MANIT" },
     { team: "random_team_1", inst: "NIT, Kurukshetra" },
     { team: "Centauri", inst: "MANIT" },
@@ -19,11 +15,8 @@ const ResultsR2 = () => {
     {team: "Cute Little Red Flags", inst: " School of Commerce, DAVV, Indore."},
     { team: "mr.ankitanand.2004", inst: "MANIT" },
     { team: "Lunatic Byte", inst: "BIT Mesra, Ranchi" },
-    { team: "TheMogach", inst: "RV University, Bangalore" },
-    { team: "Griffin", inst: "MIT Academy of Engineering, Pune" },
-    { team: "OG 99", inst: "Amity University, Gwalior" },
+    {team: "yakuza", inst: "MANIT"},
     { team: "bhoomigajbhiye7", inst: "NIT Raipur" },
-    { team: "rishavprashar72", inst: "MANIT" }
   ];
 
   // Split data into two columns for the report view

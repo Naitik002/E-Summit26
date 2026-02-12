@@ -58,7 +58,7 @@ const ScrollAlert = () => {
                                     </button>
                                 </div>
                                 <h4 className="text-white font-heading font-bold text-sm">
-                                    Results for round 2 of Case Study Competition are Live!
+                                    Submission for round 3 presentation is live!
                                 </h4>
                                 <div className="my-2 flex justify-start">
                                     <motion.button
@@ -68,7 +68,7 @@ const ScrollAlert = () => {
                                         onClick={(e) => {
                                             e.preventDefault();
                                             const targetPath = '/casestudy';
-                                            const targetId = 'result';
+                                            const targetId = 'form';
 
                                             // If already on the casestudy route, just scroll to the target id
                                             if (window.location.pathname === targetPath) {

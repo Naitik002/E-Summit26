@@ -12,6 +12,7 @@ import CyberpunkCursor from '../components/Naitik/CaseStudyCursor';
 import MusicPlayer from '../components/Varun/music';
 import CyberGallery from '../components/Varun/caseGallery';
 import ResultsR2 from '../components/Varun/results';
+import RoundThreeSubmission from '../components/Varun/finalSub';
 
 function Casestudy() {
 
@@ -51,6 +52,7 @@ function Casestudy() {
         {/* <CaseStudyRegistration /> */}
 
         {/* <ResultsR2/> */}
+        <RoundThreeSubmission/>
 
         {/* 6. Organizing Team (Character Select Screen) */}
         <CaseStudyTeam />
